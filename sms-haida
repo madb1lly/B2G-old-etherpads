@@ -1,0 +1,82 @@
+Haida for SMS
+
+About Haida in general: https://wiki.mozilla.org/FirefoxOS/Haida
+
+This Etherpad is about Haida's sheet handling. Please see https://etherpad.mozilla.org/messages-datastore for thoughts and planning about DataStore/RocketBar.
+
+Goals for sheet handling:
+ * In-app navigation can be done either by keeping a one-page navigation or opening a new window to the new view
+ * a view needs to be bookmarkable
+   * the user can bookmark the current view
+   * the user can recall the bookmark
+ * loading only one view must be quick and cheap
+
+
+What does it mean for us:
+ * we need to be able to load only one view, without doing useless work
+   * esp. not load the threads if the threadlist is not displayed
+   * I think we still should keep the "one-window" model, but lazy loading the needed JS and possibly some HTML
+   * eventually, when we won't have the "one-window" navigation model, we'll be able to start moving to invidiual files, but I think it's too soon
+ * saving state
+   * with state (?) which state (?)
+     * should we save a draft for a specific state so that the user could recall it, even if a new draft exists for the same thread?
+
+
+Preamble about lazy loading markup:
+
+In Dialer, they lazy load every bit of markup that looks like a component. I don't think this is necessary, and I think we should have a thicker granularity:
+ * move panels to separate markup files
+ * move common components (eg: composer) to separate markup files
+   * Not sure if it's necessary, since only thread ui panel and new message panel will need it, maybe we can just duplicate it first?
+     * I see what you mean, maybe the markup is not that complicated. We can wait for web components maybe.
+     * but we need to sanitize the CSS: too many ids here. Let's try to use BEM on the composer, to see how it works?
+   * Should we treat these as component?
+     * In app notification(overlay)
+     * edit form
+     * Message deleting dialog
+     * attachment action menu
+   * (Oleg) BTW, they use HTML template elements, maybe we can try to use it too
+   * (Julien) menus, notifications, edit form: there is IMO no performance improvement in moving this into lazy loaded components. But otherwise I don't mind moving these or some of these to web components (not necessarily lazy loaded). IMO most of this are already "shared" with building blocks, and they will be done in Web Components soon. Here I was more talking about SMS-app-specific components.
+
+Work to do:
+
+ * Move every component to proper panels
+   * separate new-message-panel and thread-panel (https://bugzilla.mozilla.org/show_bug.cgi?id=1011085 )
+     * make the "composer" a separate component; possibly separate HTML that would be lazy-inserted?
+       * note: the "send" button is sometimes changed from ThreadUI, this will need to be changed (https://bugzilla.mozilla.org/show_bug.cgi?id=944249)
+
+   * separate group-view and report-view (and rename them: proposal the JS objects would be GroupRecipientsPanel and ReportPanel; the panel names in Navigation would be simply "group-recipients" and "report")
+
+   * separate the markup per panel, and lazy load it the first time we open a panel
+     * proposal one bug per panel
+       * Maybe we can integrate related panels into one bug, like Thread UI/new message panel, Group recipient/report panel
+       * (Julien) yep, why not
+
+   * separate the Controller and View part for each panels
+     * and maybe components too: "Compose" already has View and Controller inside compose.js, but I don't find it very easy to navigate.
+     * split in separate files in a subdirectory per panel/component?
+       * (Oleg) Yeah, it would be nice if we move panel "behaviour" js files to a separate folder /js/panels/ (probably with subfolder for the panel if we need several files for example for components).
+       * (Oleg)  We don't use namespaces right now, but if we did, then we can have  something like this: Panels.GroupRecipient, Panels.Report,  Components.CarrierLabel and etc. One of the benefits is that Navigation  object won't need hardcoded available panel list, it can just enumerate  through window.Panel and make "PanelName->panel-name" conversion. But if we load panel js files (not just markup and component dependencies) lazily, it won't work.
+       * (Julien) A "Panel" object could take care of having all the names, lazy loading, and keep the object. Navigation object would just delegate to "Panel" for this.
+
+ * lazy loading of everything needed for each panel https://bugzilla.mozilla.org/show_bug.cgi?id=1009545
+   * lazy_loader needs to return promises
+   * proposal one bug per panel
+
+ * set the hash when moving panels to make it bookmarkable https://bugzilla.mozilla.org/show_bug.cgi?id=1011089
+   * activities and messages use a hash that does not belong to a panel. Currently, the Navigation object does nothing in that case, this is probably what we want, good!
+   * (Oleg) Is it for the some future needs, or the first use case is opening composer directly bypassing inbox panel? Just thinking aloud, we probably can use it case app was killed by the system (OOM or similar) and user launches it once again, we can restore the last active panel via last known app's url stored by system before app is killed.
+   * (Julien) all this :)
+
+
+Open questions:
+
+ * open panels using sheets
+   * kind of blocked by https://bugzilla.mozilla.org/show_bug.cgi?id=818000
+     * because of this bug, system messages are delivered to the open window; that means that all open windows need to have the message handlers, and need to be able to react to it...
+     * or could a ServiceWorker handle the system messages?
+   * I don't really know how it works yet (ServiceWorker...)
+
+ * Is messages datastore the part of Haida for SMS requirements? I mean Universal Search, RocketBar that will probably need access to the messages.
+   * (Julien) it's part of Haida, but here I wanted to focus on sheets, because it's clearly 2 orthogonal matters.
+
