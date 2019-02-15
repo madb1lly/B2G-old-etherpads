@@ -1,0 +1,186 @@
+// Random list of SMS team coding guidelines, not sorted yet
+//  note: these guidelines are not applied accross the application yet,  legacy code don't use it. We're applying it on new code when we add it.
+ 
+*  Put multiple comma-separated declarations in a single var statement,  but only if they don’t have assignments. Assignments must be in their  own var statement.
+Why? Better readability
+ 
+Example:
+var foo, bar, baz;
+var abc = 1;
+var def = 2;
+
+* In case of long parameter list that doesn't fit into 80 chars put every parameter into separate line as well as closing bracket
+Why? Team-wide agreement
+
+Example:
+this.getValue(
+    oneLongParameterName,
+    anotherLongParameterName,
+    oneMoreLongParameterName
+);
+
+* Use dashes for the custom events with composite names
+Why? Team-wide agreement
+
+Example:
+Subject.on('visibility-change'); and _NOT_ 'visibilitychange' or 'visibilityChange'
+
+* Use "x === undefined" instead of "typeof x === 'undefined'" to determine whether a variable has a value.
+Why? JavaScript is a statically scoped language, so knowing if a variable is defined can be read by seeing whether it is defined in an enclosing context [1].
+[1] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined
+
+* Promise "then" placement:
+
+If using only one "then", put it just after the function returning a promise;
+
+Example:
+  Utils.findByPhoneNumber('012345678').then((contacts) => {
+      ...
+  });
+
+If your "then" handler is a one-liner, put the handler separately on its own line;
+
+Example:
+  Utils.findByPhoneNumber('012345678').then(
+      (contacts) => contacts.forEach(Recipients.add)
+  );
+
+If using several of them, try to put them on a new line:
+
+Example:
+  Utils.findByPhoneNumber('012345678').then((contacts) => {
+       ...
+      return result;
+  }).then((result) => {
+  });
+
+(Note of Julien: not convinced yet for the first one)
+
+The rule is that each new "then" or "catch" needs to be easily visible near the start of a line.
+
+* "global" jshint rules
+Please put one "global" per line, alphabetically ordered.
+
+Example:
+/* global
+  GestureDetector,                                   
+  Navigation,                                   
+  RecipientValidator,                                   
+  Settings,                                   
+  SharedComponents,                                   
+  Utils                                   
+*/
+
+* Don't use content 2-space indent when using module pattern for JS file
+Why? Team-wide agreement, cleaner git-blame when file is migrated to es6 module
+
+Example:
+(function(exports) {
+var Module = {};
+
+exports.Module = Module;
+})(window);
+
+
+=====================CSS=========================
+We can probably start discussing\borrow some points from this link: 
+http://cssguidelin.es/#support-the-guidelines
+
+* 80 characters wide;
+
+* 2 spaces indentation;
+
+* Related selectors on the same line; unrelated selectors on new lines;
+Example
+.foo, .foo--bar,
+.baz {
+      .....
+}
+
+(Julien) usually I prefer to have one selector per line... arguable :)
+(Oleg) Yep, I'm fine with having one selector per line too :) Easier to resolve conflicts
+
+* Multi-line CSS with one-property exception
+Example
+.icon {
+    display: inline-block;
+    width:  16px;
+}
+
+.icon--home     { background-position:   0     0  ; }
+.icon--person   { background-position: -16px   0  ; }
+
+(Julien) I'd prefer that we have no exception :)
+(Oleg) Ok, both work for me
+
+* Indenting
+*: (Oleg) I somewhat like idea, but I'm not sure whether it makes things worse of better in our case. I like more how it's done in SASS/LESS. What do you think?
+
+Example:
+.foo {}
+
+    .foo__bar {}
+
+        .foo__baz {}
+
+(Julien) if we can make small enough css files (per component), I think indentation is not useful.
+(Oleg) Yes, it doesn't make sense in small well contained component/panel based files
+
+* Meaningful whitespace
+** One (1) empty line between closely related rulesets.
+** Two (2) empty lines between loosely related rulesets.
+** Five (5) empty lines between entirely new sections.
+Example:
+/** Foo section */
+
+.foo {}
+
+    .foo__bar {}
+
+
+.foo--baz {}
+
+
+
+/** Baz section **/
+
+.bar {}
+
+* CSS property grouping and ordering
+** Either more strict [1] or not so strict [2]. 
+** [1] https://github.com/csscomb/csscomb.js/blob/master/config/yandex.json
+** [2] https://github.com/necolas/idiomatic-css#format
+(Julien) "not so strict" sounds better to me :) as long as it's readable enough I am happy...
+
+* BEM-like Naming (for self-contained, discrete parts of the UI)
+** Blocks, elements, modifiers;
+** Ideally max 1 descendant selector?
+Example:
+.person {} // block
+  .person__head {} //element
+  .person__head--bald {} // modifier
+.person--tall {} //modifier
+
+* JS Hooks
+** Use ids only for the elements that are app-level (if we have any), not panel-level?
+** Don't use ids in CSS files?
+** Use "js-*" class names as js hooks.
+
+* data-* attributes
+** Don't use as JS-hooks?
+** Don't use for styling?
+**: (Oleg) Maybe it's me, but I don't really like using data-* in selectors just for styling. What do you think?
+(Julien) compared to classes, it makes it easier to have several states for one thing; eg panel names. I'm not saying it's ok to use them, just give one good use case.
+(Oleg) For panels case, I think BEM's "modifiers" should work too. But I admit that I like data-* for panel positions because it makes states mutually exclusive.  Eg. with dataset it's easy to change position: el.dataset.position = 'left', but with CSS classes it's more cluttered: el.classList.remove('.panel--position-right');el.classList.remove('.panel--position-left');. Or probably single "classList.toggle" if we have just 2 states, but for more than 2 mutually exclusive states using BEM modifiers would be ah nightmare :)
+
+* If a selector will work without it being nested then do not nest it.
+
+* CSS variables
+** Gaia web components started to use it. Maybe we can also define use cases when we can use it? I'd say if one value is used in more than 2(1?) places, variables would be good, eg. our CSS related to recipients input (expanded/collapsed) states.
+
+(Julien) I'm ok to start using them, but only in "rewritten" CSS (I mean, not in the big sms.css file). In the smaller CSS files why not, as long as it stays local to that file.
+(not sure about all this, it's only a first suggestion).
+(maybe we should have a good convention to distinguish local var from app-wide var from project-wide var).
+(Oleg) Yep, " only in "rewritten" CSS" rule probably should be applied for the most of our new more or less radical conventions :)
+
+* use "unset" or "initial" if you want to reset a property value to its default, instead of (for example) "auto" for margin. "unset" is likely preferred in most cases (it is like "inherit" for inherited values and "initial" for other values).
