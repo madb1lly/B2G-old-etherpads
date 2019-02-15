@@ -1,0 +1,279 @@
+We will use this document to track agenda for the 2 one hour community sessions for Orlando.
+https://public.etherpad-mozilla.org/p/QACommunityOrlandoWW
+Join our Telegram Channel - Firefox OS QA
+
+2.6 Features:
+https://wiki.mozilla.org/Firefox_OS/Releases/2.6
+
+Features Owners: https://public.etherpad-mozilla.org/p/b2g-qa-roundtable
+
+One and Done session: 2:30 PM - One and Done Hackathon - Planning Session     - Room TBD (FxOS Homeroom for now)
+
+    Planning etherpad: https://public.etherpad-mozilla.org/p/QACommunityOrlandoWW     
+
+
+Goal of Session 1:
+
+        Develop an Action Plan around the three top level goals which includes what resources we will devote to the various projects
+
+
+Session 1
+Topic: Aligning our community efforts with top level goals
+Top Level Goals are identified as:
+
+    Foxfooding
+
+    Ports
+
+    Bugs
+
+
+    Foxfooding
+
+    What can we do strategically to help the Foxfooding program?
+
+    Should we have volunteer roles for various members of the team?
+
+    Monitor Forums
+
+    Answer questions in email threads
+
+    Help triage bugs
+
+    Clarify documention items to make foxfooders understand how they are contributing
+
+    How can One and Done help - https://oneanddone.mozilla.org/?
+
+    Note there will be a separate One and Done Planning Discussion in Session 2
+
+    What role if any will Test Days or Intro Days play?
+
+
+Notes:
+  
+
+      Strategic ways we can improve the Foxfooding program
+
+    [asa] Posting information to Discourse - post changelogs that show what is new in the Daily Build. Summary of the most important new things at the end or beginning or end of the week .
+
+    Test plan - suggestions of how to test a particular area
+
+    Things are most exciting when things land
+
+    More communication about when changes are happening
+
+    [ioana] Apply what we learned from Firefox for Android - build up wiki pages (public pages) with testplans, tests and results/status
+
+    Need people to reply to the posts +1
+
+    Using QA contact field
+
+    [wquiver] - Communication channels
+
+    Could we get a new maintainer for the Foxfooding app
+
+    [pallavi] Smoketest results
+
+    [jamie] - Daily bulettin (https://wiki.mozilla.org/B2G/QA/Daily_Bulletin)
+
+    [Marcia] - announcing the changes will make it easier for self starters
+
+    we need to make it accesible for those who need handholding
+
+    [Ioana] Use the QA Contact from bugzilla form and having a meta bugs 
+
+    [asa] Some forums have badges - interesting to have a Foxfooding forum on discourse to answer questions - tell people when it should be moved to Bugzilla
+
+    Recognition for being - rotate the role
+
+    Each forum should have several Champions
+
+    Does Discourse have this functionality?
+
+    Triage Champions - needed for success
+
+    We need to be there to be supportive
+
+    TEACHING BY DOING
+
+    Inviting more people to Triage sessions
+
+    Use AirMo to record sessions [ioana]
+
+    Whole day of timezones - set a day for a speciific task Triage/Verification etc and keep it so people get used to it and join 
+
+    Events
+
+    Connecting with Reps at planned events
+
+    Teach people how to teach - Asa will develop a session in regard to this
+
+    Intro Days [asa]
+
+    Full day of world coverage and we will help you get started with the very basics
+
+    Get prepared to do the work
+
+    Moderators needed
+
+    http://whatcanidoformozilla.org/#!/progornoprog/teach
+
+    [Ioana] Ask Core people to share the wokr they do as example so others can start too ( ex. Manel on Automation) 
+
+    Ask me anything session - once per month 
+
+
+    Ports
+
+    What can be do strategically to help the Porting program?
+
+    Test and File bugs
+
+
+Notes:
+    
+
+    Bugs
+
+    Are there things we could do in Bugzilla to make it easier to file bugs?
+
+    Guided entry
+
+
+
+Notes:
+    
+Feedback from Telegram groups:
+
+    better communication
+
+    Telegram -  
+
+    organization 
+
+
+    meetings 
+
+    Triage - Monday, Wednesday and Friday 9:30 PST vidyo room B2G
+
+    http://mzl.la/1On6n7Q
+
+    Stand up -  https://public.etherpad-mozilla.org/p/b2g-qa-roundtable for status 
+
+    bugs vs feedback
+
+    we need to figure it out a clear process 
+
+    many of the bugs are of all the types  - 
+
+    new sections on discourse - bugs, feature requests. 
+
+    foxfooding or nightly with sending info?
+
+    check with domenik 
+
+    QA should use Nightly as recommended
+
+    check foxfooding app - webdevs Nikos 
+
+    changelogs - needed  
+
+    we can generate them from the hg
+
+    Asa already doing it . 
+
+    Mentors and dedicated persons
+
+    Tuesday - do the triage afetr and comment in to the bugs - thanks for file the 
+
+
+    [Marcela] I am interested to work on  triage (if someone can teach me how to do it) and also monitor discourse besides usual bug reporting, foxfooding qa.
+
+
+
+Session 2
+
+    One and Done Hackathon
+
+    Goals - 
+
+    Clean up all the FxOS One and Done tasks?
+
+    Get owners, update cases so they map to 2.6
+
+    Get rid of out of date test cases
+
+    Design a workflow that makes sense for One and Done to promote involvement beyond finishing the tasks
+
+    Contributor pathways - what do they do after One and Done
+
+    Set up a consistent way to write the tasks - maybe a template? [isabel]
+
+    Same Format
+
+
+
+Notes: 
+
+        Daily Tasks Page? Discussed in the morning session
+
+    Automated query to see recent landings? Here are the recent landings go do some testing around it. Modified to fit better to work for the community
+
+    libreoffice uses time as an option
+
+    Challenges with the Tool
+
+    Creating a best practices template to follow
+
+    Look at Code Academy 
+
+    Participation team owns the mozilla.org/contribute
+
+    TPE team might be able to leverage the TV settop box
+
+
+Tiger Team - Target Date end of February
+
+    Marcia
+
+    Manel
+
+
+
+
+DOCUMENTATION SESSION
+
+    How can we keep docs up to date?
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1199047
+
+    Assigning docs to people?
+
+    Each FxOS component
+
+    Once a week
+
+    auto email to check wiki for updates
+
+    Daily bulletin
+
+    Owner for "Meet the Team Page"
+
+    https://old.etherpad-mozilla.org/QA-Docs-2-5 <- I tried to setup an etherpad of etherpad/wikis/links... 
+
+    still too confusing
+
+
+Process
+
+
+Action Items
+
+    Jamie will own creating the "meet the team" page. It will live on QMO and be linked to from the wki.
+
+    List sub teams
+
+    Replace John Dorlus email on QMO
+
+
+
