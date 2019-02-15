@@ -1,0 +1,88 @@
+PLEASE PUT YOUR QUESTIONS ON THE MAIN ETHERPAD 
+
+
+https://public.etherpad-mozilla.org/p/b2g-weekly-meeting
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+
+0Questions about the recent announcement
+
+See https://groups.google.com/forum/#!topic/mozilla.dev.fxos/FoAwifahNPY for context.  Mozilla announced today that all B2G-specific code will be removed from the mozilla-central:
+
+    "In order to evolve quickly and enable substantial new architectural changes in Gecko, Mozilla’s Platform Engineering organization needs to remove all B2G-related code from mozilla-central. This certainly has consequences for B2G OS. For the community to continue working on B2G OS they will have to maintain a code base that includes a full version of Gecko, so will need to fork Gecko and proceed with development on their own, separate branch".
+
+
+== Add your questions below ==
+
+    Will Mozilla continue to provide the B2G community with access to its infrastructure?  For instance, Bugzilla, Taskcluster, Mercurial/Git hosting, MDN?
+
+    Is B2G still considered Tier 3?
+
+    I wonder why Mozilla announced transition & modified the architecture. They could have stated this earlier & stopped with 2.6 branch.
+
+    Can Mozilla place all B2G-specifc code in a separate repo so that it's easy for B2G OS community to work on. 
+
+    Is all Mulet-related code also affected by this? Of course, yes
+
+    Are latest B2G system apps are at least supported in the next Gecko? I heard that some of the new Rust code are coming to Gecko, but this means the core stack of B2G may need to be modified.
+
+    Should we start to archive current B2G and Mulet source codes then start another new transition to be compatible with the next versions of Gecko, and even Servo? (But it be Boot to Servo at this time)
+
+    Instead of a fork, will it be possible to have a stable interface on the C++ part to add and compile our part of code ? It will be easier for new C++ contributors to have a list of functions to use to add new camera functions for example than to search in Gecko fork code where add his code ( and worse to maintain when there is code modification in Gecko ... );
+
+    Who took this decision, precisely? it would be (a little more) fair to talk with the community before or, at least, with your core developers (@Gabriel on the mailing list).
+
+    When do you plan to do this remove of b2g code from gecko ? (= do we have time to manage what's next ?)
+
+    What would be the basis for trust going forward with Mozilla after all this?  Or does Mozilla see community involvement as less important in their next generation of plans?
+
+    So this project is going out of gecko. What are the plans on Mozilla Corp side ? Do you still want to help us in some way ? (This add a lot more work for the community, that is still quite small and not super experienced)
+
+    If we can use current Gonk build for later versions of Gecko, how about releasing some of B2G system apps (such as clock and calendar) as WebExtensions? If most of the B2G core is changed I prefer apps to be installed the same way as WebExtensions. As I mentioned in Telegram group I have forked "B2G" and "Gaia" in GitHub for archive and testing purposes.
+
+    Is there a way to use libhybris to run full Linux stack and Linux port of Gecko, while converting all the phone-specific stuff to services?
+
+
+Español
+
+Original mensaje:  https://groups.google.com/forum/#!topic/mozilla.dev.fxos/FoAwifahNPY
+
+Traducion:
+
+    A finales de 2015 el liderazgo de Mozilla llego a la conclusión de que la iniciativa de Firefox OS de enviar teléfonos con nuestros socios comerciales no brindaría a Mozilla el retorno que buscábamos. Hicimos la primera de una serie de anuncios sobre los cambios en el desarrollo de Firefox OS en Mozilla. Desde entonces gradualmente hemos parado ese trabajo y a finales de julio de 2016 hemos parado todo el desarrollo comercial de Firefox OS. Este mensaje resume todo lo que ocurrió durante ese periodo de tiempo y también describe lo que ocurrirá con la codebase de Firefox OS en el futuro.
+
+
+    En particular, se anunció a través de varios canales:
+
+
+    Vamos a detener nuestros esfuerzos para construir y enviar (vender) teléfonos inteligentes y reenfocaremos nuestros esfuerzos con Firefox OS para explorar nuevas oportunidades de casos de uso en el mundo de los dispositivos conectados
+
+
+    Firefox OS transiciono a una plataforma de nivel 3 (Tier 3) desde la perspectiva de soporte por la organización de ingeniería de la plataforma de Mozilla (Mozilla’s platform engineering organization). Esto significa que para el 31 de enero de 2010 no se dedicaran más recursos de la plataforma de ingeniería de Mozilla para proveer soporte y que todo este trabajo debe de hacerse por otros colaboradores. Durante algún tiempo ese trabajo se haría por el equipo de Mozilla Connected Devices.
+
+
+    Tuvimos ideas para otras oportunidades para Firefox OS, posiblemente como una plataforma de exploración en el mundo de los dispositivos conectados, y tal vez para la evolución continua del Firefox OS TV. Para permitir estas posibilidades y proveer una reléase estable para nuestros socios comerciales de TV, el desarrollo continuaría en la reléase de Firefox OS 2.6.
+
+
+    En paralelo con la exploración continua del equipo de Connected Devices, nos dimos cuenta que había interés dentro de la comunidad de Mozilla para continuar el trabajo sobre Firefox OS como una plataforma de Smartphone y tal vez para otros propósitos. Un proyecto de transición de Firefox OS se lanzó para llevar a cabo una limpieza mayor en el código de B2G para llegar a un estado estable y poderlo pasar a las manos de la comunidad como un proyecto de código abierto
+
+
+    En la primavera y verano de 2016 el equipo de Connected Devices profundizo en las oportunidades para Firefox OS. Concluyeron que el proyecto Firefox OS TV era un proyecto para ser llevado a cabo por nuestro socio comercial y no un proyecto para ser llevado por Mozilla. Además, se determinó que Firefox OS no era lo suficientemente útil para el trabajo en curso de Connected Devices como para justificar el esfuerzo de mantenerlo. Esto significa que el desarrollo de la pila de Firefox OS ya no sería parte de Connected Devices o de Mozilla en absoluto. Firefox OS 2.6 será la última versión liberada por Mozilla.
+
+
+    Hoy anunciamos la próxima fase en esta evolución. Si bien el trabajo en Firefox OS por parte de Mozilla ha cesado, realmente necesitamos continuar evolucionando el código subyacente que comprende Gecko, nuestro motor de plataforma web, como parte del desarrollo de Firefox. Con el fin de evolucionar rápidamente y permitir cambios sustanciales en la arquitectura de Gecko la organización Mozilla’s Platform Engineering necesita remover todo el código relacionado con B2G de mozilla-central. Esto seguramente traerá consecuencias a B2G OS. Para que la comunidad pueda continuar van a tener que mantener una codebase que incluya una versión completa de Gecko, por lo que se tendrá que hacer un fork de Gecko y continuar con el desarrollo en una branch propia y separada.
+
+
+    Nos damos cuenta que estas decisiones pueden ser dolorosas para aquellos de nosotros que teníamos grandes esperanzas, sueños y trabajo involucrados en Firefox OS – La idea de un sistema operativo de código abierto, centrado en el usuario, basado en la misión de Mozilla para el espacio móvil. También reconocemos que esta decisión hará mucho más difícil para la comunidad de B2G continuar su trabajo. Desearíamos poder encontrar otra forma. Sin embargo creemos que estas han sido decisiones necesarias y la mejor manera posible para que Mozilla continúe con su misión.
+
+
+==  Escriba sus preguntas a continuación ==
+
+    ¿Podemos tomar como base Chromium? Igual como hace Electron para crear desktop apps.
