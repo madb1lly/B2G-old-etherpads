@@ -1,0 +1,70 @@
+B2G OS governance model proposal
+
+Goal:
+As the code transition period will be over soon, the Mozilla staff will be less involved, the volunteer community needs to be more independent and to lead the governance process moving forward.
+
+What?
+The B2G OS community being still small -for now- the idea is to have a "provisional council" to work on the governance model of the B2G OS community.
+Tasks to be managed:
+    
+
+    Manifesto finalization
+
+    Relationship with Mozilla and potentially other organizations 
+
+    PR/Official communication
+
+    Is the B2G OS community representing Mozilla?
+
+    Ask the PR team
+
+    Code of conduct creation
+
+    See Mozilla's https://www.mozilla.org/en-US/about/governance/policies/participation/
+
+
+Work on an organization model for governance. It will have to answer (at least):
+
+    how is the decision making process shaped?
+
+    absolute majority vote of the members
+
+    who has a voice in it?
+
+    The members, membership is volunteer based. 
+
+
+Who?
+Ideally, one person involved in each working group, and all people interested in building the governance model
+
+    Lapineige
+
+    benfrancis
+
+    fabrice
+
+    Valentin (ens0)
+
+    Jovan
+
+    Enrico
+
+    Thatoo
+
+    Luca
+
+    Pochy
+
+
+Proposed members:
++ Ask on dev-fxos
+
+How?
+Identifying the governance questions, discussing it in regular meetings and help the group moving forward while building and documenting the governance structure.
+The provisional council would have 6 months to work on the governance structure, before presenting his work, and re-evaluating the organization.
+
+
+Merge the wg meetings in the weekly meeting
+3 meetings : one every two months, the final one being at the end of the provisional council lifetime
+ML for the council
+
