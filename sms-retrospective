@@ -1,0 +1,80 @@
+Demos !
+
+Previous sprints' actions:
+From 2.1S3:
+* Look into VM with gaia dev environment
+*: Nothing more done in this sprint
+
+From 2.1S5:
+*  in planning for sprint N, we pick some items we want to do in sprint  N+1 to ask early questions to UX and Designers (esp refresh bugs, but  also bugs with UX changes)
+*  we'll add screenshots of panels in Wiki, with the various cases for  these panels, to help analyzing change impacts and not forgetting things
+*: Oleg started this: https://wiki.mozilla.org/Gaia/SMS/Current_App_State
+
+From 2.2S4:
+* undercommit in the sprints.
+* use bugs and github's PR for spec definition and changes
+
+From 2.2S14:
+* move more discussions to #gaia
+* figure out 2.5 features for SMS
+
+From FxOS-S3:
+* split patches as much as we can when we develop it, and split bugs as much as we can when planning them.
+
+From FxOS-S7:
+* stand-up at 11:30am CET / 5:30pm Taipei
+
+What was good in the last sprint
+* I feel this sprint was quite productive for me;
+* I'm glad to see new Messages app contributors;
+* We've resolved several blockers;
+
+What was bad in the last sprint
+* Low storage is deprioritized _unexpectedly_. Not our fault, but still I think it's bad when we have a lot of stuff to do :)
+* I overestimated my available time, as a result we didn't finish some tasks directly because of me :(
+* The low storage disabling part didn't progress as much as I expected, and some spec is still not clear to me(Althought it's pending now)
+
+Any questions
+* October is for blockers? (just confirming that nothing has changed _again_ :))
+** Actually in this sprint we'll need to focus on low storage first. - not anymore, right?
+** Not anymore ;) I think we want to finish unfinished bugs (or maybe keep that for background ?) but focus is definitely on blockers -- including blockers from other teams
+** Yeah, I think we can have low storage tasks in background as you've already started them and we don't want them to become very obsolete :)
+* Should we take care/investigate about perf regressions in this sprint?
+** I think so; Oleg I think one of your patches could make it possible to decide whether we use workers or not, right ?
+** Yeah, at least we need to decide if it's OK to have "upgradable" services (in window on startup and then in workers). If the approach looks good to you, I can take a closer look to numbers.
+** I think it's our first best approach for now. If this doesn't work we can try other ideas (like moving back at everything in the window "statically".
+** we can discuss a little more during the planning
+** We should finish the upgrade service first and see what we'll need to do later in following sprints(I feel that we still have lots of things for improvement...)
+** I'd like to try something around async scripts -- but I think it's a bigger work.
+
+Actions for next sprint
+
+Any actions ?
+Can't think of any...
+
+Grades (5 is very good, 1 is very bad):
+
+Product Performance
+(Oleg) pp=
+(Steve) pp=
+(Julien) pp=
+
+Product Quality 
+(Oleg) pq=
+(Steve) pq=
+(Julien) pq=
+
+Commited tasks vs Completed tasks 
+(Oleg) t=
+(Steve) t=
+(Julien) t=
+
+Code Quality (inverse of Technical Debt)
+(Oleg) cq=
+(Steve) cq=
+(Julien) cq=
+
+External contribution (?)
+(Oleg) ec=
+(Steve) ec=
+(Julien) ec=
