@@ -1,0 +1,584 @@
+    Introduce yourself...  
+
+    Hi I'm Danso and I'm in USA today.,,,,
+
+    Hi I'm George and I'm in Berlin today.
+
+    Hi I'm Axel and I'm in Berlin today.
+
+    Hi I'm David and I'm in Madrid today.
+
+    Hi I'm Dylan and I'm in Mountain View today.
+
+    Hello, Adrian in Montevideo, Uruguay.
+
+    Brian, Participation, Slovenia
+
+    Hi, Lapineige, France
+
+    Hi, I'm Gabriela (gaby2300) and I'm in Buenos Aires, Argentina today.
+
+    Bonsoir, سلام Thatoo, Français but based in Tehran, Iran
+
+    ¡Hola! I'm Alex and I'm in Santa Catarina, NL, México today.
+
+    Hi I'm Fabrice, in Mountain View today
+
+    Hey, I'm Valentin in Paris, France.
+
+    Hi, Julien from Finland  (orig. France)
+
+    Hi, I'm Jovan and I'm in Heidelberg, Germany today.
+
+    Hi, Ralf from Germany
+
+    Hi I'm Fagelot and I'm in Antananarivo today
+
+    Hi I'm Ilphrin and I'm in France Today.
+
+    Hi I'm Enrico and I'm in Italy today.
+
+    Hi I'm Gabriel and I'm in Budapest today.
+
+    Hi I'm sfoster and I'm in Eugene, Oregon
+
+    Hi, I'm Jobava and I'm from Romania
+
+    Hola! Juan@Madrid
+
+    Hi I'm autra and I'm in Grenoble :-)
+
+    Hi I'm Brendan and I'm in France today :-)
+
+    Hi I'm Stargayte and I'm in France today
+
+    Hi I'm Martin (Reno) and I'm in UK today. ^__^
+
+    Hi I'm Paul (Penserbjorne) and I'm in México City today
+
+    Hi I'm Daniel and I'm in Rhode Island today
+
+    Hi I'm Luca and I'm in Italy today! :D
+
+    Hi I'm Vincent and I'm fin France today :)
+
+    Hi I'm anaran and I'm in Munich today
+
+
+
+Agenda:
+
+    1) Code transition update
+    2) Working groups
+
+Wiki page https://wiki.mozilla.org/B2G/Transition_Project
+Slides https://docs.google.com/presentation/d/1m1R2pslcoK8fuOT4FaYOFkt31pXqoBgXALJlRWhBHVs/edit#slide=id.g1035ad42c5_0_90
+
+Questions in progress -- please put your questions and ideas here:
+
+    What will chrome be written in? HTML et al, or something else?
+
+    HTML + CSS
+
+    How will we get the new builds for the devices to be able to test them?
+
+    We will follow-up to have instruction on this on the Wiki
+
+    Can we get a vision for what future B2G will be used for, what is its value?
+
+    Can I move a Flame to kanikani today? +1 for Flame support
+
+    No not right now...but should in 2 weeks.
+
+    How many Mozilla employees are involved in this project and for how long? Part-time, full time?
+
+    16 people in total ... 7 people are fulltime and the rest are half-time.
+
+    Expect to be 
+
+    What lessons have you learned about the 'project' and its management,from the failure of the telephony project? A post-mortem may be nice    
+
+    How do you all imagine the transition of the project's 'management' from a mozilla project to some other structure?
+
+    How does the new project tackle security updates?
+
+    Will come back with an answer on this
+
+    Who acts as maintainer for the code base, keeping the code repo clean and well organized?
+
+    Current owners and peers will continue to review and merge PR. Otherwise, anybody :-)
+
+    Does moving the hom escreen to chrome mean that we cannot replace homescreens anymore?
+
+    We will try to get this feature back in.
+
+    Can the community be able to access to UX/UI proposal from Mozilla ? (I assume you have some in stock)
+
+    Most are already public
+
+    https://wiki.mozilla.org/Firefox_OS/Alopex
+
+    Thanks for the link :)
+
+    Gregor will reach out to UX team to start gathering resources in one place
+
+    Which branch builds right now for Flame and OpenC? I am planning porting workshops to port it on other devices but I need to build it first on my devices. Also I have a patch to add as soon as things are ready
+
+    current mozilla-central and gaia master. I had tried master for a week but it booted on a black screen so I will try mozilla-central, thanks
+
+    openc : need port to cm for full support in >2.5 branch
+
+    How can I help NOW?
+
+    Join the weekly meetings
+
+    List of initial action items on the wiki page
+
+    Try building transition branch and running
+
+    Will come up with a list of first time bugs
+
+    Specific things will pop up during transition
+
+    How do you plan to transfer the knowledge from staff to community ? (Code knowledge, organization, ...)
+
+    Community needs to be active during the transition - triaging, coding, ...
+
+    In addition, can we do tutorials, shadowing, .... and other things? We'll be discussing moving forward
+
+    Reach out expressing your interests / skills
+
+    There had been no updates on nightly-latest for Flame at least, why is that?
+
+    We won't be publishing any further updates via OTA/FOTA to Flame. The last update went out last week (to turn off the Foxfood data collection). As the transition progresses, builds will be made available but these will need to be manually flashed.
+
+    A year from now, what might the structure of the leadership of the project be like?
+
+    What support in terms of infrastructures is Mozilla willing to provide?
+
+    Firefox Accounts ?
+
+    Find my Device ?
+
+    BuddyUp ?
+
+    Hosting website, forum, code, builds, support, documentation… ?
+
+    SUMO ?
+
+    And what kind of "education" (how to use them, how it was managed, ...)
+
+    answered above? ^^^
+
+    Community needs to make a proposal, that than will be reviewed by senior Moz staff
+
+    Is there a plan for using Hello in B2G? For share view of any app like we share tab in Dev Edition? 
+
+    There is an app that you can install from github (not marketplace). (I will add the link) - and it's working well. edit: I think it was that one (not sure): https://github.com/mozilla-b2g/firefoxos-loop-client
+
+    Are there plans for including localization in CD's?
+
+    For outside of the smartphone moving forward, depends on whether there is a user interface + whether this is interesting for people to localize. Right now not looking at anything in particular.
+
+    A role for Rust within the new B2G OS? Boot2Servo? :)+1 +1(with WebRenderer? :D)
+
+    Once servo is ready, why not!
+
+    Is Gonk good going forward, would Gnu/Linux work better?
+
+    Right now yes Gonk is great for Android phones
+
+    CD brancing out to different architectures
+
+    Can we re-distribute devices to people actively involved in the project
+
+    [Brian] So I misunderstood the question, but with regard to z3cs in stock we have put on hold distribution for now. Figuring out a plan, e.g. distribute to active contributors working on the transition
+
+    Here's the foxfooding update - https://discourse.mozilla-community.org/t/foxfooding-update-devices/7378
+
+    Do you plan to keep a developer phone like Flame or Z3C ? Would it be difficult to make it work on Z3 dual too, to have a dual sim card phone option?
+
+    We will work on the Z3C going forward and Flame should work as well.
+
+    Is Mozilla planning to "communicate" for the B2G project (the phone part), like saying: "Hey, it's still alive !" ?
+
+    nothing official currently planned
+
+    how can we talk about the transition in a way that is not confusing to tech press? TBD
+
+    Let's work quietly ;-)
+
+    What about CyanogenMod base ? Do you plan to migrate to CM 12 or 13 ?
+
+    https://github.com/cm-b2g And it's pretty outstanding :)
+
+    check https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS/B2G_installer_add-on
+
+    More docs coming soon!
+
+    Talk to Adam Farden! (adfad666 #fxos)
+
+    Will the new builds that will need to be manually flashed be for Windows users too?
+
+    the internal effort will be focused on linux/mac. I don't know that we'll be able to provide Windows
+
+    Maybe a community job ?+1
+
+    What about Vaani ? Do you plan to include it in the future ?
+
+    https://wiki.mozilla.org/Vaani
+
+    https://github.com/mozilla/vaani
+
+    The mozSpeech API is already part of B2G.
+
+    Will B2G OS be less suitable for daily use for smartphone OS than the current 2.6 build? Why we're doing this then?
+
+    transition == unstable to begin with
+
+    Goals:
+
+    get rid of proprietary APIs and move to standard
+
+    What about the APIs that have no standard alternatives? There are no suitable replacements for lots of the MozApps APIs...
+
+    We need to find new solutions for those problems, either with chrome-only functionality or web standards. An example might be using web services which work locally with Service Workers to provide certain functionality that was previously provided with privileged DOM APIs.
+
+    See https://bugzilla.mozilla.org/show_bug.cgi?id=1255803 for the recipe about cached web app (using service-worker) not being accessible while fxos device has internet connections turned off
+
+    build a leaner platform, otherwise it will be too hard to maintain moving forward
+
+    Doing nothing is not an option, because things will break and stop working
+
+    What is your vision of the relationship between the community's B2G and mozilla's FxOS?
+
+    Firefox OS for smartphones will no longer live as a product / brand
+
+    About Web Standards: will Mozilla still work on "promoting" them, help building/defining them, even on the phone part ?
+
+    Mozilla is all about standards, but...
+
+    Not the telephony ones
+
+    Watch out for WADI - https://wiki.mozilla.org/Apps
+
+    Can the community get the wonderful graphical identity of the "unleashed", wavy fire fox from Firefox OS?
+
+    It's a part of the FxOS brand, so I don't think so
+
+    George will check in with brand team
+
+    Perhaps a tweaked design in the same vein?
+
+    When moving away from mozapp apis without killing functionalty, Is there a plan to avoid hurting security/privacy? (TBD, untreated during the meeting)
+
+
+Working Groups (please add your email address to whichever working area that you would want to contribute to in the next 3-months):
+
+    1) Code (including vision/direction)
+
+    Ilphrin <ilphrin@autistici.org>
+
+    krz37 dev.julien@runbox.com (But limited time since I am working on my thesis at the moment)
+
+    Lapineige lapineige@lavache.com
+
+    babolivier <fxos@brendanabolivier.com> (Limited, since I'm involved in a few other projects and don't have all the free time I want)
+
+    stargayte philippe.joulot@laposte.net
+
+    Jovan <fxos@titannano.de>
+
+    Andre <andre@andregarzia.com>
+
+    Joan Ciprià (Webapps developer) <joancipria@gmail.com>
+
+    Penserbjorne <paul.aguilar.enriquez@hotmail.com>
+
+    dsthode <mail@dsthode.info>
+
+    vcasse <vincent@casse.me>
+
+
+    2) Governance (including relationship with Mozilla)
+
+    alex_mayorga@yahoo.com
+
+    Lapineige lapineige@lavache.com
+
+    Enrico Ghiorzi <enrico.ghiorzi@gmail.com>
+
+    Adrian Custer acuster <ac@pocz.org>
+
+    stargayte philippe.joulot@laposte.net
+
+    Wim Benes fryskefirefox@gmail.com
+
+    gaby2300 (Gabriela) gmontagu@gmail.com
+
+    Andre <andre@andregarzia.com>
+
+    dsthode <mail@dsthode.info>
+
+    vcasse <vincent@casse.me>
+
+
+    3) Build/test system and infrastructure
+
+    Adrian Custer acuster <ac@pocz.org>
+
+    Jonathan Lin <jlin@winteroftext.ca>
+
+    Thatoo <thatoo AT leprette.fr> can test on Nexus 5 and Z3 dual (soon) but don't know how to build.
+
+    Lapineige lapineige@lavache.com - Open C, Z1C (main phone, more stable builds first - like beta builds)
+
+    Joan Ciprià <joancipria@gmail.com>
+
+    Penserbjorne <paul.aguilar.enriquez@hotmail.com>
+
+
+    4) Mentoring Contributors
+
+    krz37 dev.julien@runbox.com (porting workshops first in Lappeenranta University, later in summer moving to Tampere) +1 who is +1? :)
+
+
+    5) QA
+
+    alex_mayorga@yahoo.com
+
+    gaby2300 (Gabriela) gmontagu@gmail.com
+
+    Enrico Ghiorzi <enrico.ghiorzi@gmail.com>
+
+    Wim Benes fryskefirefox@gmail.com
+
+    marcia - marcia@mozilla.org
+
+    Sangyong Gwak <imyaman@netscape.net>
+
+    Ikram <hossainalikram@gmail.com>
+
+
+  6) Localization Infrastructure: automation, repositories, dashboards, feedback to developers on l10n, etc (some l10n-drivers should mentor for a while)
+
+    gaby2300 (Gabriela) gmontagu@gmail.com (Spanish)
+
+    Wim Benes fryskefirefox@gmail.com Dutch and Frisian
+
+    Thatoo <thatoo AT leprette.fr> (French, Spanish, Farsi)
+
+    babolivier <fxos@brendanabolivier.com> (French)
+
+    Lapineige lapineige@lavache.com (French)
+
+    Joan Ciprià <joancipria@gmail.com> (Spanish, Catalan/Valencian) 
+
+    Luca <lucaperri@openmailbox.org> (Italian)
+
+    dsthode <mail@dsthode.info> (Spanish)
+
+
+    7) Documentation, Tutorials
+
+    Joan Ciprià <joancipria@gmail.com>
+
+    Andre <andre@andregarzia.com>
+
+    Jonathan Lin <jlin@winteroftext.ca>
+
+    Lapineige lapineige@lavache.com
+
+    stargayte philippe.joulot@laposte.net
+
+    Luca <lucaperri@openmailbox.org> (Italian)
+
+    Penserbjorne <paul.aguilar.enriquez@hotmail.com>
+
+
+    8) Building / porting to new devices
+
+    krz37 (duplicate with mentorship for me)
+
+    dattaz <taz@dattaz.fr> (mentorship)
+
+    Lapineige lapineige@lavache.com
+
+    Penserbjorne <paul.aguilar.enriquez@hotmail.com>
+
+    vcasse <vincent@casse.me>
+
+
+9) Graphic assets
+
+    Lapineige lapineige@lavache.com
+
+
+
+    Note: we are making a list like this one on this pad: https://public.etherpad-mozilla.org/p/firefoxos_is_not_dead (with ~110 people) +1+1
+ in:  [在] - an, auf, hinein, in
+ (day):  [天] - Tag
+ (us):  [我們] - uns
+ (day):  [天] - Tag
+ is:  [是] - ist
+ is:  [是] - ist
+ follow:  [遵循] - beachten, befolgen, erfolgen, folgen, verfolgen
+ 
+ 
+
+
+Chat
+
+Fagelot:19:44 Hi I'm Fagelot and I'm in Antananarivo today.
+
+Thatoo:19:46 Madagascar, nice!
+
+enrico:20:02 Working groups have been erased toghether with my etherpad-dump, try to retrieve that!
+
+Lapineige:20:08 look at the history ?
+
+enso:20:10 fixed
+
+Andre:20:30 sorry for the delay, just arrived, got the timezone wrong
+
+krz37:20:31 krz37 julien.d@iki.fi (porting workshops first in Lappeenranta University, later in summer moving to Tampere) +1 who is +1? :)
+
+enrico:20:31 @enso thanks!
+
+Andre:20:32 What is "kanikani"
+
+enso:20:32 enrico you're welcome
+
+Lapineige:20:32 The current transition branch
+
+Andre:20:36 Let me see if I am understanding this correctly from the docs and call, by the end of the transition process, we'll have B2G OS which will be less suitable for daily use as a smartphone OS than the current 2.6 build?
+
+Reno:20:37 It does feel that way :(
+
+autra:20:38 The goal is to port existing app into regular webapp or chrome code. The long term goal is not to loose functionalities I guess.
+
+enrico:20:42 Transition strategy actually looks great to me! It'll be a pain, but it's worth it
+
+Lapineige:20:43 Even if it will be hard, it's worth to do it, we can do it :)
+
+stargayte:20:43 I agree, using webstandard is our best chance even we will use broken phones for a while
+
+Andre:20:43 There are no web standards for the Telephony stuff.... how can we build a smartphone without telephony?
+
+Lapineige:20:43 It's normal that it will break for a while.
+
+Lapineige:20:44 @Andre: maybe we can continue like that, waiting for a standard ?
+
+Wim:20:44 So we need to build next generation phones based on the new webstandards
+
+Lapineige:20:44 +1
+
+Andre:20:45 @lapineige: I have no idea... I am just afraid of removing APIs with no possible replacements. USB, Bluetooth, RIL... where all that stuff will go?
+
+autra:20:45 @Andre I guess some code will be moved to chrome (ie privileged) code..
+
+autra:20:46 do you know what is chrome code?
+
+Lapineige:20:46 I do not understand it well, if you have some docs about it... Thx :)
+
+Andre:20:46 Why can't we have another process running on the phone communicating over sockets to the B2G process and providing all the non-standard stuff? That would keep b2g more aligned with mainstream Firefox and keep the second process codebase independent....
+
+autra:20:47 So Chrome code is all the code that runs above webapps and websites. For example, in fx desktop, the interface is in the chrome code
+
+Andre:20:47 @autra: all I know about chrome is the shallow knowledge about Firefox interface code... not much, will read more about it promisse.
+
+autra:20:48 so every non standard code will be eventually chorme code I guess.
+
+autra:20:48 it's kind of the shell around websites, if you prefer.
+
+Andre:20:49 but chrome code can only call APIs provided by gecko right?
+
+autra:20:49 chrome code is *in* gecko, iirc
+
+Andre:20:49 uhum.
+
+autra:20:49 e
+
+autra:20:49 we could have our own set of chrome js files that implements some api
+
+autra:20:50 chrome code have a lot of privileges
+
+Andre:20:50 then it is not a solution because the objective is to retain functionality, if they remove APIs from Gecko then moving js code to chrome will not save it.
+
+autra:20:51 we will eventually need to keep some specific code in gecko Andre. I don't see any other way to do it. But we can try to make it sustainable.
+
+Andre:20:51 We can have a second process like we do with wpa-suplicand, ril and others. They can communicate over socket or IPC or whatever... separate from gecko code. Much nimble and without side-effects to gecko code.
+
+Lapineige:20:51 About working groups: do you want us to migrate the stuff from firefox is not dead pad ? (later ?)
+
+stargayte:20:52 It should be a good idea
+
+Andre:20:52 b2g.sh can launch this process and some monitor keep it running.
+
+Andre:20:52 webOS had something similar, it kept the webkit code cleaner.
+
+autra:20:52 Andre ok, but you'll need a glue in gecko anyway.
+
+autra:20:53 btw for example, for telefony api, it's already the case. rild is a separate proces
+
+Andre:20:53 not really, we can provide an API AJAX requests, then we provide a JS file to be included/inserted in all webapps launched. They see an API but it is all async calls to a server running o nthe local device... it can be done without touching any gecko code.
+
+stargayte:20:54 Long live to B2G!
+
+babolivier:20:54 +1 :)
+
+Andre:20:54 it won't work for all APIs though... but some.
+
+autra:20:55 Andre that would work for some of them.
+
+autra:20:56 but the problem is that not all api can be coded in term of http request.
+
+Andre:20:56 yes, thats it :D not all, but some...
+
+stargayte:20:56 the goal is to replace, not remove all of them right?
+
+Andre:20:57 @stargayte: for some APIs there is no standard replacement possible...
+
+Lapineige:20:57 So maybe we can wait for them, using the actual one for the moment ?
+
+stargayte:20:57 yeah that's why, we need to do replacement and for the others just keep thhem
+
+Lapineige:20:58 And Mozilla could help to create the missing ones
+
+Andre:20:58 I hope so but I actually think some APIs will be removed to make the software more nimble and aligned with mainstream Firefox even if there are no replacements.
+
+Lapineige:20:58 (and even Google, as they are promoting webapps more and more)
+
+Lapineige:20:59 @Andre: it was a question to ask ^^ - we can discuss with them about that
+
+stargayte:20:59 yeah, create a post on discourse about this :)
+
+Andre:21:00 yep, thats useful discussion. Thanks a lot for hopping in
+
+Lapineige:21:03 for the ffos-is-not-dead pad's people: I will add a link to this pad, and start to sum up this meeting (please help). We should do it and after discuss and debate again on what to do, regarding of all this news.
+
+enrico:21:29 how/where is the debate taking place?
+
+Thatoo:22:56 I didn't get the answer about xperia Z3 dual?
+
+Thatoo:22:20 Je réponds à ma question : J'ai fait un peu des recherches et Z3 dual peut booter CM 12.1 (https://wiki.cyanogenmod.org/w/Z3dual_Info) et un gars travaille sur CM 13 (j'ai emailé le dev). Il semble qu'on puisse installer aisément MultiROM (http://forum.xda-developers.com/showpost.php?p=65821997&postcount=158). Donc, si B2G se base à l'avenir sur CM, le portage ne devrait pas être trop compliqué.
+
+Lapineige:22:21 @Thatoo: stick to english, no french :P
+
+Thatoo:16:20 I copied-pasted but I'm not sorry, English is not the only language in the world and neither on the web, or we'll go to a monoway of thinking...
+
+Thatoo:16:21 !
+
+Lapineige:17:17 That's not the point, it's an internationnal community, well english is the language for that purpose, so keep the french for french community.
+
+Lapineige:17:17 It's a way to have clear and easy communication
+
+Thatoo:19:23 We have different point of view on that subject and here is not the place but I can't imagine a world with only one language, but unfortunatly on the name of efficiency we widely open the gate to uniformisation... In international project, we use translators or translation system, we don't force everybody to use only one language or we exclude automaticaly people who don't feel confortable speaking this specific language.
+
+Lapineige:20:18 As you said, it's not the place for that, and we have to few people for the moment to translate all those things. (even if you can do it for french community). So let's speak english :)
+
+kskarthik:10:14 anyone has a idea of marketplace for b2gos ?
+
+Lapineige:10:38 We spoke a lot about it in the brainstorming part of this pad https://public.etherpad-mozilla.org/p/firefox_is_not_dead-brainstorming
+
+Lapineige:10:38 I think here is not the place to discuss about it
