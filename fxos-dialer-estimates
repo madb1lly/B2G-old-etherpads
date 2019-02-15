@@ -1,0 +1,1043 @@
+// Give an estimate for the amount of time a feature will take.
+// Choose between 1, 3, 6. Points should correspond roughly with days.
+// e.g. "drs 6" for a big feature
+
+v2.2-S10
+
+PTO/Downtime
+* '''drs''': None, but focused on Lightsaber
+* '''gsvelto''': Thursday 9 and Friday 10
+* '''jlorenzo''': ?
+* '''thills''': None, but focused on Telemetry.  Will probably be < 50% since Telemetry proj is kicking off
+
+Bug 1126260 - Outgoing/Incoming call fails intermittently
+https://bugzilla.mozilla.org/show_bug.cgi?id=1126260
+Consensus: 
+drs: 
+gsvelto: 
+jlorenzo: 
+thills: 
+
+Bug 1150910  - Opening call info view produces 'L10nError: "#type_l10n_id#" not  found in en-US in  app://communications.gaiamobile.org/dialer/index.html#keyboard-view'
+https://bugzilla.mozilla.org/show_bug.cgi?id=1150910
+Consensus: 3
+drs: 3
+gsvelto: 3
+jlorenzo: 
+thills: 3
+
+Bug 1152252 - [Flame][Dialer]User can't view leftmost number via sliding string or  carat.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1152252
+Consensus: 6
+drs: 6
+gsvelto: 6
+jlorenzo: 
+thills: 6
+
+v2.2-S9
+
+PTO/Downtime
+* '''drs''': Canada: Good Friday, April 3
+* '''gsvelto''': 1-6 of April
+* '''jlorenzo''': ?
+* '''thills''': not in this sprint
+    
+Bug 1058743 - [RTL] Dialer should start out as in LTR right away
+https://bugzilla.mozilla.org/show_bug.cgi?id=1058743
+Consensus: 3
+drs: 3
+gsvelto: 3
+jlorenzo: 
+thills: 3
+
+Bug 1142485 - [l10n] End of call message is not displayed entirely with long localizations
+https://bugzilla.mozilla.org/show_bug.cgi?id=1142485
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1142610 - [RTL] [Lockscreen] The carrier name overlaps the SIM slot text when recieiving a call on the lockscreen
+https://bugzilla.mozilla.org/show_bug.cgi?id=1142610
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1145059 - [RTL][Dialer]The MIC button and hide keypad button are swapped.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1145059
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1145540 - [RTL][Dialer] The "+" symbol is shown at right side of the phone number
+https://bugzilla.mozilla.org/show_bug.cgi?id=1145540
+Consensus: 
+drs: 
+gsvelto: 
+jlorenzo: 
+thills: 
+
+v2.2-S8
+
+PTO/Downtime
+* '''drs''': None
+* '''gsvelto''': None
+* '''jlorenzo''': Tues Mar 10 - Fri Mar 13
+* '''thills''': I might wind up taking off half day on Friday.  I'll let everyone know on Thursday for sure.
+
+
+v2.2-S7
+
+PTO/Downtime
+* '''drs''': Working primarily on Lightsaber. 20% time for Dialer.
+* '''gsvelto''': 4h on Friday 6th afternoon. Mostly working on the dialer, only a few bits of gecko work left to do
+* jlorenzo: No PTO planned. About 25% on the dialer.
+* '''thills''': No PTO planned.  Working also on metrics search, but at least 50% dialer and probably more than 50% in first week.
+* '''jlorenzo''': 
+
+Bug 1011066 - [RTL][Lockscreen] Arabic: Overlapping and truncation caller ID name and "phone" icon.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1011066
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1133621 - [RTL][Dialer] Vertical scrollbar appears shortly at left side of prompt text.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1133621
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1134961 - [Dialer] [RTL] Additional contact info in suggestion bar in dialer is not bdi
+https://bugzilla.mozilla.org/show_bug.cgi?id=1134961
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1135023 - Recent contact's name disappears if you call him back with the call log
+https://bugzilla.mozilla.org/show_bug.cgi?id=1135023
+Consensus: 3
+drs: 3
+gsvelto: 3
+jlorenzo: 
+thills: 3
+
+Bug 1135044 - Call information gets never updated after creating a contact
+https://bugzilla.mozilla.org/show_bug.cgi?id=1135044
+Consensus: 3
+drs: 1
+gsvelto: 3
+jlorenzo: 
+thills: 3
+
+Bug 1135063 - The "Select logs to delete" button can be used on the Call info page
+https://bugzilla.mozilla.org/show_bug.cgi?id=1135063
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1135067 - Name and phone number gets moved to the left once you hang up a call
+https://bugzilla.mozilla.org/show_bug.cgi?id=1135067
+Consensus: 1
+drs: 1
+gsvelto: 1
+jlorenzo: 
+thills: 1
+
+Bug 1135268 - [Dialer][USSD] MMI codes activated during a call do not function and will attempt to dial out as a number.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1135268
+Consensus: 
+drs: 
+gsvelto: 
+jlorenzo: 
+thills: 
+
+v2.2-S6
+
+PTO/Downtime
+* '''drs''': Feb 16, family day
+* '''gsvelto''': None
+* '''gtorodelvalle''': ?
+* '''jlorenzo''': None
+* '''thills''': Feb 16,  President's Day
+
+Bug 1112577 - CallLogDB transactions are not atomic
+https://bugzilla.mozilla.org/show_bug.cgi?id=1112577
+Consensus: 3
+drs: 3
+gsvelto: 3
+thills: 3
+
+Bug 1129339 - [Flame][Dialer]The text in context menu button disappears.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1129339
+Consensus: 1
+drs: 1
+gsvelto: 1
+thills: 
+
+v2.2-S4
+
+PTO/Downtime
+* '''drs''': Feb 2-6
+* '''gtorodelvalle''': 
+* '''jlorenzo''': PTO on Monday 2/2. Will be in MTV from 2/3 to 2/12.
+* '''thills''': None.
+* '''gsvelto''': 4h of PTO on Tuesday 2/3 morning and 4h on Friday afternoon
+
+Proposed bug:
+1122140 - Make the dialer handle paste
+
+
+
+v2.2-S3
+
+PTO/Downtime
+* '''drs''': None. Next one will be in early Feb, probably for a week.
+* '''gsvelto''': None
+* '''gtorodelvalle''': None
+* '''jlorenzo''': None
+* '''thills''': None.
+
+Bug 1078448 - Callscreen app instances linger in bfcache after being closed
+https://bugzilla.mozilla.org/show_bug.cgi?id=1078448
+Consensus: 6
+drs: 6
+gsvelto: 6
+gtorodelvalle: 6
+jlorenzo: 
+thills: 6
+
+Bug 1118422 - [Dialer][SIM PIN] - In 2.2 changing the SIM PIN via dialer  with the wrong PIN does not give the proper error message (X tries  remaining).
+https://bugzilla.mozilla.org/show_bug.cgi?id=1118422
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 3
+jlorenzo: 
+thills: 3
+
+v2.2-S2
+
+PTO/Downtime
+* '''drs''': Dec 25, Dec 26, Jan 1 (holidays in Canada)
+* '''gsvelto''': Not sure yet, but I probably won't take PTO before January (25 & 26 Dec are public holidays though)
+* '''gtorodelvalle''': 
+* '''jlorenzo''': 12/24 - 12/28 (12/25 only is a holiday in France) and 1/1 (holiday)
+* '''paco''': ?
+* '''thills''': 12/24-1/2 (12/24, 12/25, 1/1 are holidays in US)
+
+Bug 990369 - [Dialer] update call number during call state transition
+https://bugzilla.mozilla.org/show_bug.cgi?id=990369
+Consensus: 3
+drs: 3
+gsvelto: 3 (if there's an uplift involved)
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3 (need to try this out on 2.0m)
+
+Bug 1061130 - [STK] 3GPP TS 22.030 6.6.4 An abbreviated dialling code shall be able to be read using the following procedure: N(N)(N)#
+https://bugzilla.mozilla.org/show_bug.cgi?id=1061130
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3
+
+Bug 1112242 - [Dialer][Call Log] Call Log is not synced with Contact when adding/deleting second phone number
+https://bugzilla.mozilla.org/show_bug.cgi?id=1112242
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3
+
+v2.2-S1
+
+PTO/Downtime
+* '''drs''': None.
+* '''gsvelto''': None but I might be in poor shape the Monday after the PDX workweek
+* '''gtorodelvalle''': None apart from Monday, the 24th, in the afternoon
+* '''jlorenzo''': Portland work week (need to check the details)
+* '''paco''': ?
+* '''thills''': I will be out (11/27-11/28) Thurs/Fri for US Thanksgiving Holiday
+
+Bug 1010613 - [B2G][RTL][Dialer] Arabic: Incoming call screen is shifted to the right causing string truncation.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1010613
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1011731 - [B2G][RTL][Dialer] Arabic: Dialing a number is inconsistent, showing both RTL and LTR formats in "Dialer" app.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1011731
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1037603 - Opening the dialer in RTL mode causes a visible direction switch
+https://bugzilla.mozilla.org/show_bug.cgi?id=1037603
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3
+
+Bug 1058762 - Dialer should not have letters on keypad when Arabic language is selected.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1058762
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102317 - Keypad is shifted too far to the right
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102317
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102319 - Keypad solid-colored buttons are bunched up too much
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102319
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102325 - Call log date headers don't cover the entire horizontal space
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102325
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102340 - "+" symbol is shown on the wrong side of phone numbers
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102340
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102344 - Call counts are displayed incorrectly in the call log
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102344
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3
+
+Bug 1102348 - Call log checkboxes and direction indicators are too bunched up in edit mode
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102348
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102352 - Call info page call items are misaligned
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102352
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills:1 
+
+Bug 1102360 - Call info back button is on the wrong side
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102360
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1102496 - Keypad delete button is pointed the wrong way and padded incorrectly
+https://bugzilla.mozilla.org/show_bug.cgi?id=1102496
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1099366 - Make the filters list slide out of/into view when scrolling/stationary, respectively
+https://bugzilla.mozilla.org/show_bug.cgi?id=1099366
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 3
+
+Bug 1099397 - Add an empty banner to contain the favorite contacts list
+https://bugzilla.mozilla.org/show_bug.cgi?id=1099397
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 
+jlorenzo: 
+paco: 
+thills: 1
+
+v2.1-S9
+
+PTO/Downtime
+* '''drs''': none
+* '''gsvelto''': November 14th, PTO
+* '''gtorodelvalle''': None
+* '''jlorenzo''': November 11th, bank holiday in France
+* '''paco''': ?
+* '''thills''': None for this sprint, but I will be out part of the US Thanksgiving week (following sprints)?
+
+Bug 1092290 - [Dialer] Callscreen overlaps conference call screen
+https://bugzilla.mozilla.org/show_bug.cgi?id=1092290
+Consensus: 1
+drs: 1
+gsvelto: 3
+gtorodelvalle: 1
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1093267 - Properly separate Dialer/Emergency Call and Callscreen locales files
+https://bugzilla.mozilla.org/show_bug.cgi?id=1093267
+Consensus: 6
+drs: 6^
+gsvelto: 3
+gtorodelvalle: 6^
+jlorenzo: 6
+paco: 
+thills: 6
+
+Bug 1095503 - Dialer tones are not sent to others during conference call
+https://bugzilla.mozilla.org/show_bug.cgi?id=1095503
+Consensus: 1
+drs: 1
+gsvelto: 1
+gtorodelvalle: 1
+jlorenzo: 
+paco: 
+thills: 1
+
+Bug 1095579 - On hold button says call is held after merging the call in a conference
+https://bugzilla.mozilla.org/show_bug.cgi?id=1095579
+Consensus: 3
+drs: 3
+gsvelto: 3
+gtorodelvalle: 3
+jlorenzo: 
+paco: 
+thills: 3
+
+Bug 1095601 - On hold button says call is held after the participant on hold hangs up.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1095601
+Consensus: 3
+drs: 1
+gsvelto: 3
+gtorodelvalle: 3
+jlorenzo: 
+paco: 
+thills: 1
+
+v2.1-S8
+
+PTO/Downtime
+* '''drs''': None.
+* '''gsvelto''': none
+* '''gtorodelvalle''': None
+* '''jlorenzo''': none
+* '''paco''': ?
+* '''thills''': none
+
+Bug 834530 - Emergency dialer DTMF tones aren't regulated by the volume button (and are different volume from Dialer App's DTMF tones)
+https://bugzilla.mozilla.org/show_bug.cgi?id=834530
+<Consensus> 3 (6)
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+Bug 977588 - [Dialer] The Active call screen does not have the option to place calls on hold.
+https://bugzilla.mozilla.org/show_bug.cgi?id=977588
+<Consensus> 3
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+Bug 1042484 - [dolphin][flame] wrong message was shown after the mo call was not received by another user.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1042484
+<Consensus> 
+<drs> 
+<gsvelto> 
+<gtorodelvalle> 
+<paco> 
+<thills> 
+
+Bug 1082876 - TypeError: context is null at: app://callscreen.gaiamobile.org/gaia_build_defer_index.js line: 84
+https://bugzilla.mozilla.org/show_bug.cgi?id=1082876
+<Consensus> 3 (1)
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+Bug 1083124 - [Call Log] Call log is not updated when user delete contact
+https://bugzilla.mozilla.org/show_bug.cgi?id=1083124
+<Consensus> 3 (6)
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+Bug 1063032 - [Active Call] Visual Refinements for attention window
+https://bugzilla.mozilla.org/show_bug.cgi?id=1063032
+<Consensus> 3
+<drs> 1
+<gsvelto> 3
+<gtorodelvalle> 1
+<paco> 
+<thills> 3
+
+Bug 1031175 - [Gaia] Unify both sendMMI() and dial() functions
+https://bugzilla.mozilla.org/show_bug.cgi?id=1031175
+<Consensus> 3
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<paco> 
+<thills> 3
+
+Bug 977056 - [Dialer] Visual discrepancies: Call ended view under conference call participants list
+<Consensus> 6
+<drs> 3
+<gsvelto> 6
+<gtorodelvalle> 3
+<paco> 
+<thills> 6
+
+v2.1-S7
+
+PTO/Downtime
+* '''davidg''': ?
+* '''drs''': Oct 13 (certain)
+* '''gsvelto''': 4 hours on the 14th and 15th of October
+* '''gtorodelvalle''': ?
+* '''jlorenzo''': ?
+* '''jpruden92''': ?
+* '''paco''': ?
+* '''Rik''': From Monday Oct 13 to the end of times ;)
+* '''thills''': Monday Oct 13
+
+Bug 1078448 - Callscreen app instances linger in bfcache after being closed
+https://bugzilla.mozilla.org/show_bug.cgi?id=1078448
+<Consensus> 3
+<drs> 3
+<gsvelto> 
+<gtorodelvalle> 6
+<paco> 
+<thills> 3
+
+Bug 1081745 - [Dialer] "cancel" is not translated for multiple languages
+https://bugzilla.mozilla.org/show_bug.cgi?id=1081745
+<Consensus> 1
+<drs> 1
+<gsvelto> 
+<gtorodelvalle> 1
+<paco> 
+<thills> 1
+
+Bug 1081854 - GAIA follow-up to Bug 978639 (for GCF case 31.4.2.1.3)
+https://bugzilla.mozilla.org/show_bug.cgi?id=1081854
+<Consensus> 3
+<drs> 3
+<gsvelto> 
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+Bug 1082139 - JavascriptException:  JavascriptException: TypeError: window.getComputedStyle(...) is null at:  app://callscreen.gaiamobile.org/gaia_build_defer_index.js line: 146
+https://bugzilla.mozilla.org/show_bug.cgi?id=1082139
+<Consensus> 3
+<drs> 3
+<gsvelto>
+<gtorodelvalle> 3
+<paco> 
+<thills> 3
+
+v2.1-S6
+
+PTO/Downtime
+* '''davidg''': ?
+* '''drs''': Oct 3, tentative
+* '''gsvelto''': 
+* '''gtorodelvalle''': ?
+* '''jlorenzo''': ?
+* '''jpruden92''': ?
+* '''paco''': ?
+* '''Rik''': ?
+* '''thills''': Monday Oct 13
+
+Bug 834530 - Emergency dialer DTMF tones aren't regulated by the volume button (and are different volume from Dialer App's DTMF tones)
+https://bugzilla.mozilla.org/show_bug.cgi?id=834530
+<Consensus> 3
+<davidg> 
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1060293 - Remove dialer's buttons.css and use styling from shared/styles/buttons.css instead
+https://bugzilla.mozilla.org/show_bug.cgi?id=1060293
+<Consensus> 6
+<davidg> 
+<drs> 6
+<gsvelto> 6
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 6
+
+Bug 1037354 - Remove the obsolete references to the TelephonyCall.number and TelephonyCall.secondNumber fields
+https://bugzilla.mozilla.org/show_bug.cgi?id=1037354
+<Consensus> 1
+<davidg> 
+<drs> 1
+<gsvelto> 1
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 1
+
+Bug 1068093 - Remove legacy transition code from the callscreen
+https://bugzilla.mozilla.org/show_bug.cgi?id=1068093
+<Consensus> 3
+<davidg> 
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1068104 - Wake up the screen when a call is ended
+https://bugzilla.mozilla.org/show_bug.cgi?id=1068104
+<Consensus> 3
+<davidg> 
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1070021 - Prototype a call log with virtual lists
+<Consensus> 
+<davidg> 
+<drs> 
+<gsvelto> 
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 
+
+Bug 1068106 - Evaluate acquiring screen wake lock from callscreen when a call ends
+<Consensus> 1
+<davidg> 
+<drs> 1
+<gsvelto> 1
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 1
+
+v2.1-S5
+
+PTO/Downtime
+Please write the days you're on PTO this sprint here. e.g. "<name> Aug 18 - 22"
+Also include public holidays and any other reason you can't work on dialer.
+<davidg> None
+<drs> Sep 26, tentative
+<gsvelto> None
+<gtorodelvalle> ?
+<jpruden92> ?
+<paco> ?
+<Rik> ?
+<thills> None
+
+Bug 1056943 - Remove contact images from call log DB
+<Consensus> 3
+<davidg> 3
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1060730 - Turn updateICEContacts() into a Promise.all() barrier
+<Consensus> 1
+<davidg> 1
+<drs> 1
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1029142 - Call log deletions don't persist after killing the app
+<Consensus> 3
+<davidg> 3
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1061623 - Write tests for ticker updates on the call screen
+<Consensus> 1
+<davidg> 1
+<drs> 1
+<gsvelto> 1
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 1
+
+Bug 1024341 - Wake up the device after a call hangs up
+<Consensus> 3
+<davidg> 3
+<drs> 3
+<gsvelto> 3
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 3
+
+Bug 1060451 - Refactor copied-and-pasted displayMessage() code in emergency-call/dialer.js taken from dialer/telephony_helper.js
+<Consensus> 6
+<davidg> 6 because there are things to think about
+<drs> 3
+<gsvelto> 6 because while some stuff may be shared they're subtly different
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 6 because of lack of tests
+
+Bug 1054818 - [Sora][Call][Settings]The call time display abnormal after user change the system time.
+<Consensus> 1
+<davidg> 1
+<drs> 1
+<gsvelto> 1
+<gtorodelvalle> 
+<jpruden92> 
+<paco> 
+<Rik> 
+<thills> 1
+
+v2.1-S4
+
+PTO/Downtime
+Please write the days you're on PTO this sprint here. e.g. "<name> Aug 18 - 22"
+Also include public holidays and any other reason you can't work on dialer.
+<davidg> none
+<drs> none
+<gsvelto> none
+<gtorodelvalle> Sep 2 - Sep 15
+<jpruden92> ?
+<paco> ?
+<Rik> Sep 11 - Sep 15
+<thills> no plans
+
+Bug 1056943 - Remove contact images from call log DB
+** Consensus: 
+** davidg 
+** drs 
+** gsvelto 
+** Rik 
+** thills 
+
+Bug 1060451 - Refactor copied-and-pasted displayMessage() code in emergency-call/dialer.js taken from dialer/telephony_helper.js
+** Consensus: 3
+** davidg 3
+** drs 3
+** gsvelto 3
+** Rik 3
+** thills 3
+
+Bug 1031175 - [Gaia] Unify both sendMMI() and dial() functions
+** Consensus: 6
+** davidg 6
+** drs 6
+** gsvelto 6
+** Rik 6
+** thills 3
+
+Bug 1060723 - Call info page isn't updated after a call dispatched from it ends
+** Consensus: 6
+** davidg 3
+** drs 6
+** gsvelto 6 (because it requires some thought)
+** Rik 
+** thills 6
+
+Bug 1046090 - Explore if we can split Dialer and Contacts
+** Consensus: 3
+** davidg 3 (light explore)
+** drs 3
+** gsvelto 3 (but just for a quick test)
+** Rik 3
+** thills 6
+
+Bug 1061427 - [Dialer][Call Screen] Caller number, name, background disappear after making several calls sequentially
+** Consensus: 3
+** davidg 1
+** drs 1 with regressionwindow-wanted help from QA
+** gsvelto 3
+** Rik 3
+** thills 3
+
+Bug 1061120 - [Calllog][Dialer] Time duration format is not showing 'min' or 's' in 'Call Information'
+** Consensus: 3
+** davidg 3
+** drs 3
+** gsvelto 3
+** Rik 1
+** thills 3
+
+Bug 1061616 - call log is not showing recently dialled numbers
+** Consensus: 3
+** davidg 3
+** drs 1
+** gsvelto 3
+** Rik 3
+** thills 3
+
+v2.1-S3
+
+Downtime
+Please write the days you're on PTO this sprint here. e.g. "<name> Aug 18 - 22"
+Also include public holidays and any other reason you can't work on dialer.
+<davidg> Aug 18 - Aug 22
+<drs> none
+<gsvelto> Aug 25
+<gtorodelvalle> Aug 18 - Aug 22
+<jpruden92> none
+<paco> Aug 18 - Aug 25
+<Rik> none
+<thills> none
+
+Bug 1047353 - Create a call information page for call log
+** Consensus: 6
+** <drs> 6
+** <gsvelto> 6
+** <Rik> 6
+** <thills>  6
+
+Bug 1054995 - Share the way to display phone, sms and email information.
+** Consensus: 6
+** <drs> 6
+** <gsvelto> 6
+** <Rik> 6
+** <thills> 6
+
+Bug 1046090 - Explore if we can split Dialer and Contacts
+** Consensus: 
+** <drs> 
+** <gsvelto> 
+** <Rik> 
+** <thills> 
+
+Bug 1035763 - [B2G][Dialer] support 24 hour time format
+** Consensus: 3
+** <drs> 3
+** <gsvelto> 3
+** <Rik> 3
+** <thills> 3
+
+Bug 1041601 - [Dialer] Call Duration not provided for CDMA second incoming call
+** Consensus: 
+** <drs> 
+** <gsvelto> 
+** <Rik> 
+** <thills> 
+
+Bug 1031175 - [Gaia] Unify both sendMMI() and dial() functions
+** Consensus: 6
+** <drs> 6
+** <gsvelto> 3
+** <Rik> 6
+** <thills> 6
+
+v2.1-S2
+
+* Bug 1026692 - Access to mute button
+** davidg 3
+** drs 3
+** gsvelto 3 (just because I'm vaguely familiar with the code)
+** gtorodelvalle 3 (since specs and assets are ready and included in the bug) (related to and impacted by the hit state bug 1044996)
+** paco 3
+** Rik 3
+** thills 6
+
+* Bug 1038701 - Support for ICE Contacts in Lockscreen/Emergency call
+** davidg 3
+** drs 3
+** gsvelto 6 (because I really don't know what needs to be done and it seems like I lost audio too...)
+** gtorodelvalle 3 (concrete specs (sizes, etc.) pending from UX)
+** paco 3
+** Rik 3
+** thills 3
+
+* Bug 1046090 - Explore if we can split Dialer and Contacts
+** davidg 
+** drs 
+** gsvelto 
+** gtorodelvalle 
+** paco 
+** Rik 
+** thills 
+
+* Bug 1043133 - [Dialer] Call with new taller hang up button
+** davidg 1
+** drs 1
+** gsvelto 1
+** gtorodelvalle 1
+** paco 1
+** Rik 1
+** thills 1
+
+* Bug 977056 - [Dialer] Visual discrepancies: Call ended view under conference call participants list
+** davidg 3 (Because I don't really understand what the problem is)
+** drs 6
+** gsvelto 6 (unfamiliar with this particular area)
+** gtorodelvalle 1-3
+** paco 3
+** Rik 3
+** thills 6
+
+* Bug 877971 - The call logs menu doesn't show the call time duration
+** davidg 
+** drs 
+** gsvelto 
+** gtorodelvalle 
+** paco 
+** Rik 
+** thills 
+
+Bug 877971 sub-bugs
+Bug 1045499 - Switch call log to a 2-line layout
+** davidg 3
+** drs 3 (not including functional, maybe even including it)
+** gsvelto 3 (looks pretty straightforward + removing is good)
+** gtorodelvalle 3 (concrete specs pending as required by Anthony in the bug)
+** paco 3
+** Rik 3
+** thills 3
+
+Bug 1045515 - Always highlight missed calls in call log
+** davidg 1
+** drs 1
+** gsvelto 1
+** gtorodelvalle 1
+** paco 1
+** Rik 1
+** thills 1
+
+Bug 1047351 - Insert call durations in the call log database
+** davidg 3
+** drs 3
+** gsvelto 3
+** gtorodelvalle 3
+** paco 6
+** Rik 3
+** thills 1
+
+Bug 1047353 - Create a call information page for call log
+** davidg 6
+** drs 6
+** gsvelto 6 (looks like a lot of work and we probably need decent testing too)
+** gtorodelvalle 6
+** paco 6
+** Rik 3
+** thills 6
+
+---
+Team template
+** davidg
+** drs
+** gsvelto
+** gtorodelvalle
+** jpruden92
+** paco
+** Rik
+** thills
