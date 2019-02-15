@@ -1,0 +1,57 @@
+SMS Feature backlog
+
+How does it work ?
+
+Each time we want to organize the backlog (once every 3 or 6 months, TBD), we do this:
+ * first step is to gather all input from developers/owner/UX/community; without specific order
+ * 2nd step is to order according to value (owner work)
+ * 3rd step is to roughly estimate 
+   * for these things, we estimate using 50 or 100: 50 is a small feature, 100 is a big feature
+
+Current backlog
+
+This is roughly organized in the order we plan to do these things
+
+Haida sheets: https://etherpad.mozilla.org/sms-haida
+Datastores and local IndexedDB support: https://etherpad.mozilla.org/messages-datastore
+Undo support (needs local IDB): https://bugzilla.mozilla.org/show_bug.cgi?id=1037650
+https://bugzilla.mozilla.org/show_bug.cgi?id=1121863
+
+
+Unordered list of features to insert in previous list for the new backlog
+(NOTE: ADD THINGS HERE)
+
+Make Group MMS useful (had some requests from the community, see https://bugzilla.mozilla.org/show_bug.cgi?id=1018611 )
+* IIRC we already discussed it with gecko devs before, except for the complex behavior in grouping, the main limitation is gecko could not guarantee that fetching phone number from itself is available for all simcard. If we could not get number, we could not do proper grouping with outgoing/incoming message.
+*: (Julien) yes, but knowing this limitation, we should try to move forward.
+
+Text search: https://bugzilla.mozilla.org/show_bug.cgi?id=1037573
+
+Progress while sending: https://bugzilla.mozilla.org/show_bug.cgi?id=1017797
+
+MMS recipient limit: https://bugzilla.mozilla.org/show_bug.cgi?id=897840
+*: (Julien) I think we have other things to answer here
+
+Error message support: https://bugzilla.mozilla.org/show_bug.cgi?id=1021387
+*: (Julien) needs the background IndexedDB work
+
+Limit message notification: https://bugzilla.mozilla.org/show_bug.cgi?id=989182
+*: (Julien) was already to "sms-most-wanted"
+
+Contact search result order: https://bugzilla.mozilla.org/show_bug.cgi?id=1019245
+*: (Julien) I have this mail to answer for 2 months at least...
+
+Size limit tip: https://bugzilla.mozilla.org/show_bug.cgi?id=1018111
+*: (Julien) easy, adding it to our list of "sms-papercuts", but a several-sprint-long feature
+
+Add blinking cursor: https://bugzilla.mozilla.org/show_bug.cgi?id=1021639
+*: (Julien) added to "sms-most-wanted" list
+
+Resend button on message report: https://bugzilla.mozilla.org/show_bug.cgi?id=1021608
+*: (Julien) will hopefully be part of the v2.1 redesign, added to the "sms-most-wanted" list
+
+Recipient panel behavior: https://bugzilla.mozilla.org/show_bug.cgi?id=905169
+*: (Julien) added to "sms-most-wanted" list
+
+Differentiation between MMS/SMS: https://bugzilla.mozilla.org/show_bug.cgi?id=1030676
+*: (Julien) added to "sms-most-wanted" list
