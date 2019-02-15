@@ -1,0 +1,170 @@
+General DS discussion notes
+ 
+Attendees: a lot of guys :)  gaia:Steve, Oleg  gecko: Gene, Vicamo. Bevis
+ 
+The  main discussion was about introducing some sort of system messages that  can be caught by app (via manifest subscription even if it isn't run)  on DS updates. Example is contacts app that would like to sync contacts  DS not only when the app is run (especially for the initial sync with a  lots of contacts). 
+(Julien) I don't feel very concerned about this; this would happen once. We can show a "migration" panel in that case.
+ 
+There were two main concerns though:
+ * Resources  - if system wakes up subscribed app to make a sync we can end up with  lots of app running triggered by single update (cpu and radio usage,  battery consumption and etc.);
+   * (Julien) memory and OOM
+ * Throttling  - if that system message occurs on every single update it will be too  inefficient for the case when we have a lot consequent updates in a row  ex. initial import of contacts. So the proposition was to introduce  throttling or batching of DS update events that can be configured in the  app manifest.
+   * (Julien) agreed
+
+
+Messages DS discussion notes
+
+Attendees:  Bevis Tseng,  Vicamo Yang,  Gene Lian, Steve Chung, Oleg Zasypkin
+
+Responsibilities
+ * Gecko directly updates DS in case of:
+   * New message received;
+   * Read\delivery report updates.
+   * (Julien) and then, still sends a system message ? Or will we have a system message from datastore update? (for notification)
+   * (Oleg) Datastore should fire "onchange" event. Event object has "operation" property, I think in case of "new" message - operation will be "ADD", in case of "read\delivery" updates it will be "UPDATE", so we can react appropriately.
+   * (Julien) but we need to react when the application is closed, remember :) Only system messages can do this, as far as I know.
+   * (Oleg) Oh, yes. These "system" messages also should be supported by DS as was discussed at general DS f2f session. We should be able to subscribe for it via manifest.
+   * (Oleg) Ok, there is a problem here, "onchange" event contains only id of the changed item and new revision id [1]. So we can't understand what actually changed (read or deliveryStatus). [1] https://mxr.mozilla.org/mozilla-central/source/dom/webidl/DataStoreChangeEvent.webidl
+   * (Oleg) But we can probably determine the right event using some logic (operation is the field of "onchange" event), does it look too fragile?
+     * OnSending
+       * operation: new, message.delivery: sending, message.deliveryStatus: pending
+     * OnReceived 
+       * operation: new, message.delivery: received or not-downloaded
+     * OnDeleted
+       * operation: remove
+     * OnSent
+       * operation: update, message.delivery: sent, message.read: false
+     * OnFailed
+       * operation: update, message.delivery: error, message.deliveryStatus: error
+     * OnRead
+       * operation: update, message.read: true
+     * OnDelivered
+       * operation: update, message.delivery: sent, message.deliveryStatus: success
+   * (Julien) do we really need what the event is? Most of the time we can simply refresh the thread or message if existing, or create it if not existing.
+   * (Oleg) Well we have a lot of logic inside different panels that do different stuff depending on these events, not just rerendering. That will be much more painful if we need to refactor all panels instead of just migrating MessageManager to DS and IDB. Theoretically we can have only "onchange" event, but panels will have to have this differentiating logic anyway. To name just a few examples:
+     * ThreadListUI and ThreadUI, onMessageSending vs onMessageReceived - mark or not mark thread\message as "read";
+     * ThreadUI, ReportView: onMessageDelivered vs other onchange events - re-rendering of entire report doesn't sound like a good idea, especially in case of group mms with recipient list in the report.
+
+
+ * Gaia (Messaging App) uses DS API to:
+   * Delete message from DS;
+     * (Julien) Cost control needs to delete messages too. We'll need something new to handle this if CostControl can't do it.
+     * (Oleg) That's OK as Cost control should have access to DS and it doesn't need access to Messaging API.
+   * Fetch messages from DS (DS.get and DS.delete will also support array of IDs);
+   * Listen for "onchange" event.
+
+ * Gaia (Messaging App) uses Messaging API (mozMobileMessage):
+   * To re/send message;
+   * To  mark message as read (at least for now as it's not really clear whether  it's safe to use DS.put with partially updated message object);
+   * To retrieve MMS content.
+   * (Julien) who updated the DS in all these cases?
+   * (Oleg) Gecko should, but that's still open question, for now I think gaia don't need to update anything in DS directly as it's not clear how to do this properly.
+
+ * Gaia (Messaging App) uses IndexedDB to:
+   * Manage  threads, various indices to make search faster, support filtering and  probably paging. So we'll kind of paying by duplicating some data inside  our internal Threads IDB for the flexibility and absence of Gecko  dependency on that;
+     * (Julien) we'll need to think this through a little more.
+     * (Oleg) Yeah, we need to figure out what features we may need in advance to design it more or less stable.
+   * Some time later if we decide to expose Threads data to other apps will move Threads IDB to "Threads" DS owned by Messaging App.
+
+Note #1:  for now Gaia (Messaging App) will only read and delete from DS, updates  (ex. mark message as read) will be made via mozMobileMessage. It's not  that clear whether write ("put") will be allowed, one of the concerns is  what if DS consumer retrieves message from DS, updates it (ex. remove  attachment from received message) and push it back to DS via "put".
+=> (Julien) so, we can allow "delete" without allowing "put" ?
+=> (Oleg) AFAIK no as both "delete" and "put" are write operations, it could be just agreement to not use "put" for now. But probably permissions can be more granular, though it's not common for other systems I know.
+=> (Julien) can't we restrict the "put" operation to the SMS app only?
+=> (Oleg) I think there is only certified/privileged/3rd party granularity, but we need to confirm. Do you think exposing "write" operations to "certified" apps only is too dangerous?
+=> (Julien) I think we can have different permissions in the manifest. (but yes, anybody can add anything in its manifest, of course)
+
+Note #2: We need that DS supports batch operations (passing array of IDs) for "get" and "remove".
+=> (Julien) I don't really care if the performance of doing a lot of get/remove is good.
+=> (Oleg) Yes, we should measure first, the main concern was entire Thread manipulations. But anyway I think batch operations are good for such API as DS.
+=> (Julien) if the performance is the same, there is no value. If this brings better performance, or batched events, then why not.
+
+Note #3:  It looks like PhoneUtils is already available for Gecko via JSM, so  that seems that we (Messaging App) have everything to start working on  Threads IDB.
+=> (Julien) we need to find a phone number from one of its form (National, International, part of National (also called "NationalMatching")). simple_phone_matcher might work good enough but we need to ensure this using the cases tested in the mozContacts tests in gecko.
+
+Plan
+ * Messages IDB is moved to Messages DS inside Gecko; So at that time Gecko will use DS for messages and IDB for Threads;
+ * Gaia (Messaging App) implements Threads IDB;
+ * Threads IDB is removed from Gecko.
+ * mobile message API clean up
+
+Note #1:  Gaia (Messaging App) can start either via implementing Threads IDB or  via implementing some sort of temporal wrapper that can hide currently  publicly exposed mozMobileMessage features (that will be eventually  removed from public API and be done by Gecko internally, like  "onreceived", "ondeliveryreport" and etc.) from Messaging App and write  to DS instead of Gecko for now. So that Messaging App can rely on DS and  remaining mozMobileMessage features only. Once something is done in  wrapper and tested by Messaging App we can ask Gecko to implement that  on their side and remove parts of that temporal wrapper step by step.
+
+Timelines
+Nobody knows :( 
+
+Can it potentially depend on DS consumer apps? I've heard from David about  some haidificated search bar on homescreen that can be used by user to  search anything among different sources including Messages DS. Maybe  this thing has timelines?
+
+Or do we have timelines for Messaging App performance improvements that can be achieved with DS (ex. deleting of the Threads)?
+
+(Julien) Don't care about timelines yet. Let's take the plan, separate each task in subtasks, and estimate them.
+(Oleg) Agree
+
+
+Tasks:
+
+ * (Gecko) Move Messages IDB to DS
+   * (gecko engineers to decide subtasks)
+
+ * (Gaia) Implement Threads IDB on top of DS
+   * Should we first move from Gecko API to DS, for everything we can?
+     * (Oleg) I believe yes, currently I see that we're not blocked by Gecko, we just need some temporal shim to populate DS. So as temporal measure I would propose to have some shim object (to ease development, not for real use) that:
+       * Populates DS with messages from mozMobileMessage on startup;
+       * Reacts on mozMobileMessage events and updates DS accordingly;
+     * (Oleg) This way we can start migrating to DS events and methods without waiting for Gecko, once Gecko starts to populate DS by itself, we'll just get rid of this shim alongside with all performance overhead.
+   * or should we first implement Threads IDB on top of existing Gecko API?
+     * (Julien) it's my preference, and then we can even do this in parallel to the first (Gecko) task
+     * (Oleg) We can do this in parallel with previous task too I think. Generally I think we'll have MessagingManager (see very early draft below) that will work with mozMobileMessage, Datastore and Threads IDB (not directly with IDB, but with some ThreadStore\Manager) to hide all that diversity and complexity from consumer code.
+   * needs a way to match phone numbers correctly, either SimplePhoneMatcher or an exposed PhoneNumberUtils
+     * (Oleg) The only thing that I don't have any idea about, will dig into it.
+   * needs to define the IDB structure and indices
+     * (Oleg) Yeah, let's discuss queries we're going to make to Threads IDB. At least I can think of:
+       * Get all threads or I'd rather say some sorted (by date at least) page\s.
+         * I have idea inspired by WinJS library on infinite lists, not sure if this is applicable in SMS. The idea is to fill list with lightweight thread DOM nodes (with Thread IDB we can get thread count quickly) to display scroll correctly and load only currently visible page + one or few pages above and below. It's easy to determine using scroll position. On Windows devices it works pretty well, with threads it should too as it has fixed dimensions.
+         * (Julien) remember we also have the time headers. So we need to quickly get the blocks and the thread count for each block
+         * (Oleg) Yeah, I think that should not be a problem. Once we have Threads IDB at gaia level we'll be able to get sorted and grouped data. At least we can try to make a POC and we'll see what we can do.
+         * (Julien) another solution is to cache the data in a well crafted JS object at launch time
+         * (Oleg) Not sure that I caught the idea, could you please clarify more?
+       * Find thread by message id since message from DS won't have threadId field anymore.
+         * (Julien) should be easy enough if we have an object store for messages: the message id will be either the primary key or an index
+         * (Oleg) Yes
+       * get message ids from a thread id 
+         * is a simple array in the thread object enough? we don't have it in Gecko's thread object so it could be challenging
+           * (Oleg) was my first idea, but now I think to measure and compare this and the following method.
+         * or an index on the message's "threadId" property, in the messages objectstore? probably easier
+         * we need to sort by timestamp in the descending order
+       * the Gecko API has a "read" property on messages but we really only care for threads. We need to find the unread messages from a thread id so that we can change the status.
+       * find a thread from the phone number
+         * received phone number use the international format
+         * sent phone number can use the national or local format or even letters
+           * (Oleg) I saw the bug about auto conversation thread number from local to international when thread was created with local one, but then converted to international when message is received. I always see this issue when sending SMS's with my German SIMs using local format(starting from 0). So I think solution\index depends on solution for this bug, is thread's phone number fixed or can be changed in some cases?
+       * threads need to store the contact information for quicker load. We can store the contact DB version (and Facebook Datastore version too) to know if something changed since the last start..
+         * (Oleg) Yeah, this should be easy if Contacts and Facebook have DS for this, then we can get DS.revision to verify + more complex logic (if needed) using Contacts\FacebookDS.sync getting only updates for contacts we may need.
+ * (Gecko) remove Threads IDB from Gecko
+
+
+------- MessagingManager  ----------
+
+* Methods:
+    ** send (mozMobileMessage)
+    ** resend (mozMobileMessage)
+    ** retrieve (mozMobileMessage)
+    ** getSegmentInfoForText (mozMobileMessage?)
+
+    ** get (datastore)
+    ** list (datastore, depending on filter parameter first call maybe to Threads IDB)
+    ** delete (datastore, Threads IDB to remove thread if it's the last message)
+    ** markAsRead (mozMobileMessage, not sure about datastore partial updates)
+
+    ** getThread (Threads IDB)
+    ** listThreads (Threads IDB)
+    ** deleteThread (Threads IDB, datastore to cleanup messages)
+    ** markThreadAsRead (Threads IDB)
+
+* Events
+    ** onSending (datastore, onchange)
+    ** onSent (datastore, onchange)
+    ** onFailedToSend (datastore, onchange)
+    ** onReceived (datastore, onchange)
+    ** onDeleted (datastore, onchange)
+    ** onDelivered (datastore, onchange)
+    ** onRead (datastore, onchange)
