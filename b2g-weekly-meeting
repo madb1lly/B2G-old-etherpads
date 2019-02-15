@@ -301,3 +301,209 @@ Attendees
 
 == Round Table ==
 
+
+
+
+Chat
+
+krz37:18:21 I came here this week to know what was happening right now
+
+krz37:18:21 thanks
+
+krz37:18:21 in library
+
+krz37:18:22 Thaknyou
+
+krz37:18:22 see you
+
+benfrancis:18:25 BTW, if there's a WebRTC based solution that you find that can support multi-person video conferencing then we could consider switching.
+
+benfrancis:18:25 Vidyo is what Mozilla uses internally so is the default choice
+
+Lapineige:18:26 Jitsi Meet ?
+
+benfrancis:18:28 Never used it, does someone need to host that?
+
+Lapineige:18:29 we can host it, but their offer a free instance creation at meet.jit.si
+
+Lapineige:18:29 I used it a lot with group conversation (2~5), it's working fine
+
+benfrancis:18:30 cool
+
+Lapineige:18:30 it should work fine with big groups, as it is not CPU-hungry
+
+Lapineige:18:31 why not trying it for next meeting - and switching back to vidyo if it doesn't work ?
+
+Jamie:18:32 Bug number added
+
+Lapineige:18:32 thx :)
+
+kskarthik:18:55 appear.in also nice
+
+Luca:10:09 Lapi, Jitsi Meet seems a great solution!
+
+Lapineige:10:43 We should warm someday that we try it during the next meeting. We can't just say it at the beginning of one meeting (we might loose some people).)
+
+Lapineige:10:43 I had no time to do it, sorry :/
+
+jamie:18:02 sorry i cant be in vidyo right now, im sitting in class right now
+
+Lapineige:18:04 ok np
+
+jamie:18:05 any news on any of those bugs?
+
+Lapineige:18:06 no
+
+jamie:18:06 i might be working on our gecko bug later on today
+
+Luca:18:09 Lapiniege, cuold you please share the Vydio room link?
+
+Luca:18:09 could*
+
+Lapineige:18:10 https://v.mozilla.com/flex.html?roomdirect.html&key=2FCZj4WaeeMQ
+
+Lapineige:18:37 Hi Jovan
+
+Lapineige:18:37 do you news about this blocking bug ?
+
+eyome:20:59 Hi
+
+eyome:21:00 If it could help, I tried https://vroom.im/ several time and it works well
+
+eyome:21:01 the plus of vroom iis the add of a collaborative pad (etherpad)
+
+eyome:21:01 I think it's interesting for a collaborative project
+
+Enrico:21:29 I won't be at the meeting on 13th unfortunately, but I added the progresses with the E3 porting to the pad.
+
+Enrico:11:12 and some other topics I think could be of interest
+
+Luca:13:18 Added some notes
+
+krz37:17:57 Hey, joining the room soon! a bit late sorry
+
+jamie:18:05 im in class so right now i can use mic
+
+jamie:18:06 *can't
+
+m.ducorps:18:07 i think lapineige is off for 1 month or 2
+
+jamie:18:09 what components are now up and running and what is the status of our gecko bug?
+
+jamie:18:09 sorry having issues with vidyo
+
+m.ducorps:18:19 yeah skype did work
+
+m.ducorps:18:19 i'm using now
+
+jamie:18:20 please just see if you can get some andswers to my questions in QA section
+
+jamie:18:20 if im going to start putting a QA department back togther i need a few basic things to start now that we have some stuff to test
+
+krz37:18:40 Thank you everyone!
+
+krz37:18:40 jamie, is everything ok on your side?
+
+m.ducorps:18:05 @luca you are with us ?
+
+krz37:18:07 btw, I cannot really write this week on the pad because I am really slow because of this
+
+krz37:18:07 on my arm
+
+krz37:18:09 Hi benfrancis :)
+
+Jovan:18:10 sorry guys my connection is not really well right now, can someone else continue?
+
+Luca:18:10 I'm just following from the pad! :)
+
+Luca:18:10 Hi guys!
+
+krz37:18:36 some magic happened with Vroom and I am alone in the room
+
+krz37:18:36 what about you guys?
+
+krz37:18:36 are you still there ?
+
+m.ducorps:18:36 yes
+
+m.ducorps:18:37 i'm with novski
+
+krz37:18:37 that's pretty weird, I will re-attempt in a few mins
+
+m.ducorps:18:41 okey lost etherpad also
+
+krz37:18:42 back
+
+krz37:18:43 but I am still in a parrallel room alone
+
+krz37:18:43 can you see me?
+
+m.ducorps:18:43 nop
+
+m.ducorps:18:43 you've logged back in ?
+
+krz37:18:43 I guess I will follow here then
+
+krz37:18:43 yes
+
+krz37:18:44 10 times now
+
+krz37:18:46 So I guess we should go back to Vidyo next week
+
+krz37:18:58 m.ducorps, we need to clarify the bullets added to the Documentation part
+
+krz37:18:58 We give one more week and if there is no feedback about it we'll just go ahead and do the modification we've proposed in the etherpad
+
+krz37:18:58 it is about the wiki right?
+
+m.ducorps:19:00 it7s about the documentation in general
+
+krz37:19:00 when the meeting is over, please write here also, I will put the notes to the wiki
+
+krz37:19:00 alright :)
+
+m.ducorps:19:00 we don't want to wait for contribution for to long
+
+m.ducorps:19:01 do you know where to find the doc to do a gecko patch ?
+
+krz37:19:02 no sorry, only pushed to gaia
+
+m.ducorps:19:02 i got this from gerard majax
+
+m.ducorps:19:02 Can you also provide a Gecko patch that updates the sha1 in b2g/config/aries/sources.xml and b2g/config/nexus-5-l/sources.xml for the Gaia project ? There should be docs about how to do your first Gecko patch and submit this via MozReview :)
+
+krz37:19:03 probably on MDN
+
+krz37:19:03 ask him for more details
+
+krz37:19:03 I am not yet working on gecko
+
+krz37:19:03 becuase I have a reasearch conference next week and only after I can be free
+
+krz37:19:04 so I won't be able to attend here either next week, not sure where I will be at this time in St. Petersburg
+
+m.ducorps:19:05 lol okey
+
+m.ducorps:19:05 yes i'l ask him within the bug
+
+krz37:19:06 but I will post on Discourse for the weekly meeting and update about switching back to Vidyo
+
+krz37:19:08 meeting over?
+
+krz37:19:22 creating the meeting notes for next week
+
+krz37:19:58 updating the wiki
+
+Lapineige:15:00 thanls :)
+
+Lapineige:15:01 thanks*
+
+Reinhart:18:12 Any of the questions answered?
+
+Thatoo:20:08 zut, j'arrive après la bataille.
+
+Thatoo:20:29 zut, j'arrive après la bataille.
+
+Thatoo:20:31 Sorry, I've been anavailable these last month but this news made me coming back to see what's going on. I'm so sorry to discover that.
+
+Xia:10:04 Hello?
