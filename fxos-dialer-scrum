@@ -1,0 +1,168 @@
+// FxOS dialer team daily standup meeting Etherpad
+// Every day, the contents will be moved to the wiki.
+// Delete bugs you didn't work on, add new bugs.
+// Use "*"; not Etherpad lists.
+// Add each bug's title (real one or approximate), but not the link.
+// Don't add things that are not dialer-related.
+// Add things that can be interesting: problems you had and how you resolved them,
+// things happening outside the team but that can affect us, etc.
+// Write what you did since the last standup, and what you'll do until the next standup.
+// Make sure to set the "updated at xxx" field.
+// If you want to comment on someone else's notes, please write your name.
+// Convert to wiki format using http://people.mozilla.org/~dsherk/etherpad-wiki.html
+
+// Current host: gtorodelvalle - October 6 - October 10
+// Next host: thills - October 13 - October 17
+
+Blockers (last updated October 10)
+* 2.1+ Bug 1074379 - Dialer does not always show incoming call #
+** Duped to bug 1076597.
+* 2.1? Bug 1075699 - Calling voicemail by long-pressing the 1 button displays an error and then calls
+** Assigned to Tamara.
+** Lost blocker status.
+** Ready to land.
+* 2.1+ Bug 1079440 - [Dialer] When the user have multiple calls ongoing calls, the dialer screen will overlap
+** Landed, uplifted to v2.1.
+* 2.1+ Bug 1078663 - [Dialer][Call log] Hidden number incoming call is displayed as Voicemail after OTA upgrade from 2.0 to 2.1
+** Landed, uplifted to v2.1.
+* 2.0? Bug 1066874 - [Dialer] User can be put into a state where there is no one on the other line in a phone call and user is unable to end call
+** Waiting for Rachel Yang to comment. Going to resolve WONTFIX if nothing changes as this is a carrier issue.
+* 2.1+ Bug 1080632 - [Dialer] Blue screen shown when dialing a number from the Contacts app
+** Resolved duplicate of bug 1080254.
+
+
+drs (last updated October 10)
+* Admin:
+** We got all of our blockers landed! Nice work.
+* Next steps:
+** Write MVC proposal.
+** Bug 1078448 - Callscreen app instances linger in bfcache after being closed
+*** Going to investigate this.
+** Bug 1080852 - [Dialer] While on another call, the device does NOT display a notification of an incoming call
+*** Going to investigate this.
+** Plan Anthony's transition.
+* My Patches:
+** Bug 1068104 - Wake up the screen when all calls are ended
+*** Looks like this caused a regression, bug 1081068. I'm going to investigate.
+** Bug 1070050 - Dialer doesn't show you which # a contact called you on
+*** New patch up for Anthony to review.
+** Bug 1078663 - [Dialer][Call log] Hidden number incoming call is displayed as Voicemail after OTA upgrade from 2.0 to 2.1
+*** Landed.
+** Bug 1079440 - [Dialer] When the user have multiple calls ongoing calls, the dialer screen will overlap
+*** Landed.
+** Bug 1045820 - Port SimPicker implementation in MSAB and comms apps to GaiaSimPicker
+*** (no changes today) Waiting for Anthony, Francisco to review.
+* Reviews:
+** Bug 977056 - [Dialer] Visual discrepancies: Call ended view under conference call participants list
+*** f-
+** Bug 1081028 - [Dialer] Though CDMA Network doesn't support single call hold, but user can hold single call via BT Headset
+*** f?
+** Bug 1077848 - Figure out a way to show the Dialer with Eastern Numerals when Arabic locale is used
+*** r?
+* Other:
+** Bug 1080632 - [Dialer] Blue screen shown when dialing a number from the Contacts app
+*** Investigated, resolved duplicate of bug 1080254.
+** Bug 978639 - [Sora][Call][MPTY][GCF] GCF case 31.4.2.1.3 : Terminate the entire MultiParty call failed
+*** Read about what's going on here. Looks like there's nothing for us to do yet.
+** Bug 1042484 - [dolphin][flame] wrong message was shown after the mo call was not received by another user.
+*** Will read about this and answer it.
+
+
+gtorodelvalle (last updated October 13)
+* Administrative:
+** Nothing to report.
+* Bug 977056 - [Dialer] Visual discrepancies: Call ended view under conference call participants list:
+** Implementing the latest Doug's suggestions.
+** Having trouble lazy loading HTML elements/templates in the Call Screen app. I am currently investigating the issue.
+** It seems the issue magically disappear so I guess it was kind of a (already solved) regression.
+** Asked Doug for a new revision. 
+* Bug 1042484 - [dolphin][flame] wrong message was shown after the mo call was not received by another user.:
+** Requested some info from the RIL guys.
+** I will provide the RIL guys with the requested logs.
+* Bug 1063032 - [Active Call] Visual Refinements for attention window:
+** I started to familiarise with this bug.
+** This is a bug Anthony was working on.
+** I'll take it from the WIP we already provided by Anthony in the bug.
+
+
+pacorampas (last updated October 8):
+
+* Bug 977588 -  [Dialer] The Active call screen does not have the option to place calls on hold.
+** I created this Bug 1069836 as follow up for fixing the localization
+
+* Bug 1044996 - [Dialer][Call screen] New hit state for call screen options (mute, place new call, keypad...)
+**  The patch works fine but in this bug is needed a feedback of   pabratowski@mozilla.com and/or kyee@mozilla.com. I don't know if we can   do anything for get the feedback early or what to do.
+** <drs> I will get this actionable again, or at least clarify what they need. It looks like they don't want to make a decision on it yet.
+
+* Bug 933596 - [Dialer] Unable to switch call waiting calls when dial pad is opened.
+**  I have done a proposal for this bug. I think Carrie isn't happy with  my  proposal. But, there isn't another suggestion. I am waiting for a  NI  that I have asked to Rik
+** <drs> I don't think we have to push this yet; we can wait for bug 977588 to land and then ask Carrie again if she hasn't responded by then. I think she's waiting to see what it looks like first.
+
+* Bug 1060293 -  Remove dialer's buttons.css and use styling from shared/styles/buttons.css instead
+** Waiting for gaia-button
+
+* Bug 1079794 -        [Dialer] [Callscreen] When you are in active call and other call is entering you can't hold and answer with headset button
+** I opened this bug
+
+
+thills (last updated October 9)
+* Bug 1024341 - Wakeup the device after call hangs up
+** We split this into several bugs.  Right now, I'm working on one of the child bugs of this.
+* Bug 1068109 to restore the 2s delay before the call screen goes away.  
+** Need to ask for 2.1 approval.
+** We also decided not to mark 1070066 resolved as there is another fix in the works for this.
+* Bug 1068093  - Remove legacy transition code from the callscreen
+** Started looking at this.  I have some working code.  I need to test this out on Tarako though as per bug 1075603
+* Bug 1075603  - Explore removing contact background image waiting code from callscreen
+** I'm having a few technical difficulties with my Tarako right now recognizing USB.  I sent an email to nhirata on this.
+* Bug 1075699  -    Calling voicemail by long-pressing the 1 button displays an error and then calls.
+** Submitted gaia patch for review.  
+** Submitted gecko patch for review from Hsin-Yi.  She is fine with the changes and gave r+ in the bug comments since she's out tomorrow.  I have a try run in progress on this now.
+* Bug 1066874  -    User can be put into a state where there is no one on the other line in a phone call and user is unable to end call
+** I  spent pretty much all day on this one looking through logs and determined that this is an AT&T network issue based off the signaling.  Hsin-Yi confirmed this by looking through the logs.
+
+// Part-time people (not required to update this)
+//gsvelto (last updated July 4th)
+//* Bug 1016885  - [Tarako][Dolphin][LMK][Youtube][USSD]  Pop-up USSD message causes  //Youtube being killed at background due to  LMK while using Youtube app
+//**  The fix landed on master this morning, I'm working on the v1.3t patch  which should be //ready soon enough. This hasn't been nom'd for v1.4 but I  have the feeling it will.
+//***  Rik: IMHO, when a bug is greenlit for a branch and has also landed on  master, it should //land on all branches up to the one it was greenlit  for. We've been bitten by 990003 because of //that. So yup, we should land  it on 1.4.
+//**  (updated July 3rd) I landed a follow-up because of an issue on  multi-SIM devices I had //missed  in the original patch. I've got informal  approval from release  management to land on //1.4 so I'll land there too.  Totally agree on  landing on all branches starting with the older one  //that got approval  but hey, release management doesn't always seem to  agree :-(
+//**   (updated July 4th) v1.3t patch is almost ready. It required some  significant changes and //even a fix for a bizarre race condition in the  LazyL10n code. I've asked for v1.4 approval for //the dependent bug and I  intend to land this one on v2.0 too.
+//* Bug 990003 - [Dolphin][Tarako][Perf][Dialer] It takes a long time for the call screen shows up
+//**  I had uplifted two dependencies and whipped together an almost working  uplift; Etienne //offered to help me out on that one to finish the  uplifts.
+//** (Updated July 3rd) Etienne is taking care of the final uplifts
+//* Bug 1002327 - We are trying to get imei by dialing the number *#06# on a device, which //has  two sim card slots, but only one imei returns
+//** No work done yet, will be starting today
+//** (Updated July 3rd) No progress here yet, too busy with the other bug
+//** (Updated July 4th) Finally got my Flame build working, if I'm not too tired I'll try to fix this one //later today
+
+// Inactive people
+//davidg (last updated September 3)
+//* Bug 911055 - [Dialer]DuT doesn allow to dial a <<pause>>
+//**  On hold. It needs some work on the RIL, but not decided yet exactly how  or who is going to //do it * Bug 1061120 - [Calllog][Dialer] Time  duration format is not showing 'min' or 's' in 'Call //Information'
+//** Pending review from drs
+//* Bug 1062749 - [Dialer] Make prettyDuration use l10n attributes instead of setting //textContent. Follow up bug 1061120
+//**   <drs> If you have time after we land bug 1061120, you could work   on this. I know you have //other responsibilities, though.
+
+//etienne (last update July 4)
+//* Bug 990003 and dependencies landed on 1.4, brassing for a potential backout
+//* Still some back and forth on Gabriele's USSD stuff, fun times
+
+//jpruden92 (last updated September 24):
+//* Bug 943389 - [Dialer][Conference call] Detailed contact info on conference call on group line is missing:
+//** Need to do changes.
+
+//* Bug 1029313 - [Dialer][DSDS] With 2 SIMs; The matching result disappears after typing in the last correct digit when dialing
+//** Solution changed, waiting <drs> review.
+
+//* Bug 1062799 - Call information is not updated on the fly after creating a contact
+//** Solution changes, waiting NI
+
+//Rik (last updated October 9)
+//* Admin
+//** I'll be moving away from Dialer starting next week. We're still looking into the transition plan.
+//* Landed bug 1078921 and asked for approval
+//* Reviews
+//** bug 1075699
+//** bug 1078663
+//** bug 1062799
