@@ -1,0 +1,5400 @@
+==========
+ 2016-03-18  
+==========
+
+Michael
+
+Yesterday
+* Continued reading through the Rust guide
+
+Today
+* Start programming in rust
+
+    * Nothing huge, just some tinkering to start with
+
+* Have to run some errands this afternoon but will be available by email if needed
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Created a pr that tests pagekite connection, and external ping endpoints
+** Looked into https issue. Looks like the code has issues with the latest version of openssl, hopefully get this resolved during the workweek
+** Automation meeting
+
+* What will I do?
+** Review mhenretty's PR
+** Incorporate comments from jlorenzo regarding the integration test PR
+
+
+nhirata:
+3/18:
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+*** Prototype: Link + ConnectedMe
+**** working more on FitBit API; waiting for the bulb
+** Q1 goals
+
+3/17:
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+*** Prototype: Link + ConnectedMe
+**** working more on FitBit API; got the FitBit working with OAuth2 with a python wrapper so I don't need to worry about verification code.  Took a little bit of time to figure out how to work past that until I did more digging around to seeing what's available (FitBit doesn't allow for Mechanize or other bots to access their APIs); waiting for the bulb
+
+Isabel
+-Today
+Link Smoketest
+Work on automating some scenarios for foxApp locally
+Attended FoxLink automation meeting
+Started to investigate how to simulate the services(lights bulbs) in FoxApp
+(Had to go to the doctor, will be extra time after this stand up)
+
+-Monday
+Link Smoketest
+Investigate how to simulate the services(lights bulbs) in FoxApp
+Atthend ww foxlink meetings via vydeo
+
+
+Kate
+- Yesterday
+* Worked on understanding OpenHab CI + builds
+* Chatting with Chris Lord today about what he learned from Kai
+* Encrypted token for BinTray API and learned about encryption
+* Fixed final outstanding things in the PR
+
+- Today
+* Going to look at OpenHab bintray to see what they are doing differently (whether there is some script they are running)
+* Otherwise I think PR is in a good place
+* Do some work towards deliverable and write UI test for OpenHab using steps from Manel's manual One and Done tasl
+
+
+Martijn
+
+    Working on converting tests from setBoolPref to pushPrefEnv
+
+    Working on converting tests from addPermission to pushPermissions
+
+
+
+Johan (On PTO starting Monday, be back on Tuesday 29th)
+
+* What did I do today?
+
+** Foxbox
+*** Continue on setting up the unit test framework on Foxapp. Thanks to gmarty's feedback I avoided the mock browser problem by changing the test runner to Karma. It's a test runner that execute test within browsers. I'm getting some issues in regards to pipelining ES-2015 and the test runner
+*** Tired to export code coverage in another repo than fxbox/foxbox https://github.com/fxbox/thinkerbell/pull/42. I got some issues with the workaround I used in my script. This workaround won't be necessary anymore in the next rust nightly. Then I'll wait until I'm back to continue on it.
+*** Reviewed https://github.com/fxbox/app/pull/22. Reviewing https://github.com/fxbox/foxbox/pull/235/ . Still have https://github.com/fxbox/foxbox/pull/220 left before leaving
+*** Helped in regards to tests failures/questions I've been asked on IRC.
+*** Meeting with Isabel and No-Jun
+
+** Vaani: Looked at config failures on the build for openhab-distro. It seems descriptor.json is not valid from a JSON point of view. I left details at  https://github.com/mozilla/openhab-distro/pull/1
+
+* No blockers so far
+
+* What will I do when I'm back?
+** Catch up.
+** Couldn't do it today, document assertion methods
+** Continue on unit tests on FoxApp
+** Turn on code coverage on another repo than foxbox
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+No-Jun
+* What did I do?
+** Briefings on what happened
+** Going over comments on my PR from johan
+
+* What will I do?
+** Incorporate comments to PR
+** Prioritize testing tasks for link project
+
+==========
+ 2016-03-17 
+==========
+
+Michael
+
+Yesterday
+* Weekly Metrics meeting
+
+    * Decided to use sprints to assist with workflow
+
+    * Sprints last 2 weeks, daily status meetings at 9am PST
+
+* Rust 'n stuff
+
+Today
+* Rust training
+
+Blocked?
+Nope
+
+
+Johan
+
+* What did I do today?
+
+** Foxbox
+*** Finalized clean up on e2e tests https://github.com/fxbox/app/pull/14 . Cleaning the indexedDb turn out to be more difficult that I initially thought. Guillaume helped me out
+*** Reviewed https://github.com/fxbox/app/pull/17 
+*** Started to set up unit tests on the web app. I struggled a bit on the pipeline to convert next gen JavaScript into node-compatible ones. I'm now trying to mock out the browser.
+
+* No blockers so far
+
+* What will I do tomorrow?
+** Couldn't do it today, document assertion methods
+** Continue on unit tests on FoxApp
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+Isabel
+-Today
+Run the smoketest
+Create a PR for a basic test for FoxApp. Fixed the reviewer's comments
+Tried to access Foxbox and FoxApp from a different network
+CD meetup with the Madrid community
+
+-Tomorrow
+Run FoxLink smoketest
+Work on FoxApp automation
+FoxLink automation meeting
+
+No-Jun
+* What did I do?
+** Tried out https implementation, but the foxbox segfaults, emailed dev
+** Investigated how to use certs in mocha tests
+** created a new test that connects to ip tunnel via http
+** Helped out nhirata about connecting to the foxbox
+
+* What will I do?
+** Await response regarding my https issue
+** Continue working on ip tunnel script
+
+Martijn
+
+    Trying to get a docker build again
+
+    Filled in my Workday goals
+
+    Working on converting tests from setBoolPref to pushPrefEnv
+
+
+Pallavi:
+    Meeting is deleted; not able to recover; will create a new one.
+    Will change etherpad name to cd-qa-standup
+    Intern: location will be SF; London invite will be handled by recruiting
+    Contributors for London - 15 from CD
+    Q1 goals - start filing out
+
+Kate
+Yesterday
+* Vaani Meeting
+* Paulo last day, Marcia "official" last day in MV
+* Spoke with Kelly, was blocked by email from Kai
+* https://openhab.ci.cloudbees.com/ this is how OpenHab does CI
+--  Did the doc and tips from Chris work?
+
+nhirata
+3/17:
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+*** Prototype: Link + ConnectedMe
+**** working more on FitBit API; waiting for the bulb
+**** sync up with Amy
+
+3/16:
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+* dr. appt
+** CD 
+*** Prototype: Link + ConnectedMe
+**** looking at connecting Philips Hue to FoxBox and sending requests:
+***** Worked with NoJun : https://wiki.mozilla.org/Connected_Devices/QA/Tips_and_Tricks#REST_API
+**** https://docs.google.com/presentation/d/1eiuVTzAwMmr0HpxaDHQVAh1C0RFf6HD4icNVRqxvWqg/edit#slide=id.p
+
+==========
+ 2016-03-16 
+==========
+
+Johan
+
+* What did I do today?
+
+** Foxbox
+*** Found the reason of the failure on travis (old version of Firefox used). got reviewed. Landed https://github.com/fxbox/app/pull/11
+*** Continued on nicer assertions in unit tests https://github.com/JohanLorenzo/rust-assert-sugar  I now need to document it out. 
+*** Looked into how to write unit tests for React
+*** Attendded Thinkerbell meeting
+
+** Vaani: Investigated reason of build failure. Details sent in a follow up email.
+
+* What will I do tomorrow?
+** Document assertion methods
+** Play with unit tests in React
+** Clean up the e2e/integration test (forgot to do it in the previous PR)
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+
+Michael
+
+Yesterday
+* Weekly B2G meeting
+* Continued working with Russ on understanding the Rust telemetry library
+
+    * We also wrote a few unit tests for kicks
+
+* Continued reading/working through the Rust book
+
+Today
+* Weekly Metrics meeting
+* Rust'ing
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Talked to ferjm, found out how to access foxbox remotely via  tunnel
+** define a couple use case scenarios
+** Attended Thinkerbell and Taxonomy meeting
+** helped dev with compiling on mac platform
+
+* What will I do?
+** Try out the UI app to see its progress
+** Work on developing a new test case for remote access
+
+
+Martijn
+
+    Updating patch for bug 1138426 - convert accessibility setIntPref to pushPrefEnv
+
+    Bug 1057499 -  Run mochitests with pref browser.sessionhistory.max_total_viewers=0 and see if there are tests that need fixing
+
+    Looking into converting tests from setBoolPref to pushPrefEnv
+
+
+Isabel
+Today
+-Update FoxApp and started to create simple tests
+-Got the philips hue lights bulb and set them up. Finally I can see them in FoxApp
+-Foxlink Taxonomy meeting
+-Started to run the smoketest
+
+Tomorrow
+-Smoketest
+-Start creating tests for FoxApp
+-CD meetup in Madrid
+
+nhirata:
+3/16:
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+* dr. appt
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+** CD 
+*** Prototype: Link + ConnectedMe
+**** looking at connecting Philips Hue to FoxBox and sending requests:
+***** Worked with NoJun : https://wiki.mozilla.org/Connected_Devices/QA/Tips_and_Tricks#REST_API
+
+3/15: 
+* update :   bug 1248791 was pushed. 
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+* meetings: CD meeting
+** CD 
+*** Prototype: Link + ConnectedMe
+***** Looking at FitBit API/OAuth
+
+==========
+ 2016-03-15 
+==========
+
+Johan
+
+* What did I do today?
+
+** Foxbox
+*** Reviewed https://github.com/fxbox/foxbox/pull/205/
+*** Login: Clarified bug with gmarty and Isabel
+*** Update first e2e/integration test. Had some trouble to make it run on Travis https://github.com/fxbox/app/pull/11
+
+
+* What will I do ?
+** Couldn't get some help from the dev today https://github.com/fxbox/thinkerbell/pull/38
+** Continue on nicer assertions in unit tests
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+Michael
+
+Yesterday
+* Reading through the Rust book
+* Started going through the Rust telemetry library with Russ to better understand the code
+
+Today
+* Weekly B2G meeting
+* Continue working with Russ on understanding the Rust telemetry library
+* Continue reading/working through the Rust book
+
+Blocked?
+Nope
+
+Isabel
+Today
+-Checked FoxApp and the error shown, now it fixed
+-Defined an smoketest to check the USs that are going to be demod
+-Will receive the lights by the end of the day(got delayed)
+-CD weekly status meeting
+
+Tomorrow
+-Set up the new lights and test the app
+
+No-Jun
+* What did I do?
+** integration test is in travis now, spent a lot of time trying to locate the file that causes failure
+
+* What will I do?
+** Look into the pagekite (remote access from outside) solution for Foxbox and design an automated test for it
+
+nhirata:
+3/15: 
+* update :   bug 1248791 was pushed. 
+* blocker :
+** chirimen : bug 1166608 - asked fabrice
+* meetings: CD meeting
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+** CD 
+*** Prototype: Link + ConnectedMe
+**** need to look at API and seeing what we can poll better
+*** Prototype : Changed prototype, going to figure out fitbit API and what it contains.
+***** redesign of database
+3/14: sick
+3/11:
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+* [on pause] webvr : automation/research ( need to check out how to output log from oculus )
+* meetings: standup, syncmetrics, 1 on 1
+* tasks : 
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+** CD 
+*** Prototype: Link + ConnectedMe
+**** setup hue on wifi going out :
+***** getting Hue Hub connected, color light came in, worked on setting up a wifi network dedicated to connected me setup.
+**** connected wemo : wemo app, connects to wifi network.  No security
+*** Prototype : Changed prototype, going to figure out fitbit API and what it contains.
+***** redesign of database
+
+==========
+ 2016-03-14 
+==========
+
+
+Johan
+
+* What did I do today?
+
+** Foxbox
+*** Reviewed https://github.com/fxbox/foxbox/pull/194   https://github.com/fxbox/foxbox/pull/176
+*** Unbitrot https://github.com/fxbox/foxbox/pull/99 . I'm still getting some errors on travis. Investigating.
+*** Tried to continue on the App integration test, but I got some errors. Debugging that with gmarty
+*** Looked into how to improve #[should_panic] in rustc for error message. It's actually simpler than I thought and doesn't require a change in the compiler. I'm making macros in a separate repo.
+
+** Jenkins: Changed credentials by new ones
+
+* What will I do ?
+** Couldn't get some help from the dev today. Will try on Monday https://github.com/fxbox/thinkerbell/pull/38
+** Get login mechanism repaired
+** Continue on nicer assertions in unit tests
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+
+Michael
+
+Friday
+* Working through the Rust tutorials
+
+Today:
+* Continue on with the rust tutorial/guide
+* Meet with Russ to talk about Rust and work through some code
+* New hire onboarding panel this afternoon
+
+Blocked?
+Nope
+
+Isabel
+Today
+-Fixed PR with Johan's comments and merged it
+-Worked on the test cases definition, adding steps and expected
+-Attended FoxLink weekly meeting
+-Will attend Monday Project meeting
+
+Tomorrow
+-Will receive the philips new lights, will start testing the app manually
+-Check if I can start helping on automating any part of the app
+
+No-Jun (read only - in the Link meeting)
+* What have I done?
+** Link integration test is now in repo
+
+* What will I do?
+** Working with jlorenzo to add test integration to travis, should be done today
+** Review changes made to foxbox so far, and identify new test cases
+** Create new test case regarding setup and login which tests do you want to add here? (just to check if the ones I created are the ones you mean ;))
+
+Martijn
+
+    Updating patch for Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv
+
+    Updating patch for bug 1249061 - Improve property/attribute handling for marquees 
+
+    Updating patch for bug 1138426 - convert accessibility setIntPref to pushPrefEnv         
+
+
+nhirata: sick; out on PTO
+
+==========
+ 2016-03-11 
+==========
+
+Michael
+
+Yesterday
+* Returned the 5 Micro SIM cards from the Aries devices to IT
+* Finished watching the engineering onbaording sessions for Metrics/Telemetry
+* Starting reading the Gecko documentation on metrics/telemetry
+
+Today
+* Moar reading!
+* Hopefully play around with rust a bit
+
+Blocked?
+Nope
+
+Johan
+
+* What did I do today?
+
+** Foxbox
+*** Implemented a simple server that simulates FoxBox for the UI (thanks to No-Jun's code)  https://github.com/fxbox/app/pull/11 . It won't immediately land as login is currently being change and that's a pre-requisite for every front-end test.
+*** Unbitrot https://github.com/fxbox/foxbox/pull/99 . I'm still getting some errors on travis. Investigating.
+*** Reviewed test plan https://docs.google.com/document/d/1-3-CpYiiLYtZKKenjh5O_SdDxFB0ZMJBrXgTosX6mWE/edit#
+*** Meeting with Isabel and No-Jun
+
+* What will I do on Monday?
+** Continue the investigation on https://github.com/fxbox/foxbox/pull/99
+** Couldn't get some help from the dev today. Will try on Monday https://github.com/fxbox/thinkerbell/pull/38
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+** Try to improve #[should_panic] in rustc 
+
+Isabel
+*Today
+Applied for invitation to women at Mozilla to attend Google I/O 2016.
+Project Link
+-Looked at the integration framwork code to understand it
+-Worked on test plan and test cases
+-Automation meeting
+-Created a small PR for changing a few functions for the selenium setup test
+-Ordered the currently supported philips light bulbs
+
+*Moday
+Project Link
+Now that the test cases are defined, will work on adding details to each of them
+Will update the test cases doc with the docs created in the spreadsheet
+Project Link weekly meeting
+
+Kate 
+This Week
+* TRIBE
+Today
+* Set up BinTray and TravisCI with separate email account and password
+* Need to understand how to "share" Travis among people (because it is through my Repo) => Just put .travis.yml in other repos, and people will have to toggle a switch it on Travis' UI https://travis-ci.org/profile/$YOUR_GITHUB_USERNAME . However, I'd just recommend to toggle it on your account (for testing) and the mozilla one. You'll need an owner of the GH mozilla group to toggle the switch on that account. 
+* Find out more details about Vaani prototype and start thinking about how to test
+
+No-Jun
+* What did I do?
+** Meeting to discuss automation with the Project Link
+** Refactored the test case based on jlorenzo's feedback, fixed some bugs with it
+
+* What will I do?
+** Review test plan
+** Incorporate new comments from jlorenzo
+** Make updates to the test status in the Link user story
+
+nhirata:
+3/11:
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+* [on pause] webvr : automation/research ( need to check out how to output log from oculus )
+* meetings: standup, syncmetrics, 1 on 1
+* tasks : 
+** webvr : 
+*** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+** CD 
+*** Prototype: Link + ConnectedMe
+**** setup hue on wifi going out :
+***** getting Hue Hub connected, waiting for color light to come in (possibly friday)
+**** connect wemo
+*** Prototype : Weather : 
+***** redesign of database
+
+3/10: 
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan : Meeting thursday at 3
+* meetings: standup, webvr team
+* tasks
+** fxos taskcluster builds :
+*** looked at https://bugzilla.mozilla.org/show_bug.cgi?id=1251293
+*** talked to doliver about taskcluster builds
+*** SIM number count : still a large number of sims that are unaccounted for; still investigating and asking around.
+*** looked at https://bugzilla.mozilla.org/show_bug.cgi?id=1244497 
+** webvr :
+*** meet with cvan, and several of the team to talk about webvr needs.
+**** use of taskcluster, docker images and pulling various browser builds and repo hash.
+**** need to double check if there's other testing tools out there other than selenium
+*** more research
+** CD : 
+** send back mentor email
+** https://wiki.mozilla.org/Connected_Devices/QA/Tips_and_Tricks
+*** connected me prototypes due date 3/30
+**** Link + fitbit + lights + outlet + scale + smartlid : 
+***** added new scale, connects via bluetooth to device.
+***** connecting smartlid to fitbit
+**** Weather accumulation data : 
+***** started prototyping redesign in FileMaker before moving to LAMP
+
+==========
+
+ 2016-03-10 
+==========
+
+Johan
+
+* What did I do today?
+** Reviewed intern's DS-7002
+
+** Foxbox
+*** Done first iteration. E2E test will require some manual setup for now  https://github.com/fxbox/app/pull/11
+*** Reviewed https://github.com/fxbox/foxbox/pull/176
+*** Made a patch that should workaround the intermittent issue  https://github.com/fxbox/foxbox/issues/156
+*** Addressing reviews. I'm getting compilation errors I'm not used to  https://github.com/fxbox/thinkerbell/pull/38 . Will continue to work on it.
+
+* What will I do tomorrow?
+** https://github.com/fxbox/thinkerbell/pull/38
+** Unbitrot https://github.com/fxbox/foxbox/pull/99 
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+** Try to improve #[should_panic] in rustc 
+
+Michael
+
+Yesterday
+* Metrics weekly meeting
+* Bi-weekly qa meeting
+* Read up on metrics and telemetry
+
+    * Watched engineering onboarding session
+
+
+Today
+* More reading/watching/learning about metrics and telemetry
+* Work on learning rust
+* Return the 5 Aries SIM cards to IT
+
+Blocked?
+Nope
+
+Isabel
+-Today
+Finally after applying the tricks Johan discovered about selenium and FoxApp, I did some tests locally to try and now I can access its elements and interact with them. 
+Worked on the Projec Link test plan: https://docs.google.com/document/d/1-3-CpYiiLYtZKKenjh5O_SdDxFB0ZMJBrXgTosX6mWE/edit#
+Worked on the E2E manual test cases, although without steps yet, they are taking good shape: https://docs.google.com/spreadsheets/d/19l74YZVagQJTuWZpJ1ohmtNFR8p3AOo6YUpbv9A-LtU/edit#gid=0
+
+-Tomorrow
+Will work a bit more on the test cases regarding recipes
+Will start working on the improvement for the set up tests
+FoxLink automation meeting
+
+No-Jun
+* What did I do?
+- Submitted a PR to merge integration test environment into fxbox repo
+- Read over the new design architecture (taxonomy)
+- Read over the columns that were added to the foxlink user story
+
+* What will I do?
+- Incorporate feedbacks from jlorenzo 
+- Think about immediate improvements I can make to the integration test
+- Make comments on the testing task (might need to go over this on the automation meeting)
+
+nhirata
+3/10: 
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan : Meeting thursday at 3
+* meetings: standup, webvr team
+* tasks:
+** setup oculus account + id : https://id.oculus.com, verify with the link sent in your email, and log in at least once at http://forums.oculus.com/
+** send back mentor email 
+** SIM number count
+** connected me prototypes due date 3/30
+*** Weather accumulation data : 
+**** designing database ; need to redesign to be more generic
+*** Link + fitbit + lights + outlet + scale + smartlid : 
+**** getting Hue Hub connected, waiting for color light to come in (possibly friday)
+**** meeting setup with syncmetrics team : meeting friday morning
+**** connect smart lid and scale to fitbit and wemo
+3/9:
+* meetings: QA, standup
+* tasks done:
+** connected me prototypes due date 3/30
+*** Link + fitbit + lights + outlet + scale + smartlid : 
+**** working on installing foxbox on rpi2; got foxbox running; doesn't work on wheezy ...
+**** meeting setup with syncmetrics team : meeting friday morning
+
+==========
+ 2016-03-09 
+==========
+
+
+Johan
+
+* What did I do today?
+** FoxLink: 
+*** Reviewed https://github.com/fxbox/foxbox/pull/170
+*** FoxApp
+**** Set up Philips Hue in Paris, so I could try the app manually before
+**** Started to write a first e2e test against react https://github.com/fxbox/app/pull/11 ohh you got it!!\o/ Not sure if I tested the problematic use case :S What was the bad element?I tried to tap on any of the bottom tabs like themes, settings, mr.fox. I found the elements but could not click on them. Those are the only elements I see so far so could not test with others
+
+
+* Am I blocked? No.
+
+* What will I do tomorrow?
+** Continue on https://github.com/fxbox/app/pull/11
+** Address review comments  https://github.com/fxbox/thinkerbell/issues/35
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+** Try to improve #[should_panic] in rustc 
+
+
+Pallavi (At the dentist)
+
+Michael
+
+Yesterday
+* Installed Rust
+* Ran Hello World
+* CD Meeting
+
+Today
+* Metrics meeting (9-9:45)
+* Bi-weekly roundtable tonight
+* Play with Rust
+
+Blocked?
+Nope
+
+Isabel
+-Today
+Medical platform meeting
+Foxlink
+*Updated trello board
+*Worked on PR https://github.com/fxbox/foxbox/pull/170 and finally merged it
+*Worked on the test plan adding the development tasks and the qa tasks for each one
+*Reviewed the new wireframes including recipes
+**Worked on creating the test cases. The USs and scenarios to tests are getting clearer
+
+-Tomorrow
+FoxLink
+*Will continue working on the test plan/test cases
+*Will start working in a follow up to improve PR170
+
+Martijn
+
+    Patch ready for  Bug 1138426 -  convert accessibility setIntPref to pushPrefEnv 
+
+    Working on review comments in [Bug 1249061] Improve property/attribute handling for marquees
+
+    Tomorrow I'll be on PTO (travelling)
+
+
+No-Jun
+* What did I do?
+** Tested cr's patch
+** Looked into TLS/WSS scheme
+** Tested cr's patch using the integration test tool, merged
+
+* Todo:
+    ** Move test framework into fxbox repo
+    ** Review test status on Links project spreadsheet
+
+3/9:
+* meetings: QA, standup
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan : Meeting thursday at 3
+* tasks:
+** connected me prototypes due date 3/30
+*** Weather accumulation data : 
+**** designing database
+*** Link + fitbit + lights + outlet + scale + smartlid : 
+**** working on installing foxbox on rpi2.
+**** meeting setup with syncmetrics team : meeting friday morning
+
+3/8:
+* meetings: systemsfe, CD meeting
+* tasks:
+** connected me prototypes due date 3/30
+*** Weather accumulation data : 
+**** setup LAMP / designing database
+*** Link + fitbit + lights + outlet + scale + smartlid : 
+*** meeting setup with syncmetrics team : meeting friday morning
+
+==========
+ 2016-03-08 
+==========
+
+Pallavi 
+- Will be at the Connected Devices meeting
+- Just heard from the recruiter - Justin accepted internship offer with Cloud Services team. 
+
+Johan (will attend CD meeting)
+
+* What did I do today?
+** FoxLink: 
+*** Investigated reason of the failure https://github.com/fxbox/foxbox/issues/156
+*** Done first iteration https://github.com/fxbox/thinkerbell/issues/35
+*** Small refactor of some unit tests done by devs https://github.com/fxbox/foxbox/pull/161
+*** Made a patch to unblock integration tests. It turns out to be a dupe of something in development. More discussions in there  https://github.com/fxbox/foxbox/issues/106
+
+*** Vaani: Investigated Travis failure on openHab.
+
+* Am I blocked? No.
+
+* What will I do tomorrow?
+** Couldn't do it today, work with guillaume in regards of Selenium testing of the front 
+** Continue on Thinkerbell
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+** Try to improve #[should_panic] in rustc 
+
+Michael (Read only - CD Meeting)
+
+Yesterday:
+* Meeting on an introduction to metrics and telemetry
+* Read up on metrics and telemetry
+* Read up on Rust
+
+Today:
+* CD meeting this morning
+* Install and start playing with Rust
+* Go through the Rust guide
+
+Blocked?
+* Nope
+
+No-Jun
+* What did I do?
+** Discussed with jlorenzo and isabel about having test status for each Link project user story tasks
+** Now the test framework automatically starts the foxbox
+** Spent time thinking my env was broken, but it was the nightly rust
+
+* What will I do?
+** read up on ws implmentation on foxbox
+
+Martijn
+
+    Working on Bug 1138426 -  convert accessibility setIntPref to pushPrefEnv 
+
+    Still working on getting a docker build
+
+
+    Todo:
+
+    Got r-, need to address issues [Bug 1249061] Improve property/attribute handling for marquees
+
+
+Isabel
+-Today
+Tried ghosts for the automation of FoxApp UI, but cannot get it working
+FoxBox did not compile, I was missing a new library needed, took me a while to have it installed and foxbox running again
+Worked on refactor the tests so they respect the po pattern
+Got my philiphs hue bulb. Tried to set them up but getting an error
+
+-Tomorrow
+PR for refactor setup ui tests
+Work on the test plan and test cases based on the existing USs
+WIll try to get fixed the problem with my philips hue bulb lights
+Blocked: FoxApp UI cannot access it for automation
+
+nhirata:
+3/8:
+* meetings: systemsfe, CD meeting
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan
+* tasks:
+** connected me prototypes due date 3/30
+*** Weather accumulation data
+*** Link + fitbit + lights + outlet + scale + smartlid
+*** speak with syncmetrics team
+** webvr: need to chat with cvan
+
+3/7:
+* meetings: qa standup, moco
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan
+* tasks:
+** connectedme : 
+*** working on some prototype ideas -> 
+**** connect fitbit w/ link + cronjob :
+***** received raspberry pi 2, started looking at link documentation; need to read over how it works with the web service.
+***** looking into how to utilize cron w/ rust + create a webpage using rust
+**** collect weather data : 
+**** looking at various weather APIs.
+*** create some questions for the syncmetrics team: https://public.etherpad-mozilla.org/p/syncmetric_questions
+** tested making a b2g build with taskcluster since the change over : https://tools.taskcluster.net/task-inspector/#E5gF52ZhT3OWKNuShpbQiw/
+
+
+==========
+ 2016-03-07 
+==========
+
+Johan
+* What did I do today?
+
+** FoxLink: 
+*** Unit test coverage landed. Clarified the numbers on the mailing list
+*** Reviewed No-Jun's first tests that simulates Phillips hub
+***  https://github.com/fxbox/thinkerbell/issues/35
+*** Looked more closely on how rustc implements #[test].
+*** Weekly meeting
+
+** Vaani: Documented CI reqs and action items via email.
+
+* Am I blocked? No.
+
+* What will I do tomorrow?
+** WOrk with guillaume in regards of Selenium testing of the front 
+** Continue on Thinkerbell
+** Was contacted by dustin for Taskcluster credentials clean up. I'll do the migration tomorrow 
+** Try to improve #[should_panic] in rustc 
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+Michael
+
+Friday
+* Attended Johan/No-Jun/Isabel's Project Link meeting
+* Snagged a Raspberry Pi 3
+* Attended the initial meeting of the new CD metrics group
+
+    * Goal is to try and provide metric and telemetry data for the new conected devices projects
+
+    * Group has 2 primary engineers working on this stuff
+
+    * My job will be to learn and help out wherever I can
+
+
+Today
+* Read up on telemetry and metrics
+* One of the engineers in the group is going to stop by the office and give me an overview of all the things
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Sent out the integration test code for Johan's review
+** Incorporated feedback from Johan
+
+* What will I do?
+** Will experiment with spawning foxbox process from mocha test
+** Will look into simulating ws messages between webapp and foxbox
+
+Isabel
+-Today
+*FoxLink
+**Finally got post setup and login requests working. https://github.com/isabelrios/foxbox/blob/testing/test/selenium/post_setup_and_login_test.js
+**Could incorporate post set up to the current tests (only to the tests that requires user to be loggedin): https://github.com/isabelrios/foxbox/blob/testing/test/selenium/post_setup_request_ui_session_test.js
+**Foxlink weekly meeting
+*Will watch Project meeting
+
+-Tomorrow
+**See how I can add the post requests to existing tests or create new ones
+**FoxApp check the updates, and go back to try to find a way to interact with the elements to start creating tests for the UI
+**1:1 Pallavi
+
+Kate
+Friday
+* FoxLink presentation
+* Worked with Paulo to help him set up remote RPI tests and OpenHab
+* https://github.com/yglazko/openhab-seleniumjs there are two different ways to run now, on Mac or on-Rpi through Mac!
+
+Today
+* Vaani meeting
+* Figure out CI strategy
+* Start investigating BinTray
+* TRIBE this week on 3/9 and 3/10, may be away from the computer 
+
+
+nhirata:
+3/7:
+* meetings: qa standup, moco
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan
+* tasks:
+** connectedme : 
+*** looking at various weather APIs.
+** working on some prototype ideas
+** Rust/Servo
+
+3/4:
+* meetings : link meeting, qa standup
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed; wes pinged.
+** chirimen : bug 1166608 - asked fabrice
+** automation for webvr : blocked, need to talk to cvan
+* tasks:
+** push new Aries build with fingerprints; linked people to a manual update.zip file for sideloading
+** connectedme : 
+*** looking at various weather APIs.
+*** getting in contact with people from Syncmetrics.com
+*** ordered hue, and a bunch of other things: idea, connecting fitbit to foxbox and hue and changing lights by requests based on heartrate and awake status and polling.  ie setup a webserver to change cronjobs
+** Rust/Servo
+
+==========
+ 2016-03-04 
+==========
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Pending
+Aries 2.6 Status:  Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Pending
+Flame 2.6 Status: Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+* What did I do today?
+
+** FoxLink, unit tests: 
+*** Code coverage ready for review https://github.com/fxbox/foxbox/pull/134
+*** Office hour with Isabel and No-Jun + presentation 
+*** Started to test Thinkerbell. I realized #[should_panic(expected = "foo")] is super strict with the error message given and doesn't handle .unwrap() well. I looked at rustc to see if we could upgrade the behavior. It seems doable in a reasonable amount of time. 
+
+* Am I blocked?
+** No
+
+* What will I do on Monday?
+** Continue on Thinkerbell
+** Try to improve #[should_panic] in rustc 
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+
+Martijn :
+
+    Checked in Bug 1252444 -  Rewrite some dom mochitests to use pushPrefEnv instead of setCharPref
+
+    Working on getting a docker linux build working again for  Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv,
+
+    Updated patch for Bug 553417 -     Write new test for bug 299673
+
+
+Todo:
+
+    After getting a docker linux build, test the mochtests that are failing on MacOSX and work from the Docker build
+
+    Work on other pushPrefEnv rewrites
+
+
+Michael
+
+Yesterday:
+* Inventory the QA Lab
+
+    * Put information into Bug 1251371 https://bugzilla.mozilla.org/show_bug.cgi?id=1251371
+
+    * Listed all of the flame devices, SIM and SD cards in the bug for reference
+
+    * Also listed the numbers of the Mac Minis we have.
+
+
+Today:
+* Attend the Foxlink Project Link presentation
+* Magically I got put onto a new Metrics and Telemetry team (Shanghaied actually)
+
+    * Introduction meeting for the new Metrics and Telemetry team
+
+
+Blocked?
+Nope
+
+Kevin Tucker
+*What did I do yesterday?
+**No builds so no smoke tests were performed
+****Sent out the EOD report
+*****Daily Bug Triage
+******Project clean up work
+*******Inventory
+
+*Am I blocked?
+https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+*What will I do today?
+**Testing updates for 3 different builds and maybe Nexus 4 and 5
+***Daily bug triage
+****Project clean up work.
+*****Packing up all the devices etc
+
+Isabel
+-Today
+*FoxLink
+**Rebased and merged PR  https://github.com/fxbox/foxbox/pull/135
+**Create another PR https://github.com/fxbox/foxbox/pull/136
+**Worked on the presentation
+**Foxlink automation meeting focused on the presentation
+**Foxlink presentation
+
+-Monday
+*FoxLink
+**Work on new tests for UI using POST request
+**Project Link meeting
+
+No-Jun
+* Done: refactored the test code, now a lot more neat
+* Meetings, presentations
+
+* Will do: add additional feature to view last incoming IoT REST API command from FoxBox 
+
+nhirata:
+3/4:
+* meetings : link meeting, qa standup
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed
+** chirimen : bug 1166608 - just need to get a review and push I think.  Not sure who to ask for review.
+* tasks:
+** relook at connectedme pathway : crowd source data to push insights (we found this data in this group)
+*** looking at various weather APIs.
+** push new Aries build with fingerprints
+** automation research for webvr; spoke with some of the guys, only cvan wants to discuss since he has some automation knowledge.  Need to meet with him.
+** Rust/Servo
+
+3/3:
+* meetings : missed qa standup,  systemsfe, meeting w/ Sakina&Amy in regards to ConnectedMe
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed
+** chirimen : bug 1166608 - just need to get a review and push I think.  Not sure who to ask for review.
+* tasks:
+** relook at connectedme pathway : crowd source data to push insights (we found this data in this group)
+*** looking at various weather APIs.
+** push flame nightly OTA today ; nexuses doesn't have full fota, partial fota will brick device, dropped nexus update support for this round.  If someone comaplins about it, I would have to make a build.
+** guessing the 3 builds out in public in regards to the base build, created a special build that has the fingerprints of all 3; having QAnalysts test the update paths for OTA on aries.
+** automation research for webvr; spoke with some of the guys, only cvan wants to discuss since he has some automation knowledge.  Need to meet with him.
+** Rust/Servo
+
+
+==========
+ 2016-03-03 
+==========
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Pending
+Aries 2.6 Status:  Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Pending
+Flame 2.6 Status: Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+* What did I do today?
+* Meetings: Ari in Paris, Fobbox UI review, CI for Vaani
+
+** FoxLink, unit tests: 
+*** Landed https://github.com/fxbox/foxbox/pull/103
+*** Reviewed https://github.com/fxbox/foxbox/pull/109 
+*** Scripted how to generate code coverage reports. It's not super fancy. I'm cleaning it up before having it in a PR.
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Code coverage
+** Complete slides for foxlink presentation
+** Start to implement unit tests for Thinkerbell (Foxlink IFTTT implementation)
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+Michael
+
+Yesterday
+* Image compare runs:
+
+    * NonSmoke and Smoke havent built in a week
+
+    * Standard failed to build properly
+
+* Tinkered with Test Rail
+
+Today
+* Inventory the QA Lab
+
+    * Put information into Bug 1251371 https://bugzilla.mozilla.org/show_bug.cgi?id=1251371
+
+    * Listed all of the flame devices, SIM and SD cards in the bug for reference
+
+    * Also listed the numbers of the Mac Minis we have.
+
+
+Blocked?
+Nope
+
+Kevin Tucker
+*What did I do yesterday?
+**No builds so no smoke tests were performed
+****Sent out the EOD report
+*****Daily Bug Triage
+******Project clean up work
+*******Status reports
+
+*Am I blocked?
+https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+*What will I do today?
+**Sanity and Smoke on Flame nightly, Nexus 4 and Nexus 5
+***Daily bug triage
+****QA Wanted
+*****Project clean up work.
+******Inventory
+
+No-Jun
+* What did I do?
+** Created mocha script that handles the new authentication scheme
+
+* What will I do?
+** Continue working on refactoring the test design 
+
+Isabel
+-Today
+*FoxLink
+**Fixed comments in PR https://github.com/fxbox/foxbox/pull/109, finally I can merge, travis is green but there is conflict but seems only related to the rights to write:
+This branch has conflicts that must be resolved, Only those with write access to this repository can merge pull requests., should I ask permision to Fabrice?
+**Got a test working for a POST request, create PR for adding it (test/integration/rest-api)? 
+**FoxApp UI review meeting
+*1:1 Pallavi
+
+-Tomorrow
+*FoxLink
+**Work on new tests for UI usign POST request
+**FInish the presentation
+**Foxlink automation meeting
+**Foxlink presentation
+
+Blocked: 
+FoxApp, I see an error when foxbox is running and open the app, not sure that is why I cannot see the full app.
+No progress on accessing the elements in the DOM
+
+Kate
+* Yesterday
+** Vaani meeting
+** Made a bash script test trigger for Selenium and a local version of OpenHab (yes) https://github.com/yglazko/openhab-seleniumjs
+** Had Participation/CI/1:1 meeting today
+* Today
+** Work on some more One and Dones
+** Grab ID elements from automation script
+** Run a basic automation test with OpenHab-SeleniumJS
+
+
+Martijn
+
+    Bug 1252444 -       Rewrite some dom mochitests to use pushPrefEnv instead of setCharPref
+
+    Retriggered try 5 times and now ready to be checked in
+
+    Working on Bug 1238632] crash in webrtc::VCMGenericEncoder::SetChannelParameters
+
+    I built a non-debug build with debug symbols now and I'll see if I can reproduce
+
+    Finally was able to provide a stack from a non-debug build with debug symbols for Bug 1238632 -       crash in webrtc::VCMGenericEncoder::SetChannelParameters
+
+Todo:
+
+    Updated patch for Bug 553417 -       Write new test for bug 299673 - will update the patch and then let it check in
+
+    Get docker linux build working again for  Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv,
+
+
+nhirata:
+3/3:
+* meetings : missed qa standup,  systemsfe, meeting w/ Sakina&Amy in regards to ConnectedMe
+* blockers
+** bug 1248791 : build pushed; patch reviewed - checkin needed
+** chirimen : bug 1166608 - just need to get a review and push I think.  Not sure who to ask for review.
+** waiting for feedback on fingerprint issue with the FOTA builds.  Too many variations of fingerprints, just need to add them all to the build and rebuild; errors could potentially be from wrong data/time on device.
+* tasks:
+** relook at connectedme pathway : crowd source data to push insights (we found this data in this group)
+** push flame nightly today
+** automation research for webvr
+** Rust/Servo
+** certifiate
+
+3/2:
+* bug 1248791 : build pushed; need to push patch - checkin needed
+* [done] bug 1244893 : waiting for feedback - checked in.
+** chirimen : bug 1166608 - just need to get a review and push I think.  Not sure who to ask for review.
+* meetings : standup
+* fingerprint issue with the FOTA builds.  Too many variations of fingerprints, just need to add them all to the build and rebuild.
+* connected me idea : fitbit API + scale ? ; scale doesn't do BMI, ordered new one.  App on phone connects with fitbit, no need for extra app.
+** research on best food logging/calories.  Possibly ordering a smart food scale.
+* setup nightly with a build to match the dogfood builds. (flame/nexus-4/nexus-5)
+
+==========
+ 2016-03-02 
+==========
+
+Daily Smoke results and Severe issus:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Pending
+Aries 2.6 Status:  Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Pending
+Flame 2.6 Status: Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+nhirata:
+3/2:
+** bug 1248791 : build pushed; need to get a review/push patch
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608 - just need to get a review and push
+* Rust/Servo
+* meetings : vanni, standup
+* connected me idea : fitbit API + scale ?
+* webvr automation : selenium + appium + galen
+
+3/1:    
+* Blocked: 
+** bug 1248791 : build pushed; need to push patch
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; got feedback from Hal.  adjusted PR.  Waiting for results
+* Rust/Servo
+* pushed out build from bug 1248791
+* meetings :systemsfe, gaia, project meeting, driver
+* start on investigation of API for fitbit; research on fitbit/health related apps
+** discussion with Amy
+
+Johan
+* What did I do today?
+* 1 meeting (TW roundtable)
+
+** FoxLink, unit tests: 
+*** Finished investigating unit tests slowness. Results published there https://github.com/fxbox/foxbox/issues/113
+*** Added one more test to main.rs and bubbled up default ports/hosts to main  https://github.com/fxbox/foxbox/pull/115
+*** Started to fill up the slides
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Complete/review slides for foxlink presentation
+** Find another place where unit tests are missing and implement them 
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+
+Michael
+
+Yesterday:
+* Weekly Gaia meeting
+* Played around with TestRail some
+
+    * Read through the documentation and watched some of their training videos
+
+    * Overall it seems very solid and well put together.
+
+    * Pretty easy to figure out and work with so far
+
+
+Today:
+* Image compare runs:
+
+    * NonSmoke and Smoke havent built in a week
+
+    * Standard failed to build properly
+
+* Order Raspberry Pi http://www.mcmelectronics.com/product/83-17300 Good price here, also on Amazon but overpriced
+* Tinker with TestRail some more
+
+Blocked?
+Nope
+
+Kate
+Yesterday
+* Got Raspberry Pi 2 and Pocketsphinx set up
+* Ask me about resetting the Raspberry Pi :)
+* Introduced Paulo to One and Done and working with him to write task
+* Talked to FlyWeb team to give them pointers on quadrotor demo
+
+Today
+* Vaani meeting
+* Do more work on Selenium test while waiting to unblock with Pocketsphinx
+* Ordered Rpi 3 (officially switching to Rpi 3 for Vaani)
+* CI part 2, need to talk to Johan :)
+* Reflashing guide so people can test Fennec and FlyWeb and other projects as they begin to integrate with mobile?
+
+Kevin Tucker
+*What did I do yesterday?
+**No builds so no smoke tests were performed
+****Sent out the EOD report
+*****Daily Bug Triage
+******QA Wanted regression window
+
+*Am I blocked?
+https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+*What will I do today?
+**No builds today so no sanity and smoke tests
+***Daily bug triage
+****QA Wanted
+*****Project clean up work.
+******Send out status reports
+
+Isabel
+-Today
+*QA Rountable
+*Weekly Medical platform project meeting
+*FoxLink
+**Fix the error that made travis red for my PR, now it is green. 
+**Trying to fix the test for the POST request, I get an error in boxbox related to headers
+ERROR:hyper::server: request error = Header
+**Worked on the presentation for Friday
+
+-Tomorrow
+*FoxLink
+**Continue working on POST test
+**Continue working on the presentation
+**Review UI for FoxApp meeting
+*1:1 Pallavi
+
+Blocked: FoxApp, I see an error when foxbox is running and open the app, not sure that is why I cannot see the full app.
+No progress on accessing the elements in the DOM
+
+Martijn
+
+    Worked on a docker build of linux to test Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv,
+
+    Got feedback+ from Mats on  Bug 553417 -       Write new test for bug 299673 - will update the patch and then let it check in
+
+    Patch r+ for bug 1252444 -  Rewrite some dom mochitests to use pushPrefEnv instead of setCharPref  - need to do some retries on tryserver, then this can be checked in
+
+    Working on Bug 1238632] crash in webrtc::VCMGenericEncoder::SetChannelParameters
+
+
+No-Jun
+* What did I do?
+** Refactored the mocha script for the foxlink, read more about express.js routing
+** Added some contents into the foxlink presentation slides
+** Created a small PR that updates the rust version for foxbox
+
+* What will I do?
+** Need to play around with the new authentication feature implemented in foxbox
+** Need to update the test script to accomodate above feature
+
+==========
+ 2016-03-01 
+==========
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Pending
+Aries 2.6 Status:  Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Pending
+Flame 2.6 Status: Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+* What did I do today?
+** FoxLink, unit tests: 
+*** for registar: Rebased  https://github.com/fxbox/foxbox/pull/103
+*** Helped :cr and Isabel in regards to tests failures
+*** Started to Investigate why unit tests take 30s each time I run `cargo test` with a single change in a test. At first, stainless macros don't seem to be the root cause. The tests themselves aren't either. If I have one single regular #[test], it still takes ±28s to compile/run. I'm taking unit tests out of the production code to see if that helps.
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Continue on the investigation for unit tests slowness 
+** Complete/review slides for foxlink presentation
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+
+Michael
+
+Yesterday
+* Monday Meetings
+
+    * Internal
+
+    * Project
+
+* Started looking more into Test Rail
+
+    * Through John's efforts we've got a batch of test accounts for Test Rail, if you'd like to play around with it contact Stuart Philp
+
+
+Today:
+* Weekly Gaia meeting
+* Play around with Test Rail
+* Start looking into Squash TM / Testlink / Tarantula as those are other alternatives if we don't like Test Rail
+
+Blocked?
+Nope
+
+No-Jun (read only, connected devices program update)
+* What did I do today?
+
+    created a mocha script(https://github.com/npark-mozilla/foxlinker/blob/master/test/philipshub_sync.js) that mimicks the philips bridge, and also sends a rest api command to foxbox to turn on light and have the fake bridge respond  to foxbox request
+
+    this script shows that current integration approach is technically feasible and straightforward
+
+* What will I do?
+
+    Clean this script up with proper style, based on suggestions by jlorenzo
+
+
+Kate (running late)
+* Yesterday
+** RPi One and Done https://oneanddone.mozilla.org/tasks/158/
+** Vaani meeting
+** Worked on Rpi
+
+*Today
+** Vaani UI requirements meeting
+** Continue on RPi + Pocketsphinx
+** Finish and write one and done
+
+Isabel
+-Today
+*FoxLink
+**Created PR with two basic test cases for the set up page, they passed. Then I added a new one that passes locally but travis is red so it cannot be merged
+**Started to investigate how to create a first test to check the Post requests for the FoxBox User Managment API
+*Ordered Philips hue
+
+-Tomorrow
+*QA sync meeting
+*Medical Platform project meeting
+*FoxLink
+**Start working on a FoxLink presentation for the team
+**Continue with the Post tests
+
+Bloked: 
+FoxApp. Not able to see the complete app yet. And the options I see I cannot access them in order to start automating somthing
+
+
+Kevin Tucker
+*What did I do yesterday?
+**No builds so no smoke tests were performed
+****Sent out the EOD report
+*****Daily Bug Triage
+******Exploratory testing on last Wednesday build since it does not have the sanity blocker
+
+*Am I blocked?
+https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+*What will I do today?
+**No builds today so no sanity and smoke tests
+***Daily bug triage
+****Exploratory testing on Wednesday's build.
+*****Project clean up work.
+
+Martijn
+
+    Re-enabled those tests and put them on tryserver Bug 553417 -       Write new test for bug 299673
+
+    Linux, Windows and e10s are failing, asking for feedback from :mats
+
+    Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv, this one already gives me failures locally, testing on try if it works fine there
+
+    Tryserver gives errors, will need to have a linux environment to be able to test this (Docker image?) See example from https://bugzilla.mozilla.org/show_bug.cgi?id=1251837
+
+    Patch for Bug 1252135 -  Convert some tests in dom/events to use pushPrefEnv
+
+    Bug 1252135 -       Convert some tests in dom/events to use pushPrefEnv 
+
+    Checked in
+
+    Patch r+ for bug 1252444 -  Rewrite some dom mochitests to use pushPrefEnv instead of setCharPref 
+
+    Working on bug 1252369   -  Convert chrome mochitest test_selection_underline.html to use pushPrefEnv 
+
+    Initial patch gives failures, so needs a better patch
+
+
+Todo:
+
+        Get a linux docker image working
+
+
+nhirata: (readonly in project meeting)
+3/1:    
+* Blocked: 
+** bug 1248791 : build pushed; need to push patch
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback from Hal.  May need to ping him.
+* Rust/Servo
+* pushed out bug 1248791
+* meetings :systemsfe, gaia, project meeting, driver
+* start on investigation of API for fitbit
+
+2/29:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback from Hal.  May need to ping him.
+* Rust/Servo
+* meetings : mozilla, vaani, foxfooding
+
+week of 2/22: (forgot to place in yesterday's notes because of conflict internal meeting)
+2/26:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback from Hal.  May need to ping him.
+1/2 day : meetings : qa standup, connectedme planning, vaani review
+rust stuff.
+
+==========
+ 2016-02-29 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Pending
+Aries 2.6 Status:  Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Pending
+Flame 2.6 Status: Red, 2 existing blockers and 1 qablocker
+
+No builds today:
+- https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+No-Jun (readonly - internal meeting today)
+* What did I do?
+** Was able to setup a fake nupnp site to redirect foxbox requests to the test environment
+** Was able to get the UI app running on both linux and mac
+
+* What will I do?
+** Need to read up on express on node.js so I can send proper json responses to foxbox to mimick the philips hub behavior 
+
+Michael (Read Only - Internal Meeting Today)
+
+Friday:
+* Continue looking at Moztrap alternatives:
+
+    * Found a few possibilities, need to look into them further
+
+    Open Source:
+
+    * Squash TM
+
+    * Testlink
+
+    Free:
+
+    * Tarantula
+
+    Potentially free to us:
+
+    * Test Rail
+
+    * Freemium
+
+    * Klaros-Testmanagement
+
+* Weekly Image Compare check:
+
+    * Standard: Failed to build completely 
+
+    * Non-Smoke: 2 expected errors
+
+    * Smoke: a few expected errors. Some instances of URLS being different for tests
+
+
+Today
+* More closely examine Moztrap alternatives
+
+    * Get information, attempt to use a few, work with kate to compile figure out some criteria
+
+* Meeting
+
+Blocked?
+Nope
+
+
+Isabel (read only)
+-Today
+Foxlink:
+*Thought about new test to add to the set up page
+*Implemented a few tests but cannot get them working with the rest of the tests
+*Tried to access to FoxApp elements, no success yet
+*Foxlink weekly meeting
+Monthly internal meeting
+
+-Tomorrow
+*Will try to get solved the problems with set up tests and fox appst 
+
+Bolcked: Would need help to understand why the tests do not work and how to access FoxApp elements, cannot implement new tests so far
+
+Johan
+* What did I do today?
+** FoxLink, unit tests: 
+*** for tunnel_controller: Finished first iteration of https://github.com/fxbox/foxbox/pull/99
+*** for registar: Small refactor of  https://github.com/fxbox/foxbox/pull/103
+*** for utils: Another refactor + bug fix https://github.com/fxbox/foxbox/pull/104
+*** Reviewed https://github.com/fxbox/foxbox/pull/101
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Benchmark why compilation got longer when running tests.
+
+* What do I have in my queue?
+** Continue to use rust as a lib
+
+Kate (read only)
+* Friday
+** QA Vaani presentation
+** Worked on RPi documentation
+** Worked with Paolo
+** Created Vaani pain points list
+* Today
+** Wipe RPi, install pocketsphinx
+** Create Paulo's guide as a one-and-done
+** Internal meeting
+
+Kevin Tucker
+*What did I do Friday?
+**Sanity on Aries (Sanity Failed) and Sanity and Smoke on Flame 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+
+*Am I blocked?
+https://bugzil.la/1252139 - No new builds are available on taskcluster
+
+*What will I do today?
+**No builds today so no sanity and smoke unless it gets resolved.
+***Daily bug triage
+****Exploratory testing on Friday's build.
+*****Project clean up work.
+
+Martijn
+
+    Re-enabled those tests and put them on tryserver Bug 553417 -       Write new test for bug 299673
+
+    Patch for Bug 1251905 -       Convert test_continuous_wheel_events.html to use pushPrefEnv, this one already gives me failures locally, testing on try if it works fine there
+
+    Got r+ for Bug 1249061 -       Improve property/attribute handling for marquees, but made some final improvements and a couple of more subtests
+
+    Initial patch for Bug 1252135 -  Convert some tests in dom/events to use pushPrefEnv
+
+
+==========
+ 2016-02-26 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Failed
+Aries 2.6 Status:  Red, 2 existing blockers
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Sanity: Passed
+Flame 2.6 Status: Red, 2 existing blockers
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+- https://bugzil.la/1251293 Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Michael
+
+Yesterday
+* Finished setting up devices in the QA Lab
+
+    * Running a test build one them. Ran into Bug 1251293
+
+* Reomved the Aries devices from their notdes in the QA Lab
+
+    * Filed Bug 1251371 and cc'd jlorenzo on it
+
+    * Inventory all the things!
+
+    * 10 devices
+
+    * 5 SIM cards
+
+* CD All-hands
+* Start to look into Moztrap alternatives
+
+    * Kate suggested looking at: http://alternativeto.net/software/testrail/?license=free for recommendations
+
+    * John Dorlus is looking into TestRail
+
+
+Today
+* Continue looking at Moztrap alternatives
+* Weekly Image Compare check:
+
+    * Standard: Failed to build completely 
+
+    * Non-Smoke: 2 expected errors
+
+    * Smoke: a few expected errors. Some instances of URLS being different for tests
+
+
+Blocked
+nope
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity on Aries (Sanity Failed) and Sanity and Smoke on Flame 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+
+*Am I blocked?
+None
+
+*What will I do today?
+**Sanity on Aries which failed and sanity and smoke on Flame 2.6  
+***Daily bug triage
+*****Send out the EOD report
+*******Exploratory testing on Aries 2.6
+********Verifications
+
+Johan
+* What did I do today?
+** FoxLink: 
+*** https://github.com/fxbox/foxbox/pull/67 was fixed by ferjm yesterday after the investigation we both made. It turned out to be a 1-line-change on the event listener.
+*** Weekly office hour with with No-Jun and Isabel
+*** Tried to add unit tests to tunnel_controller. I wanted to make a spy on a function. I got some issues with mutability within a Struct that implements a trait. That part has been dealt with thanks to Arc<Mutex>. I'm now fixing poisoned thread.
+
+** Misc: Internship interview, vaani meeting. 
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Continue on  tunnel_controller.rs
+** Continue to use rust as a lib
+
+Isabel
+Today
+-Watched CD all hands
+-Checked the new FoxLink Setup page and the tests created for it
+-Looked at FoxApp and how to start automating the UI
+-FoxLink automation meeting
+
+Monday
+-Will create a PR with more tests for the setup page (the ones I created and new ones)
+-Will order Philips hue, will need it to test the FoxApp
+
+Blocked: kind of, for FoxApp not able to access elements in shadow dom. Trying different options without success so far
+
+No-Jun
+* What did I do?
+** Got the philips bridge working with foxbox
+** Able to send REST API commands to foxbox
+** Tried the UI app, so far only works in linux, not on mac
+** Got feedback for the design, will try alternative method
+
+* What will I do?
+** Continue working with foxlink, tinker with its features
+
+nhirata:
+2/26:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback from Hal.  May need to ping him.
+* 1/2 day : meetings : qa standup, connectedme planning, vaani review
+rust stuff.
+
+2/25:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback from Hal.  May need to ping him.
+** followed up with each just to make sure that the blockages are still prevelent.
+* nonblocked:
+** review of meetings notes on ConnectedMe
+** meetings: intern review, qa standup, systemsfe, 1-on-1, CD
+** review of : https://wiki.mozilla.org/B2G/QA/Continuous_Integration_infrastructure
+** rust/servo
+
+==========
+ 2016-02-25 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Failed
+Aries 2.6 Status:  Red, 1 new blocker, 1 existing blocker
+
+New:
+- https://bugzil.la/1251293 [Aries] Phone will not progress past blue Firefox loading screen after OTA or reboot 
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+
+Sanity: Passed
+Flame 2.6 Status: Yellow, 1 existing blocker
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** FoxLink: Spent the day on trying to debug selenium tests which are breaking in this PR https://github.com/fxbox/foxbox/pull/67 . I'm still figuring out a fix with ferjm.
+
+** Jenkins
+*** Done. Bug 1250977 - Make the adhoc job download builds from taskcluster
+*** Started. I updated the plugin in charge of it. The current bug preventing reboots didn't help invalidating the fix. Bug 1251190 - HTML reports don't display correctly
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** https://github.com/fxbox/foxbox/pull/67 
+** Continue to use rustc as a lib
+
+Michael
+
+Yesterday
+* Got my notes test r+ and merged. (Bug 1224629)
+* Weekly QA roundtable
+* 1-on-1 with Pallavi
+* Got SIM Cards from Dylan, started work on setting them up in the QA lab
+
+Today
+* Finish setting up devices in the QA Lab
+
+    * Running a test build one them.
+
+* Should I remove the Aries devices in the QA Lab or leave them be? < Remove
+
+    * File a Bug for tracking purposes <= Bug 1251371 cc'd jlorenzo on it
+
+    * Inventory all the things!
+
+    * 10 devices
+
+    * 5 SIM cards
+
+* CD All-hands this evening
+* Start to look into Moztrap alternatives
+
+Blocked?
+Nyet
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and smoke on Aries and Flame 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+******Status reports
+*******Attended the weekly roundtable in stealth mode
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity on Aries which failed and sanity and smoke on Flame 2.6  
+***Daily bug triage
+*****Send out the EOD report
+*******Exploratory testing on Aries 2.6
+
+Isabel 
+-Today
+*Looked at No-Jun upnp server implementation
+*Had to update rust so foxbox works after some updates
+*Installed FoxApp and started to look at the code. Tried to automate a simple test but the app is built with React (new thing for me). 
+**Investigated about React, not sure we can use selenium with that.
+
+-Tomorrow
+*Will continue investigating about FoxApp and how I could automate a simple test
+*CD all hands at european time
+*Foxlink automation meeting
+
+Kate
+* Yesterday
+** Worked on RPi + Kaldi, still going, I forgot how slow Raspberry Pis are
+** Began setting up environment for UI testing with webdriver IO
+** Helped onboard community member
+** Made goals
+
+*Today
+** Continue raspberry pi and Kaldi
+** Make One and Done
+** Enter goals into Workday
+** All Hands
+
+No-Jun
+** Got around the inheritance issue with JS. julienw will help me to review the implementation
+** read about REST API testing framework: http://dareid.github.io/chakram/
+
+* What will I do?
+** Send out the code example to julienw
+** Read about the revised API spec by David Teller
+
+nhirata:
+2/25:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback
+* nonblocked:
+** rust/servo
+** certification
+* meetings: intern, qa standup, systemsfe, 1-on-1, CD
+
+2/24:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback
+* nonblocked:
+** worked with Amy and Andrea on Amy's pitch
+** rust/servo
+* meetings: interview, pitch, qa round table, qa standup
+
+==========
+ 2016-02-24 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries 2.6 Status:  Yellow, 1 existing blocker
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+
+Verified:
+- https://bugzil.la/1250188 Phone will freeze after taking a picture in camera
+
+Sanity: Passed
+Flame 2.6 Status: Yellow, 1 existing blocker
+
+Existing:
+- https://bugzil.la/1250694 User is unable to send or receive files via bluetooth
+  * Fails [6071]
+
+Verified:
+https://bugzil.la/1250188 - Phone will freeze after taking a picture in camera
+
+Sanity: Passed
+Aries Dogfood 2.6 dogfood to non-dogfood Whitelisted FOTA build: Green, no existing blockers
+
+Existing:
+None
+ 
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan (won't attend - last internship interview happening at the same time)
+
+* What did I do today?
+** Meetings (2 roundtables)
+
+** FoxLink
+*** showroom: Reached out to :michal` in reagards to security. Opened Bug 1250869 - Security review of FoxLink
+*** Mocks: Tried to create a small rust program which calls rustc. There is an example https://github.com/nrc/stupid-stats that I updated to the latest nightly. However, I didn't manage to pass "--version" to the compiler. I'm debugging rustc to understand what's wrong with the parameters I give.
+
+** Jenkins
+*** Finished thanks to No-Jun's help. There are a couple of minor changes to do, they'll be handled in separate bugs  Bug 1250459 - Remove/move soon-to-be unused jobs (b2g-inbound, Bitbar, old base images, etc.) 
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Contrinue to use rustc as a lib
+
+Michael
+
+Yesterday
+* Continue watching Gate 0 presentations
+* CD Meeting
+* Do the same PR fix for Bug 1224629
+* Bug 1242634 r+ and merged, thanks Johan
+
+Today
+* Attempting the PR fix for Bug 1224629
+
+    * Closed existing PRs
+
+    * Deleted branch
+
+    * Created new branch
+
+    * Re committed/pushed now waiting on it to show up on github
+
+    * Showed up, PR submitted, added Johan for r?
+
+    * R+ and merged, yay!
+
+* Weekly Roundtable meeting
+* 1-on-1 with Pallavi
+* Kicked Flame 14.1 in the lab for Eli
+* When i get 2 sim cards from Dylan I'll work on setting up two more phones in the QA lab as per Johan's request.
+
+    * Have sim cards, will start working on setting up phones in the lab after standup
+
+
+Blocked?
+Nope
+
+Isabel
+-Today
+Roundtable
+Medical Platform meeting
+Checking new updates in FoxLink repo
+Investigating more about selenium-webdriver, how to launch tests in different sizes broswers,
+Also reading about how to get reports after executing the tests with mocha
+
+-Tomorrow
+Will have a lookt at No-Jun upnp server implementation (need to read about websockets to get more familiar with that)
+Continue checking FoxLind updates
+Attend AllHands meeting
+
+No-Jun
+* What did I do?
+** Moved all imagecompare jobs from bitbar to MTV lab
+** Implemented a basic design for simulating upnp server, and ran the design by Johan and Isabel
+** Did a basic setup of Raspberry Pi, but haven't copied the builds yet
+
+* What will I do?
+** Look into inheriting javascript classes, finalize this part and and check into github
+
+nhirata:
+2/24:
+* Blocked: 
+** bug 1248791 : go on monday or tuesday waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback
+* nonblocked:
+** worked with Amy and Andrea on Amy's pitch
+** rust/servo
+** certification
+2/23:
+* Blocked: 
+** bug 1248791 : go tomorrow?  Waiting to hear back
+** bug 1244893 : waiting for feedback
+** chirimen : bug 1166608; waiting for feedback
+* troubleshooting morning build issue.
+* worked with Amy and Andrea on Amy's pitch
+* idea : 3d camera ; request feedback from pdol : idea needed to morph -> there was a w3c spec!
+* rust/servo
+* certification
+
+Kate:
+* Yesterday
+** Went through more Travis tutorials
+** Learned about Kaldi and prepared for today
+** Created Verification and Validation Trello for Vaani
+
+*Today
+** Vaani meeting today
+** Set up Rpi
+** Set up Kaldi on Rpi
+** Run word error rate script
+** Save to text file
+** Make one and dones for the above
+** 1 on 1 today
+
+Martijn
+
+    Bug 1249061 - Improve property/attribute handling for marquees - Added some subtests for getAttribute  
+
+    SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    Next, working on SpecialPwers.setPermission to pushPermissions
+
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and smoke on Aries and Flame 2.6 (Sanity Failed)
+****Sent out the EOD report
+*****Daily Bug Triage
+******Whitelisted FOTA dogfood to non-dogfood build smoke test
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity on Aries and Flame 2.6  
+***Daily bug triage
+*****Send out the EOD report
+******Send out team's status reports
+*******Exploratory testing on Aries 2.6
+
+==========
+ 2016-02-23 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Failed
+Aries 2.6 Status: Red, 1 existing blocker
+
+qablocker:
+https://bugzil.la/244893 - Disable F/OTA updates to balrog
+
+Existing:
+- https://bugzil.la/1250188 Phone will freeze after taking a picture in camera
+
+Verified:
+- https://bugzil.la/1249280 Touch events in several app seems to be badly broken
+* Resolved as fixed
+
+Sanity: Failed
+Flame 2.6 Status: Red, 1 existing blocker
+
+Existing:
+https://bugzil.la/1250188 - Phone will freeze after taking a picture in camera
+
+Verified:
+- https://bugzil.la/1249280 Touch events in several app seems to be badly broken
+*Resolved as fixed
+
+Sanity: Passed
+Aries Dogfood 2.6 dogfood to non-dogfood build: Yellow, 1 new blocker
+
+New:
+- https://bugzil.la/1250353 [Aries] Unable to send Files via bluetooth
+* Fails [6071]
+  
+FOTA Whitelisting smoke test is currently in progress.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** FoxLink
+*** Meet with Isabel in regards to e2e tests and Promises
+*** Meeting for the showroom in Paris
+
+** Jenkins
+*** Started to shink Jenkins. Good advancement on it. Need to move a couple of jobs back to MTV and create DSDS devices. Michael will handle the last part in a s Bug 1250459 - Remove/move soon-to-be unused jobs (b2g-inbound, Bitbar, old base images, etc.) 
+*** Bug 1250474 - Retire the dogfood suite and put its tests in non-smoke
+
+** France: Attended meeting with Denelle Dixon and the rest of the people in France.
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Continue on documenting Taskcluster/Jenkins, depending on reviews
+** Continue on Bug 1250459
+** FoxLink showroom: Reach out to :michal` in reagards to security
+** Try to use rustc as a lib
+
+marcia
+* Today
+* Correspondence with Kelly regarding getting Vaani Studio Time
+** Contacted 3 studios for quotes
+* Reviewed various threads about Connected Devices community
+* Continue progress on King's College IOT course
+
+Michael
+
+Yesterday
+* Closed my original PR For Bug 1242634, deleted the branch, re-created it, made a new PR submitted it for review
+* Filled out PTO request for last week
+* Started watching Gate 0 presentations
+
+Today:
+* Continue watching Gate 0 presentations
+* CD Meeting
+* Do the same PR fix for Bug 1224629
+* Bug 1242634 r+ and merged, thanks Johan
+
+Blocked?
+Nope
+
+Isabel
+-Today
+Watched Monday project meeting
+Talked with Johan about the implementation of the E2E tests (https://github.com/isabelrios/FE_tests)
+*Worked on getting the fixes needed
+*Created a new test to practice a little bit more changing between different views
+Installed foxbox/app, there is a first simple UI for the app
+1:1 Pallavi
+
+-Tomorrow
+QA roundtables
+Medical platform weekly meeting
+Continue reading about selenium webdriver/mocha/js to improve the tests
+
+Kate
+*Yesterday
+** Began refactoring front-end into a MVC app with CouchDB
+** Watched project meeting
+
+*Today
+** Finish creating MVC app
+** Set up Travis CI for main repo and pocketsphinx
+
+Pallavi (Will be at the Connected Devices meeting at 10)
+
+nhirata: ( read only, CD meeting )
+2/23:
+* bug 1248791 : go tomorrow?  Waiting to hear back
+* bug 1244893 : waiting for feedback
+* chirimen : bug 1166608; waiting for feedback
+* worked with Amy and Andrea on Amy's pitch
+* idea : 3d camera
+* rust/servo
+* certification
+
+2/22: 
+* bug 1244893 : waiting for feedback
+* chirimen : bug 1166608; waiting for feedback
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : 
+** https://tools.taskcluster.net/task-inspector/#D2GHnsVBTQSn-pITmAEEeA/
+*** reran for nightly test
+** https://tools.taskcluster.net/task-inspector/#JOMf3GtIS6qvpIwY-blRrA/
+*** setup dogfood-test for whitelisted and nonwhitelisted
+* ideas: pitching 3d Cameras as generic
+* ideas: helping Amy with her idea
+* servo/rust
+** RUST_BACKTRACE=1: rust has a backtrace built in
+** comment documentation built in.
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity on Aries and Flame 2.6 (Sanity Failed)
+****Sent out the EOD report
+*****Daily Bug Triage
+******Full Flash and OTA dogfood to non-dogfood build smoke test
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity on Aries and Flame 2.6  (Sanity Failed)
+***Daily bug triage
+*****Send out the EOD report
+******Sanity, Smoke and Dogfood on dogfood to non dogfood build (FOTA Whitelisting)
+
+==========
+ 2016-02-22 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Failed
+Aries 2.6 Status: Red, 1 new blocker, 1 existing blocker
+
+New:
+- https://bugzil.la/1250188 Phone will freeze after taking a picture in camera
+
+Existing::
+- https://bugzil.la/1249280 Touch events in several app seems to be badly broken
+* Resolved as fixed
+
+Sanity: Failed
+Flame 2.6 Status: Red, 1 new blocker, 1 existing blocker
+
+New:
+https://bugzil.la/1250188 - Phone will freeze after taking a picture in camera
+
+Existing::
+- https://bugzil.la/1249280 Touch events in several app seems to be badly broken
+*Resolved as fixed
+
+Sanity: Passed
+Aries Dogfood 2.6 dogfood to non-dogfood build: Green, no blockers thus far
+
+Full Flash smoke currently in progress.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** FoxLink
+*** Discussed with IT about how to set up FoxLink within the office network. I started with https://docs.google.com/drawings/d/1nkjTdma36PSwx0DeKW5H4xUtGZ8LhIuVk98vpuYMJSc/edit . The VPN seems like a security hole. I'll attend to a meeting with jbarnell and the London office tomorrow to see how we can set that up.
+*** Took a look at Isabel's first e2e tests. Will continue to do so with her tomorrow
+*** Weekly meeting
+
+** Jenkins/Taskcluster
+*** Documentation: First revision finished. Images and links polished and checked. Sent in review Bug 1250161 - Document our different Continuous Integration systems
+*** Bugzilla: Closed out Bitbar's bugs and dependencies of Bug 1225457 - [Meta] Get parity between the Taskcluster jobs and the Jenkins ones
+*** Taskcluster: Made a patch. Got reviewed. Landed in b2g-inbound. Bug 1250178 - [e2e-py] Delete the tasks
+
+* Am I blocked?
+** No
+
+* What will I do tomorrow?
+** Continue on documenting Taskcluster/Jenkins, depending on the reviews
+** Shrink Jenkins
+** Meeting for the showroom in Paris
+** Meet with Isabel in regards to e2e tests and Promises
+
+* What do I have in my queue?
+** Try to use rustc as a lib
+
+Michael
+
+Friday
+* Weekly image compare run
+
+    * Standard Run:
+
+    * Failed to build successfully
+
+    * Smoketest
+
+    * 3 Expected date mismatches
+
+    * Non Smoketest
+
+    * Calendar scroll bar
+
+    * Bing maps mismatches
+
+* Started work on rebasing patch for Bug 1242634
+
+    * Stupid Git shenanigans
+
+    * Might try closing the Pull Request and opening a new one with just one commit aka (nuke it from orbit)
+
+    * If successful this should also solve my problems for Bug 1225629
+
+
+Today
+* Attempt to fix PRs for Bug 1242634 and Bug 1225629
+
+    * Will try closing PR and opening a new one, first with Bug 1242634 since it's a smaller (1 line) fix
+
+* Filled out my PTO request for last week
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Turns out we need to accomodate for upnp protocol.  read up on Philips hue API, and used ssdp-upnp nodejs library to try out a simple upnp broadcasting
+* What will I do?
+** Check out the new code checkin on foxbox repo, and think about code design of the integration framework
+** Review Johan's doc on jenkins setup
+
+Isabel(PTO read only)
+
+Worrked 
+
+Kate
+*Last week
+** Worked on presentation
+** Finished FE implementation
+** Read up on CouchDB and began implementation
+
+Today
+** Continue working on database script
+** Set up a Vaani repo with Travis CI (that doesn't run any tests)
+
+Kevin Tucker
+*What did I do Friday?
+**Sanity on Aries and Flame 2.6
+***Exploratory testing on Aries 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+******Checked to make sure data collection was not locked in on the dogfood to non-dogfood build
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity on Aries and Flame 2.6 
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Sanity, Smoke and Dogfood on dogfood to non dogfood build. (Full Flash)(OTA)(FOTA)
+
+Martijn
+
+    Patch ready for enabling subtests for Bug 1249061 -       Improve property/attribute handling for marquees
+
+    Working on attribute filtering for mutationobserver
+
+    Continuing work on  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=649563
+
+
+nhirata:
+2/22: 
+* bug 1244893 : waiting for feedback
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood: turns out it was hardcoded elsewhere.
+** https://tools.taskcluster.net/task-inspector/#OG9D1UJaRtCslft1cNUx5g/
+** https://tools.taskcluster.net/task-inspector/#JOMf3GtIS6qvpIwY-blRrA/
+* ideas: pitching 3d Cameras as generic
+* chirimen : bug 1166608
+* servo/rust
+* certificate
+* webvr: automation; investigation
+
+2/19:
+* spoke with Kelly and Amy about Amy's idea
+* interview - done; feedback in jobvite.
+* bug 1244893 : waiting for feedback
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood: turns out it was hardcoded elsewhere.
+** https://tools.taskcluster.net/task-inspector/#OG9D1UJaRtCslft1cNUx5g/
+** https://tools.taskcluster.net/task-inspector/#JOMf3GtIS6qvpIwY-blRrA/
+* ideas: pitching 3d Cameras as generic
+* chirimen : bug 1166608
+* servo/rust
+
+marcia
+Today
+
+    PTO on Friday so catch up on email
+
+    Vaani team meeting
+
+    Enter items in Trello pad
+
+    Email correspondence with Kelly Davis and Robb Caroll regarding Vaani microphone
+
+    Apparently the quality of the mike we have is not good enough
+
+    Started second week of https://www.futurelearn.com/courses/internet-of-things
+
+
+Tomorrow
+
+    Investigate Mac battery draining - follow up on Service Now ticket
+
+    Follow up with community regarding the King's College IOT class
+
+    Follow up with WPR regarding room in MV
+
+
+
+
+
+
+==========
+ 2016-02-19 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Failed
+Aries 2.6 Status: Red, 1 new blocker
+
+New blocker:
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1249668 Tap hit detection is appearing below touch point on some UI elements throughout device
+
+Sanity: Failed
+Flame 2.6 Status: Red, 1 new blocker
+
+New blocker:
+- https://bugzilla.mozilla.org/show_bug.cgi?id=1249668 Tap hit detection is appearing below touch point on some UI elements throughout device
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** Foxlink: Finished first revision of https://github.com/fxbox/foxbox/pull/54 . 
+*** Bug noticed in the test https://github.com/hyperium/hyper/pull/732 . I made a PR to update their documentation.
+*** Meeting with Isabel and No-Jun https://public.etherpad-mozilla.org/p/foxlink-automation
+*** Julien discussed with me about mock. The API I proposed in the gist is not super clear. I'll update it.
+
+* Started to document Jenkins and Taskcluster work. I broke down the document into 3 parts: The initial jenkins infrastructure, the one with bitbar included and TaskCluster. The first 2 ones are almost done. I'll continue to work on the 3rd part (which will be more detailed than the 2 first ones, because less things are standard). https://public.etherpad-mozilla.org/p/304cyol5us (temporary etherpad -- will be uploaded to the wiki once finished)
+
+* Am I blocked?
+** None
+
+* What will I do on Monday?
+** Try to use rustc as a lib
+** Continue on documenting Taskcluster
+
+
+* What do I have in my queue?
+** Document then shrink Jenkins
+
+
+Pallavi (OOO - 10 to 11 ~ 11.15)
+- Have to meet kids coach from 10 to 11. Cant attend 10 and 10.30 meetings. Ping if needed.
+
+Michael
+
+Yesterday:
+* Started to get caught up on emails
+* Did I miss anything important?
+
+Today:
+* Merge and rebase commits for Bug 1242634
+
+    * Need to update branch in order to push the rebase - that command should be "git pull origin <branch>" right?
+
+* Figure out how to fix my PR for Bug 1225629
+
+    * Inadvertantly committed stuff that i didnt mean to
+
+    * Need to remove that and then merge the actual commits
+
+* Read through all the presentation feedback and wait for the final go/no go ruling.
+* Weekly image compare run
+
+    * Standard Run:
+
+    * Failed to build successfully
+
+    * Smoketest
+
+    * 3 Expected date mismatches
+
+    * Non Smoketest
+
+    * Calendar scroll bar
+
+    * Bing maps mismatches
+
+
+Blocked
+Not really
+
+No-Jun
+* What did I do?
+** Got a sample of websocket + REST API + mocha test working, double checking the details and going over the docs one more time 
+(https://github.com/npark-mozilla/foxlinker)
+** Interviewed Ou Ye
+** foxlink automation standup
+
+* What will I do?
+** Continue working on the architecture of the integration test environment
+** Check out what happened to the foxlink github repo this week
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke on Aries and Flame 2.6
+***Exploratory testing on Aries 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6 if there is a new build
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+
+Isabel
+-Today
+Created 4 automated test cases for the basic setpup page for FoxLink
+PR coming to share all tests done
+Foxlink automation meeting
+
+-Monday
+I will continue creating more test cases for the setup page and will improve the ones created
+PTO in the afternoon
+
+Martijn
+
+    Almost ready with patch and enabling subtests for Bug 1249061 -       Improve property/attribute handling for marquees
+
+    Continuing work on  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=649563
+
+Kate
+Yesterday
+* Finished front-end of Vaani dashboard
+* Made presentation for next Friday
+Today
+* In SF
+* Continue presentation
+* Work on DB integration
+
+==========
+ 2016-02-18 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke on Aries and Flame 2.6
+***Exploratory testing on Aries 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+******Started Sanity on the dogfood to non dogfood build but realized that data collection was still locked in on the build. Naoki is looking into this  https://bugzilla.mozilla.org/show_bug.cgi?id=1248791
+*******Attended Weekly Roundtable
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Backing up all Google Drive documentation
+
+Johan
+
+* What did I do today?
+** Gave 2 interviews, sent the topics I covered to the next interviewers, then posted review for each of them.
+
+** Foxlink: I managed to test threads  https://github.com/fxbox/foxbox/pull/54 . WIth the help of :julienw and :Yoric, we also found a bug in the test framework https://github.com/reem/stainless/issues/47 . I'm still hitting a race condition that I'm debugging. 
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** FoxLink: Continue to deal with threads for unit testing
+** Try to use rustc as a lib
+** Document then kill TC work
+
+* What do I have in my queue?
+** Document then shrink Jenkins
+
+nhirata: [readonly]
+2/18
+* interview
+* bug 1244893 : patch reworked since it was backed out.
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood, still investigating some things.
+* ideas: pitching 3d Cameras as generic
+* certifiate
+* chirimen : bug 1166608
+* webvr: automation; investigation
+* servo/rust
+2/17:
+* bug 1244893 : patch reworked since it was backed out.
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood, investigating.
+* ideas: pitching 3d Cameras as generic
+* certifiate
+* followup on bug 1247438 / bug 1244497:
+** bug 1247438 marked as done.
+** bug 1244497 marked as done.
+* webvr: automation; investigation.
+* servo/rust
+* cert
+* Moving QA101 to done.
+
+Kate
+Yesterday
+* Continued work on Vaani web dashboard
+* Helped fellow Mozillian with Github tutorial
+* Round table meeting
+
+Today
+* Vaani stand up
+* Continue working on web dashboard
+* Begin putting together into to Vaani slides
+* (Tomorrow) Work from SF
+
+Isabel
+-Today
+Successfully imported Data Sync test cases into moztrap using MozIlluminate tool: https://moztrap-dev.allizom.org/manage/cases/?pagenumber=1&pagesize=20&sortfield=created_on&sortdirection=desc&filter-suite=26216
+Rpi, trying to configure more stuff and playing with it. Got to open Foxlink set up page (https://github.com/fxbox/foxbox/issues/13)
+The start page is a basic one, but started to automate basic functionality with selenium webdriver as a practical exercise
+Mozilla Madrid meetup
+
+-Tomorrow
+Continue investigating selenium webdriver to try to automate basic scenarios for the set up page
+FoxLink automation meeting
+
+No-Jun
+* What did I do?
+** Interviewed intern and added feedback in Jobvite
+** started working on creating mocha test as a websocket client, a number of hurdles to jump
+** Meetings
+
+*Blocked?
+** No
+
+* What will I do?
+** continue on mocha and websocket
+
+Martijn
+
+    Filed  and working on patch and enabling subtests for Bug 1249061 -       Improve property/attribute handling for marquees
+
+    Noticed that some marquees not working on Fennec, need to file a bug on this
+
+    Still working on fixing remaining instances of  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=649563
+
+
+marcia
+Today
+* intern candidate interview
+* vaani team meeting
+* further correspondence with mhenretty regarding hackathons
+
+Yesterday
+* recorded some Vaani voice samples
+* intern interview and feedback in Jobvite
+
+Tomorrow
+*PTO
+
+nhirata:
+2/19:
+* spoke with Kelly and Amy about Amy's idea
+* interview - done; feedback in jobvite.
+* bug 1244893 : follow up
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood, still investigating some things.
+forgot to change the build id
+** https://tools.taskcluster.net/task-inspector/#I8emWT2ZQ-muL34EqZt94w/
+* ideas: pitching 3d Cameras as generic
+* chirimen : bug 1166608
+* servo/rust
+* certificate
+* webvr: automation; investigation
+
+2/18
+* interview - done; feedback in jobvite.
+* bug 1244893 : patch reworked since it was backed out.
+** fixed patch
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : dogfood to nondogfood, still investigating some things.
+forgot to change the build id
+** https://tools.taskcluster.net/task-inspector/#Ca_un3mERn6f2gkayuTAyw/
+** https://tools.taskcluster.net/task-inspector/#I8emWT2ZQ-muL34EqZt94w/
+* ideas: pitching 3d Cameras as generic
+* chirimen : bug 1166608
+* servo/rust
+
+==========
+ 2016-02-17 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Pallavi 
+PTO on Thursday. Will not join Wednesday QA Roundtable
+- Openness of Innovation projects 
+
+    * Legal wants to wait until projects pass Gate 0 to ensure that we do not violate any existing patents
+
+    * Legal team - Elvin and Jeff will look at the projects which pass Gate 0 to check it
+
+    * For those ideas that have passed Gate 0; we will know by end of this week
+
+- Transition plan for FxOS Code base
+
+    * 4 months to work on it plus 1 month buffer. Trying to see how can this can be done by May.
+
+- Courses QA community have signed up for IOT
+
+    * https://public.etherpad-mozilla.org/p/QAEducation?
+
+
+Johan
+
+* What did I do today?
+** Meetings: 2 roundtables
+
+** Foxlink
+*** Added unit tests to http_server  https://github.com/fxbox/foxbox/pull/54 . I'm now trying to check if we actually started it in a separated thread. I'm getting errors when trying to join the thread. Looking into it.
+*** Got positive feedback from :nrc about  https://gist.github.com/JohanLorenzo/0522282e740abae225b8 . An external tool that uses rustc as a library is a solution. I looked up projects that does the same.
+*** Meet with No-Jun about integration testing
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** FoxLink: Continue to deal with threads for unit testing
+** Try to use rustc as a lib 
+** Interviews
+
+* What do I have in my queue?
+** Document then kill TC work
+** Document then shrink Jenkins
+
+Isabel
+-Today
+QA sync roundtable
+Attended the weekly medical platform meeting
+Tried to import Data Sync test cases to moztrap using MozIlluminate tool but did not success, contact Shing
+Submit Q1 goals
+Websocket and REST API reading
+FoxLink FTU branstorming meeting
+QA roundtable
+
+-Tomorrow
+Will try to test the setp up scenario described here https://github.com/fxbox/foxbox/issues/13 and play with the Rpi
+More Websocket and REST API reading
+
+Martijn
+Finally r+ on Working on bug 1160342  -  Implement <marquee> using mutation observers
+
+    Tryserver is ok, so ready to be checked in
+
+    Removed the throwing part of the tests and got the rest of the property/attribute handling backwards compatible
+
+    Did some adhoc testing on my patch
+
+    Filing a follow-up bug on getting the property/attribute handling similar to IE/Edge as much as possible (without the throwing error part)
+
+    Working on fixing remaining instances of  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=649563
+
+    Dutch community call in an hour
+
+
+marcia
+Today
+* Email correspondence with mhenretty regarding community. He shared a planning document that the Participation team is using to plan community involvement. He wants to team up to work together
+** We need to figure out a cohesive way to onboard new community onto the various projects
+* Afternoon interview prep with No-Jun; afternoon interview with intern candidate
+* Work on needinfo document for MDN
+
+Yesterday
+* Got added to the Vaani team list
+* Prepared for interview with intern candidate that was cancelled
+* Helped to cleanup some capitalization issues on the QA 101 document
+* Finished the first week of The Internet of Things class - https://www.futurelearn.com/courses/internet-of-things
+* Some discussions about the Cuba event
+* Tried to restore access to the MozillaQA Twitter account
+* Email with John Bernard regarding getting added to the weekly Participation/Collaboration call once set up next week
+* Started to revise Q1 goals
+
+Kate
+Today
+* Continue dashboard work (finish top 5 wer, work on linking db)
+* Get me and Manel set up for JS automation of OpenHab, create repo, guidelines, etc.
+
+Yesterday
+* Completed most of front-end WER automation dashboard
+* Intro'd Marcia as a potential voice talent to Vaani
+
+
+No-Jun
+Status: continue learning nodejs and mocha.  Will work on writing a simple mocha test that checks the sample websocket chat server, and REST API server
+Medical platform wiki: https://wiki.mozilla.org/Eir
+Meeting minutes: https://docs.google.com/document/d/1TQRfJYBNp8qO8oLx5gsah2Fy4dlapBXWXur2KzxXa84/edit?pref=2&pli=1#
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke on Aries and Flame 2.6
+***Exploratory testing on Aries 2.6
+****Sent out the EOD report
+*****Daily Bug Triage
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Sanity, Smoke and Dogfood test cases on Dogfood/non Dogfood build https://bugzilla.mozilla.org/show_bug.cgi?id=1248791
+
+nhirata:
+    
+2/17:
+* bug 1248791 dogfood to nondogfood
+* followup on bug 1247438 / bug 1244497
+* final edits on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+* chirimen : bug 1166608 : https://bugzilla.mozilla.org/show_bug.cgi?id=1166608#c7
+* ideas
+* servo/rust
+* certifiate
+* webvr: automation; capture fox?
+
+2/16:
+* https://bugzilla.mozilla.org/show_bug.cgi?id=1248791 : Dogfood to non dogfood:
+** nondogfood dogfood build : https://tools.taskcluster.net/task-inspector/#AsBJ3BThSHaEECFpD1j0bA/
+** nondogfood nightly build : https://tools.taskcluster.net/task-inspector/#M-QjJQfhSrSu48mZx6zIFQ/    
+* final edits on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+** gave Marcia editing rights
+* ideas: pitching 3d Cameras as generic; waiting feedback.
+* followup on bug 1247438 / bug 1244497 : 
+** pushed end user for feedback on 1247438
+** send end user a build for bug 1244497
+* chirimen : bug 1166608 : https://bugzilla.mozilla.org/show_bug.cgi?id=1166608#c7
+* https://github.com/mozilla/rr : linux only; using Activity Monitor on the Mac is limited use only for production builds?; asm is needed for linux, and the equivalent is something very different.
+** Use instruments and attach as a process for mac and record
+* servo/rust
+** filed more servo bugs
+
+==========
+ 2016-02-16 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan (at the Firefox OS 2.6 meeting)
+
+* What did I do today?
+** Foxlink
+*** Documented how we could do implement generic mocks  https://gist.github.com/JohanLorenzo/0522282e740abae225b8 . Will discuss this with :nrc from the rust team
+*** Split dev dependencies from regular ones https://github.com/fxbox/foxbox/pull/50
+*** re-pin ru https://github.com/fxbox/foxbox/pull/51
+*** Attended PRD meeting
+
+** Put goals in workday
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** FoxLink: Address review and, if I'm close to an r+, continue on expanding the coverage on unit test http_server.rs
+** Continue experimentation for unit tests 
+** Interview (at the same time as tomorrow's standup)
+
+* What do I have in my queue?
+** Document then kill TC work
+** Document then shrink Jenkins
+
+No-Jun
+* What did I do?
+** Installed node.js and mocha, and tried out a few examples
+** Setup and linked foxlink github repos
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Think about the structure of the test environment
+** Finalize the questions for the intern interview
+
+Isabel (reading only 2.6 transition plan meeting)
+-Today
+Got my Rpi yesterday evening, today I started to set it up
+*Many problems trying to connect it to wifi, finally it worked
+*Got to downloand and launch Foxbox build
+Foxlink PRD review
+Wrote my goals, pending to add them to workday (cannot edit the previous ones)
+1:1 Pallavi
+Attend to 2.6 transition plan meeting
+
+Tomorrow
+Sync meeting
+Medical platform meeting
+Will try to test the setp up scenario described here https://github.com/fxbox/foxbox/issues/13
+Brainstorming FTU setup Foxlink meeting
+
+
+Martijn
+
+    Working on bug 1160342  -  Implement <marquee> using mutation observers
+
+     separating the error handling part into another bug
+
+    Online mochitest here: http://people.mozilla.org/~mwargers/mochitestjs2/test_bug1160342_marquee.html
+
+    Working on fixing remaining instances of  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=649563
+
+
+Pallavi (At the CD meeting)
+Michael is on PTO Tues/Wed.
+
+Kate
+Last Week
+* Vaani Workweek
+* Created Test Plan
+* Learned more about Vaani with team
+
+Today
+* Creating back-end set up for data analytics dashboard with Vaani (Node/CouchDB)
+* Scheduling test strategy meeting
+* Write a doc about web driver automation strategy for OpenHab and involve Marcia/Community (good new person task)
+* Schedule meetings to do my goals
+
+
+Kevin Tucker
+*What did I do yesterday?
+**Holiday
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Clean up work
+
+nhirata:
+2/16:
+* servo/rust read up : bug filed on crashing
+* followup on bug 1247438 / bug 1244497
+* QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+* ideas: waiting for feedback
+* chirimen
+* certifiate
+* webvr
+* https://github.com/mozilla/rr
+* dogfood to nnightly request
+
+2/12:
+* servo/rust read up : bug filed on crashing
+* followup on bug 1247438 / bug 1244497
+* QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+* ideas: gotten feedback
+* https://github.com/mozilla/rr
+
+==========
+ 2016-02-15 
+==========
+
+Johan
+
+* What did I do today?
+** Foxlink
+*** Managed to get some unit testing in http_server.rs https://github.com/fxbox/foxbox/pull/48 . I actually broken down the class so it's easier to test. There was a notable difficulty in these tests: pass a stub encapsulated in a container (like Container<Stub>). The solution is not very appealing but works. I asked Fabrice for review. 
+*** Updated foxbox dependencies https://github.com/fxbox/foxbox/pull/49 . The build got broken on Friday because of a non backward-compatible update in rustc. We froze the version of the compiler on Friday, today was time to bring back the nightly
+*** Started to play with file reading and file replacements for mocking purpose.
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** FoxLink: Address review and, if I'm close to an r+, continue on expanding the coverage on unit test http_server.rs
+** Continue experimentation for unit tests 
+** Put goals in workday
+
+* What do I have in my queue?
+** Document then kill TC work
+** Document then shrink Jenkins
+
+Isabel
+Today
+Javascript and node.js reading
+Watched Johan and Martijn FOSDEM talk
+Read about creating ACC test plan and test plans in general to improve the FoxLink test plan
+Received my RPi, downloaded the OS but cannot use it yet (need a usb keyboard, hopefully will get one tomorrow)
+
+Tomorrow
+Set up RPi
+FoxLink PRD review
+Modify my goals
+
+
+
+==========
+ 2016-02-12 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** Foxlink
+*** Addressed reviews and landed https://github.com/fxbox/foxbox/pull/30 https://github.com/fxbox/foxbox/pull/43. https://github.com/rust-lang/rust/pull/31368 was landed too.
+*** Added new unit tests https://github.com/fxbox/foxbox/pull/45. Difficulty of these ones: loop on an enum (can't be done in Rust at the moment)
+*** Started to add unit tests for http_server.rs. I'll need to change the production code, to make the test easily testable => Not sure if I'll have something working on Monday
+*** Met with Isabel and No-Jun in regards to integration testing and test plan. No-Jun published the docs for devs to review.
+
+* Am I blocked?
+** None
+
+* What will I do on Monday?
+** FoxLink: Continue on trying to unit test http_server.rs
+** Put goals in workday
+
+* What do I have in my queue?
+** Document then kill TC work
+** Document then shrink Jenkins
+
+Isabel
+Today
+More investigation on webdriver, how to create tests following the PO pattern
+Work on test plan and test cases (very first draft)
+FoxLink automation meeting
+
+Monday
+Need to investigate a learn more about promises in js, not very familiar with that
+More work on test plan and test cases to have at least a first draft easy to read
+Also, will add goals in workday
+
+
+Michael
+
+Yesterday:
+* Read over Naoki's QA 101 presentation
+* Image compare runs
+
+    * Standard Run
+
+    * Built and ran but no "Build Artifacts" link on the build information page
+
+    * Smoke-test
+
+    * 3 date differences -> Expected
+
+    * Non-Smoke-test
+
+    * Calender scroll bar there/not
+
+    * Bing maps location information showing up (solved by a new reference run probably)
+
+    * Date difference on the "edit picture" test -> expected
+
+
+Today
+* Read through Ari's AMA
+ is this the link? - https://discourse.mozilla-community.org/t/im-ari-jaaksi-svp-of-connected-devices-ama/6975 <- Yeah
+* Fill out goals for Q1
+* Watch FOSDEM presentation
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Finished test architecture doc and risk doc, published it on Foxlink Gdrive.
+** Meeting with Isabel and Johan regarding foxlink testing, was told about mocha framework
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Read up on mocha, think about ways to implement it for foxlink
+** Update goals in Workday
+** Update task status in Trello
+** Try to setup the phillip hub on a VM and try upnp
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******1 on 1 with Pallavi
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******FxOS devices and SIM inventory
+
+Martijn
+
+    Looking into fixing remaining instances of  SpecialPowers.setBoolPref/setIntPref/setCharPref to SpecialPowers.pushPrefEnv
+
+    Working on bug 1160342  -  Implement <marquee> using mutation observers, adding 2 reftests and 65 subtests of mochitest
+
+
+nhirata:
+2/12:
+* servo/rust read up : bug filed on crashing
+* followup on bug 1247438 / bug 1244497
+* QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+* ideas: waiting for feedback
+* chirimen
+* certification
+* webvr
+2/11:
+* followup to bug 1247438 : think it's complete.
+* bug 1244497 : got more info through email, checking out how to reproduce and also to see if I can create a fingerprint to allow for updating; reproduced. new build created.
+** was able to repeat the issue of having nov build dogfood build and not being able to update to the december dogfood build.
+* [draft3; edits made] work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+** need to follow up with marcia on her bullet points : add talk about root cause analysis
+* Work on ideas : 
+** https://docs.google.com/presentation/d/1cWpC38R1AQXmeLEQz814GYkrOessJsICPwSKYf6uv5c/edit?pli=1#slide=id.gf90bb8174_0_32
+*** asking for initial feedback from Peter before I move forward with other analysis
+** https://docs.google.com/presentation/d/1hofxQfMNcobi4ETFZe_J-cgHjsYmPRwbbxXw-0CU0dU/edit?pli=1#slide=id.gf81a417fb_2_45  
+*** pushed the idea over to Joe and Josh.  Seeing if they bite for hand off.
+* read up on rust/servo ;
+** found it interesting that by default variables are immutable.
+** philospher problem was a good read to understand how concurrency and thread programing is done.
+
+==========
+ 2016-02-11 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Michael
+
+Yesterday:
+* Finished reading through all the CD Proposals
+
+    * Some good, some "meh"
+
+    * Will be interesting to see which make it through Gate 0
+
+
+Today:
+* Finish reading through Naoki's QA 101 presentation
+* Check Image Compare tests for the week
+
+Blocked?
+Nope
+
+Johan
+
+* What did I do today?
+
+** Graded 1 new candidate on HackerRank (questions 1-3 & 5)
+
+** Foxlink
+*** Changed name of compilation flag https://github.com/rust-lang/rust/pull/31368 . Hope it will be the last :) 
+*** Added new unit test https://github.com/fxbox/foxbox/pull/43. Difficulty of this one: test a function on a Trait object.
+*** Updated the automation diagram for foxlink to list which component is gonna be used by which type of tests
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** FoxLink: Try to unit test event.rs and http_server.rs
+
+* What do I have in my queue?
+** Document then kill TC work
+** Document then shrink Jenkins
+
+
+Pallavi (In a different meeting at 10)
+Have asked Karl Thiessen to help us in interview if we get burned out. 
+So far the number is manageable.
+
+nhirata:
+2/11:
+* followup to bug 1247438 : think it's complete.
+* bug 1244497 : got more info through email, checking out how to reproduce and also to see if I can create a fingerprint to allow for updating.
+* Work on ideas
+* read up on rust/servo
+* certification : prep up ( take demo )
+* chirimen
+* WebVr ( start ramping up - was told I would be on it )
+* Look into concepts: Root Cause Failure, Failure Analysis, Risk Analysis and how we can apply those concepts more.
+
+2/10:
+* bug 1244497
+* [draft2 completed] work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit?pref=2&pli=1#slide=id.p
+
+No-Jun:
+* What did I do?
+** aosmond showed me his upnp code for foxlink, and configured philips hub simulator on linux.  We alsowent though some aspects of the design
+** Started workon on risk doc and the design doc for foxlink integration test environment
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Finish documentation for foxlink
+
+Isabel
+Today
+Ordered RPi 2 and read about it to be prepared once I receive it
+Installed selenium webdriver and started to investigate
+Continue looking at the FoxLink repo
+More work on FoxLink test plan
+
+Tomorrow
+More investigation on webdriver
+Work on test plan and test cases (very first draft)
+FoxLink automation meeting
+
+Martijn
+
+    Working on bug 1160342  -  Implement <marquee> using mutation observers, adding reftests and mochitests, that handle attribute/properties parsing
+
+
+Kate
+Today
+*Created and presented QA plan for Vaani
+*Discussed automation and manual strategy
+* Did research into CI
+
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******Fill out my weekly status report and sent off the team's status reports
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Continue FxOS devices and SIM inventory
+*******1 on 1 with Pallavi
+
+
+==========
+ 2016-02-10 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Red, no build made
+
+QA Blocker:
+https://bugzil.la/1243750 - mac sdk generated in the wrong place
+This issue has prevent build creation for Aries devices.
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan (read only, in meeting with FoxLink product manager)
+
+* What did I do today?
+* meetings: automation rountable + 2 foxlink meetings. 
+
+** Foxlink
+*** https://github.com/fxbox/foxbox/pull/30  took me a significant amount of time today #RampingUpRust. I didn't get r+ from Fabrice. Tried macros to perform the setup of the tests. I lost much time trying to understand an error coming from the compiler  https://github.com/fxbox/foxbox/pull/30#discussion_r52456083  . I reduced the case to a small program, asked around in #rust, but didn't get any answer. In the end, after reading more carefully an email from Brian Anderson, there is a library that solved my issue https://github.com/reem/stainless . I changed my patch to use this test descriptor.
+*** Read and commented product requirement document https://docs.google.com/document/d/1OQd_-hbJNFSVBeaBcXQn4f1BlWpVpo5uBgNt5OT3Uds/edit#heading=h.8ve6cdffgjik
+
+** Bitbar is going to be stopped. I looked into how to reduce the number of jobs in Jenkins, and sent the results to the list where the thread started. 
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** Create another diagram for foxlink to list which component is gonna be used by which type of tests
+
+
+Michael
+
+Yesterday
+* Helped Bob Cleary troubleshooting some devices in the QA lab
+* Read through about half of Naoki's QA presentation
+* Read through about 1/3 of the CD proposals
+* CD Meeting
+
+    * Read through that proposal
+
+
+Today:
+* Read all the things!
+* QA roundtable - canceled due to holidays
+
+Blocked?
+Nope
+
+Isabel (Read only, in the FoxLink meeting with the PM)
+-Today
+Started to create the test plan for FoxLink
+Started to create the test cases for FoxLink manual testing
+Created a Trello board for tracking FoxLink QA activities. Anyone interested will send the invite
+FoxLink meeting
+QA automation sync meeting
+
+-Tomorrow
+Continue working on FoxLink test plan and test cases
+Will continue understanding the code and thinking about the E2E framework
+
+Martijn
+
+    Debugging in https://bugzilla.mozilla.org/show_bug.cgi?id=1238632#c4 - crash in webrtc::VCMGenericEncoder::SetChannelParameters
+
+    Working on bug 1160342  -  Implement <marquee> using mutation observers, adding reftests and mochitests, that handle attribute/properties parsing
+
+
+Pallavi (at foxlink meeting)
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Continue FxOS devices and SIM inventory
+
+nhirata:
+2/10:
+* bug 1244497 : dogfood
+* Work on ideas
+* chirimen :
+* [draft2] work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* read up on rust/servo
+* certification
+
+2/9:
+* bug 1244893 : done.
+* bug 1244497 : waiting for dogfooder reply on the update.zip file update.
+* worked with Marty on bug 1245195: QA Approved.
+* [draft2] work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** need to work on table of contents and glossary.  Most comments were replied to.
+* review of proposal for sunsetting
+* read up on rust/servo
+** cloned servo
+
+==========
+ 2016-02-09 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** Read more closely Naoki's presentation. Added feedback
+
+** Foxlink
+*** Created diagram to try to display integration tests components  https://docs.google.com/a/mozilla.com/drawings/d/1rE1LoI4Ymuh2X7ULnIJOGsbYIeOU-SWskgkFx0Ua9eY/edit
+*** Fabrice put me in contact with 2 Rust people in regards to unit testing. Wrote an extensive email about our needs and researches. 
+*** Met with Isabel and NoJun about splitting the work in automation. Notes at https://public.etherpad-mozilla.org/p/foxlink-automation
+*** Rebased https://github.com/fxbox/foxbox/pull/30 
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** Clean up a bit more the unit tests in FoxLink
+** Create another diagram for foxlink to list which component is gonna be used by which type of tests
+
+Michael
+
+Yesterday:
+* Worked with Bob Clary to help troubleshoot some devices in the QA lab
+* Started reading over Connected Devices proposals
+
+Today:
+* Attending the Fabrice/Gregor meeting
+* More troubleshooting devices in the QA lab
+* Read over Naoki's presentation
+* Read over proposals
+
+Blocked?
+Nope
+
+Isabel
+-Today
+Meeting with Francisco and Aaime to check the 2.6+ P1, there were 24 now 16. Also de-nominated all 2.6+ P2 and P3 since no work will be done there
+More reading about Rust
+Foxlink doc and repo, installed the code
+Meeting with No-Jun and Johan to discuss about the FoxLink automation
+1:1 Pallavi
+
+-Tomorrow
+QA sync meeting
+Medical Platform meeting
+Start working on the AP I have from the FoxLink automation meeting
+
+Kate
+Today
+* Learned more about Vaani plan and strategy
+* Devised Phase 1 automation plan
+
+Tomorrow
+* Learn more about future of Vaani
+* Work on setting up RPi/w current voice-to-text libraries and a training set
+
+No-Jun
+* What did I do?
+** Met with Johan and Isabel to discuss the test strategy for foxlink
+** went over the rust code with aosmond
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Define risks and mitigation strategy for foxlink
+** Define the testing architecture diagram
+** Go over the upnp implementation with aosmond
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******Started FxOS devices inventory
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Continue FxOS devices and SIM inventory
+
+nhirata:
+2/9:
+* work with Marty on bug 1245195
+* work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893
+* bug 1244497 
+* Work on ideas
+* chirimen 
+* read up on rust/servo
+
+2/8:
+* worked with Marty on bug 1245195
+* work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 : reran
+* bug 1244497 : followed up with the person who wrote the bug
+* qa standup, interview meeting, moco
+
+==========
+ 2016-02-08 
+==========
+
+
+https://public.etherpad-mozilla.org/p/B2GvsDesktop
+
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean ; with b2g-ota it might not be necessarily for this.
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** Added interview questions. Attended meeting.
+
+** Foxlink. Will implement the first stubs by hand. If I have time, try to implement a rust syntax addon for mocking purpose
+*** Reviewed https://github.com/fxbox/foxbox/pull/26 . I ended up creating https://github.com/fxbox/foxbox/pull/30 to try organizing unit test more efficiently (aka, one test checks one thing). 
+
+*** Done Bug 1246638 - [Jenkins] Migrate/delete jobs that are running against b2g-inbound
+
+* Am I blocked?
+** None
+
+* What will I do tomorrow?
+** Read more carefully Naoki's presentation 
+** Meet with Isabel and NoJun about splitting the work in automationm
+** Clean up a bit more the unit tests in FoxLink
+
+Michael
+
+Friday:
+* Reintigrated with this whole "work" thing
+* Started reading over proposals and presentations
+
+    * Need to do this more thuroughly and record 
+
+    * Write up thoughts, critiques, ideas
+
+* 1-on-1 with Pallavi
+ Added changes to Bug 1242634 that were recommended by Johan and Martijn
+
+    * Added the fix and add/commit/pushed the changes
+
+* Image Compare
+
+    * Standard
+
+    * Failed to build
+
+    * Smoke
+
+    * No unexpected errors
+
+    * Non-Smoke
+
+    * Calendar scroll bar mismatch
+
+    * Bing maps mismatch
+
+
+Today
+* Ping No-Jun about whether or not to continue keeping an eye on the image compare runs.
+
+    * Shifting to a weeklly check just to ensure nothing goes horribly wrong
+
+* r? my patch for Bug 1242634
+
+    * if r+ then squash and rebase
+
+    * if r-/r+ with suggestions then i'll incorporate those changes
+
+* Read over CD proposals and Naoki's QA presentation
+
+    * Record thoughts, critiques, ideas
+
+
+Blocked?
+Nope
+
+No-Jun
+* What did I do?
+** Read over QA 101 slide, gave some comments/feedback
+** Started looking into node.js as it might be useful for automation framework
+** Looked a bit more into Rust, and Fabrice's code
+** Talked to devs and jlorenzo about architecture, goals, and planning
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Play around more with the foxlink code and try to learn more about it
+** Read up on changes in foxlink
+** Will unassign myself from b2g related bugs.
+
+
+nhirata:
+2/8:
+* Work on ideas
+* work on QA 101 presentation : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 : reran
+* bug 1244497 : 
+* interview, qa standup, interview meeting, moco
+* chirimen 
+* read up on rust/servo
+2/5:
+* [2nd draft WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 : reran
+* bug 1244497 : following up with end users ; 
+* worked with Marcia
+** need to expand/present my TV feature idea : give to josh/joe?
+** need to expand sign language idea
+** going to work with Amy Lee and Andrea in regards to the filter idea
+*** met with Amy: research open source tech revolving around this, play around with addapp
+
+Isabel
+Today
+Watched FOSDEM talks (Marcia's mail) and IOT readings
+More docs about Foxlink and Rust
+Helped Victoria Gerchinhoren with the TV simulator, she presented a pitch and had to look at the current status of TV
+
+Tomorrow
+Meeting with Francisco as he wants to discuss about all 2.6+ P1, there are many and wants to discuss the priorities again. 
+Foxlink automation meeting
+1:1 Pallavi
+
+Kevin Tucker
+*What did I do Friday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Meeting with Ross
+
+==========
+ 2016-02-05 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+OTA was ran locally. Please see the following issues:
+https://bugzil.la/1244893 is in regards to the turn off,
+https://bugzil.la/1244181 is in regards to the solution of turning it back on.
+https://bugzil.la/1232008 is in regards to the actual security threat that is the reason for the turning off of FOTA/OTA.
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Yellow, 1 existing blocker
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan (in the train, flaky connection, I can't even type in the etherpad without being disconnected)
+
+* What did I do today?
+** FoxLink:
+*** Reviewed https://github.com/fxbox/foxbox/pull/17 again
+*** Documented on how to implement mocks in Rust https://www.gulshansingh.com/posts/how-to-write-a-rust-syntax-extension/ + rust obscure (aka unstable) documentation
+**** This will require some heavy changes in the Rust compiler. 2 ways of doing it: Either enabling the feature in the rust main core, or creating a syntax_plugin. The second method seems more lightweight. In both cases, we'll have to deal with the AST (Abstract syntax tree) of the compiler to find what type needs to be mocked and change their code to return dummy values. 
+**** I'm not very familiar with ASTs in general, and Rust too. This objective will likely take a notable amount of time. I discussed with Fabrice, we agreed on keep trying to make it work, but also use some of my time to write each stubs `a la mano` for each component of the project. This is gonna be hard to maintain in the long term, but at the beginning, this is better than having no test, or the habit of writting no test.
+
+* On monday:
+** Foxlink. Will implement the first stubs by hand. If I have time, try to implement a rust syntax addon for mocking purpose
+** Deactivate the Jenkins (and taskcluster) jobs running against b2g-inbound
+** Read more carefully Naoki's presentation 
+
+
+Michael
+
+Yesterday:
+* Day 4 of Orientation
+* Image compare runs:
+
+    * Standard:
+
+    * Connect with WPS missing
+
+    * Change Homescreen options are switched
+
+    * Call settings screen's "Call waiting" option is borked
+
+    * Media Storage page is off
+
+    * Smoke
+
+    * 3 errors but they're expected
+
+    * Non-Smoke
+
+    * Bing Maps errors, probably solved by re-running reference image runs
+
+
+Today:
+* Check back in with this whole "work" thing
+* 1 on 1 with Pallavi
+* Add changes to Bug 1242634 that were recommended by Johan and Martijn
+
+    * Added the fix and add/commit/pushed the changes
+
+* Get a bit of help fixing my PR for Bug 1224629
+
+    * I wound up committing something that I didn't mean to commit so I need to remove that from my PR
+
+Image Compare
+
+    * Standard
+
+    * Failed to build
+
+    * Smoke
+
+    * No unexpected errors
+
+    * Non-Smoke
+
+    * Calendar scroll bar mismatch
+
+    * Bing maps mismatch
+
+* Read up on all the stuff that happened this week
+
+    * New product decks
+
+    * Naoki's QA presentation
+
+    * Email threads of doom
+
+
+Blocked?
+Nope
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******1 on 1 with Pallavi
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+
+Isabel
+-Today
+Read new docs availables yesterday about Foxlink
+Getting familiar with the repo
+Investigate about the cerifications Naoki suggested, thinking about taking http://www.istqb.org/certification-path-root/foundation-level/
+as an started as that is required for other more interesting
+
+-Monday
+Will ask again for feedback to developers to finish the Data Sync test plan (they are all in London this week)
+Will try to finish the test plan
+
+nhirata:
+2/5:
+* [2nd draft WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 
+* bug 1244497 : following up with end users ; 
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand/present my TV feature idea : give to josh/joe?
+** need to expand sign language idea
+** going to work with Amy Lee and Andrea in regards to the filter idea
+* automation chat with QAnalyst
+* chirimen
+* read up on Rust/Servo
+
+2/4:
+* [2nd draft WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 revamped; push to try; need review
+* bug 1244497 : following up with end users ; 
+* watched : https://air.mozilla.org/july-brantina-on-prototyping-with-tom-chi/
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand/present my TV feature idea : give to josh/joe?
+** need to expand sign language idea
+** going to work with Amy Lee and Andrea in regards to the filter idea
+* read up on Rust/Servo
+
+Martijn
+
+    Unassigning myself from Gaia UI test bugs
+
+    Working on bug 1160342  -  Implement <marquee> using mutation observers 
+
+    Still working on  Bug 1219649 -       Implement *test_cost_control_reset_wifi.py* as an integration test in JavaScript
+
+
+==========
+ 2016-02-04 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 2 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Verified:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**3 bugs
+=================================================
+
+Johan (still in the FoxLink product meeting)
+
+* What did I do today?
+** Interns: Graded 2 new tests (only code-related questions)
+** FoxLink:
+*** Rust compiler: Done with the PR. https://github.com/rust-lang/rust/pull/31368
+*** Activated rust linter on Foxlink on CI and as a pre-commit hook: https://github.com/fxbox/foxbox/pull/12 . 
+*** Discused with the Rust community on IRC about ways to implement mocks in Rust. Might have found one https://www.gulshansingh.com/posts/how-to-write-a-rust-syntax-extension/ 
+*** Reviewed https://github.com/fxbox/foxbox/pull/17 
+
+* Tomorrow:
+** Foxlink. Will try to implement a rust syntax addon for mocking purpose
+** Travel back to Paris during the end of the afternoon (Europe)
+
+Pallavi:
+    Will send out bonus letters to team today
+    Intern recruiting - Skype interviews will start next week. Recruiter reaching out to candidates
+    New candidates - Need grading (To be done today)
+    
+    
+
+Michael (read only)
+
+Yesterday:
+* Day 3 of Orientation
+
+Today:
+* Day 4 of Orientation
+* Image compare runs:
+
+    * Standard:
+
+    * Connect with WPS missing
+
+    * Change Homescreen options are switched
+
+    * Call settings screen's "Call waiting" option is borked
+
+    * Media Storage page is off
+
+    * Smoke
+
+    * 3 errors but they're expected
+
+    * Non-Smoke
+
+    * Bing Maps errors, probably solved by re-running reference image runs
+
+
+Blocked:
+* Well the New Hire Orientation is kind of a blocker in that it prevents me from working.
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******Attended Automation and weekly roundtable
+*******Sent out stagnant bug emails
+********Updated my status and sent out the team's status reports
+
+*Am I blocked?
+No
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******1 on 1 with Pallavi
+*******Read through Naoki's QA documentation
+
+Isabel
+-Today
+Fixed and Merged PR bug 1244775
+Read about Rust
+Read about FoxLink and attend the afternoon meeting
+Reading all the CD mails
+
+-Tomorrow
+Will join FoxLink meeting
+Read more about Rust
+If it makes sense, at least for keep practicing I will take another mjs test to automate
+
+No-Jun
+* What did I do?
+** My last mjs test is merged to gaia
+** Read up on rust examples
+** Read up on architecture discussions
+* Am I blocked?
+** No
+* What will I do?
+** Read up on HTTP basics, and node.js as they might be needed for integration testing
+** Review Naoki's qa 101 slide
+
+Martijn
+
+    Yesterday sick, catching up on mail and discussions
+
+    Pull request for  for Bug 1240077, left some questions for Hubert
+
+    Still working on  Bug 1219649 -       Implement *test_cost_control_reset_wifi.py* as an integration test in JavaScript
+
+
+nhirata:
+2/4:
+* [2nd draft WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* bug 1244893 revamped; push to try; need review
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand on the smart filtering idea
+** need to expand/present my TV feature idea
+** need to expand sign language idea
+* chirimen
+* read up on Rust/Servo
+
+2/3: 
+* [2nd draft WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** review comments made; modified, have 2 questions left.
+* bug 1244893 revamped; push to try; need review
+* looked up some more info for other countries for istqb certification : 
+** for Canada : Canada - CSTB : http://www.istqb.org/istqb-where-you-are/your-local-member-board/canadian-software-testing-board-cstb.html ; http://cstb.ca/
+** for spain : https://www.isqi.org/en/index.html 
+** for france : http://en.gasq.org/
+** reached out to a company that supports online learning/
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand on the smart filtering idea
+** need to expand/present my TV feature idea
+** need to expand sign language idea
+
+==========
+ 2016-02-03 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 3 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+* Resolved as fixed
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**2 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+** Glanced over Naoki's slides to provide some early feedback. Will read it more carefully once the Foxlink week is over.
+** Reviewed bug 1244775
+
+** FoxLink: got many reviews for the rust compiler. Addressed them one by one. Looked into how to write tests. Struggle a bit. I think I should have a suitable PR by tomorrow https://github.com/rust-lang/rust/pull/31368
+
+* Tomorrow:
+** Foxlink, finish the rust 
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame Mozilla Inbound
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+
+*Am I blocked?
+ https://bugzil.la/1245133 Treeherder isnt making builds 
+
+*What will I do today?
+**Sanity and Smoke on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+******Attend weekly roundtable
+*******Sent out stagnant bug emails
+********Fill out my status report and send out the team's status reports
+
+Isabel
+Today
+QA sync meeting
+Mainly working on fixing PR for bug 1244775
+Read Naoki's presentation
+
+Tomorrow
+Hope to finish with the PR and merge it
+Will join Foxlink meeting if there are
+Reading documetation about it
+
+nhirata:
+2/3: 
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** review comments made
+* bug 1244893 done; push to try
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand on the smart filtering idea
+** need to expand my sign language idea
+** need to expand/present my TV feature idea
+* chirimen into b2g
+* read up on Rust/Servo
+
+2/2:
+* meetings : systemsfe, vaani, qa standup, project meeting, drivers meeting
+* bug 1244893 done; push to try
+* [First Draft Done] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** review comments made
+* presentation
+
+No-Jun
+* What did I do?
+** setup foxlink, read rust doc
+** got r+ for the mjs script
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Continue learning rust
+** merge my last mjs script
+
+==========
+ 2016-02-02 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Red, 1 qablocker
+
+No builds were made:
+-  https://bugzil.la/1245133 Treeherder isnt making builds 
+*Since all B2G builds became tier-3 last week, this is the new reality: the meaning of being tier-3 is that any Gecko push might break you, and so at any time your builds may stop building on mozilla-central.
+
+Sanity: Passed
+Flame 2.6 Status: Red, 1 qablocker
+
+No builds were made:
+-  https://bugzil.la/1245133 Treeherder isnt making builds 
+*Since all B2G builds became tier-3 last week, this is the new reality: the meaning of being tier-3 is that any Gecko push might break you, and so at any time your builds may stop building on mozilla-central.
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 3 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+  * This issue doesn't explicitly fail any specific dogfood test case, but is severe enough to impact the end user.
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**2 bugs
+=================================================
+
+Johan (Read only - At FoxLink meet up week in London)
+
+* What did I do today?
+** Reviewed bug 1242634
+** Hacker Rank: Graded some questions for 2 new candidates.
+
+** FoxLink:
+*** Discussed with NoJun about splitting the test responsability. We probably go with NoJun on integration testing, and I'll be on unit tests (creating the framework, and adding tests where there are missing). End-to-end automation will be done once we have a full working prototype.
+
+*** Made a PR for adding the first (ugly) unit test https://github.com/fabricedesre/foxbox/pull/1. Turned on code coverage. Found with Fabrice that the code coverage is not accurate (if functions are not used, they're not counted in the coverage percentage). Investigated with pnkfelix. It turns out the rust compiler strips unused functions from builds used for unit tests. I hacked into rust compiling tool chain, and got a correct report. Now I'm polishing up my patch to create a PR against rust compiler. I'll probably need to add a unit test, which can take more time to get used to.
+
+* Tomorrow:
+** Foxlink: code coverage, get a PR
+
+
+Michael
+
+Yesterday
+* New Hire Orientation Day 1
+* Image Compare Runs
+
+    * Standard:
+
+    * Call Barring: Reference shows the options as "waiting" but screenshot shows them as disabled
+
+    * Call Settings: Call waiting is greyed out on the screenshot but not reference image
+
+    * Change Homescreen: flipped order
+
+    * Wifi enabled: "Connect with WPS" doesn't appear in the screenshots
+
+    * Smoke
+
+    * 3 expected errors (date changes)
+
+    * Music Song view test has album art that has a slight mismatch
+
+    * Non-Smoke
+
+    * Calendar scroll wheel shows/not shown -> not a problem
+
+
+Today:
+* New Hire Orientation Day 2
+* Image Compare Runs
+
+    * Standard
+
+    * Call Settings: Call waiting is greyed out on the screenshot but not reference image
+
+    * Wifi enabled: "Connect with WPS" doesn't appear in the screenshots
+
+    * Smoke
+
+    * No run initiated
+
+    * Non-Smoke
+
+    * No run initiated
+
+Blocked?
+Nope
+
+Kevin Tucker
+*What did I do yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+
+*Am I blocked?
+ https://bugzil.la/1245133 Treeherder isnt making builds 
+
+*What will I do today?
+**Sanity and Smoke on Mozilla bound build
+***Daily bug triage
+****Exploratory testing on Mozilla bound build
+*****Send out the EOD report
+
+
+Isabel 
+-Today
+*Created PR and asked for review for bug 1244775 - Implement new test: add_number_to_contact_from_dialer as an integration test in javascript
+*Data Sync Sprint Planning meeting
+*Checked Naoki's feedback about the test plan, thank you!
+*Joined Foxlink meeting in the afternoon
+
+-Tomorrow
+*Several sync meetings
+*Will join Foxlink meeting and read available documentation
+
+No-Jun
+* What did I do?
+** Incorporated feedback to 2 mjs tests.  One is merged, one is awaiting another review
+** Read up on connected devices use case scenarios
+
+
+* Am I blocked?
+** No
+
+* What will i do?
+** read up on the connected devices doc, and try setting up fabrice's foxbox implementation on PC
+
+Martijn
+
+    Almost ready with an updated pull request for Bug 1240077 -       Write a MarionetteJS test to verify the repeat button on the Music player works
+
+    Working on Bug 1219649 -       Implement *test_cost_control_reset_wifi.py* as an integration test in JavaScript
+
+
+nhirata:
+2/2:
+* meetings : systemsfe, vaani, qa standup, project meeting, vr meeting, drivers meeting
+* bug 1244893 done; waiting for review - may need to revamp?
+* connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+** need to expand on the smart filtering idea
+** need to expand/present my TV feature idea
+* chirimen
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* read up on Rust/Servo
+
+2/1:
+* Blockers : 
+** [Blocked by 1217130] bug 1241624
+** [Blocked by 1241624] bug 1244893
+* Done:
+* meeting with qa standup, selena, connected devices meeting:
+** meeting with selena : 
+*** https://public.etherpad-mozilla.org/p/taskcluster-b2g-balrog-future
+** connected devices meeting : https://public.etherpad-mozilla.org/p/ConnectedDevicesOfficeHours
+*** need to expand on the smart filtering idea
+*** need to expand/present my TV feature idea
+* [on hold, blocked] : bug 1224774 :
+** https://tools.taskcluster.net/task-inspector/#VCVOg4TuS8a5WhtQPPcmOw/
+** figured it out I was missing a space : https://tools.taskcluster.net/task-inspector/#bdJr1IO3TfKFjAkLXotetw/
+** switching to task : bug 1244893, which will be blocked by bug 1241624
+* [WIP] Bug 1244497 - need to work with dogfooder
+* [WIP] bug 1235392 - need to work with a different dogfooder to troubleshoot.  asked him to set gaia debug on.
+* [WIP] bug 1244893 : test build https://tools.taskcluster.net/task-inspector/#L27Fpbz8RASBixxD_eUChA/
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* feedback for Isabel
+
+==========
+ 2016-02-01 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Green, no existing blockers
+
+Existing:
+https://bugzil.la/1244149 Build error: workspace/gecko/b2g/app/nsBrowserApp.cpp:284: error: undefined reference to 'mozilla::LogModule::Init()' 
+*Not occurring today. Builds are available on taskcluster and pvt
+- https://bugzil.la/1243849  Restore support for accessing the Cache API from app:// URLs and also for storing requests/responses with app:// URLs within it
+*Resolved as fixed and not occurring. Will be verified today.
+
+Sanity: Passed
+Flame 2.6 Status: Green, no existing blockers
+
+Existing:
+https://bugzil.la/1244149 Build error: workspace/gecko/b2g/app/nsBrowserApp.cpp:284: error: undefined reference to 'mozilla::LogModule::Init()' 
+*Not occurring today. Builds are available on taskcluster and pvt
+- https://bugzil.la/1243849  Restore support for accessing the Cache API from app:// URLs and also for storing requests/responses with app:// URLs within it
+*Resolved as fixed and not occurring. Will be verified today.
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 3 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+  * This issue doesn't explicitly fail any specific dogfood test case, but is severe enough to impact the end user.
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**2 bugs
+=================================================
+
+Michael (Read Only -> In New Hire brainwashing/orientation)
+
+Friday:
+* Image compare runs
+
+    * Standard:
+
+    * Failed to build
+
+    * Smoke
+
+    * Slight Album Art mismatch > Not really an issue
+
+    * Non Smoke
+
+    * Calendar scroll bar shown/not shown > not really an issue
+
+* Continued work on Bug 1242634
+
+    * Problem solved thanks to No-Jun's help
+
+    * The reference ID was correct but not specific enough to work properly. No-Jun showed me what to do in this case.
+
+    * Fix added, committed and PR submitted
+
+    * Added Johan and Martijn for review
+
+    * Also inadvertantly borked my PR for Bug 1224629 test so I'll need help fixing that this week :/
+
+    * Lesson learned: Always make sure you're in the correct branch when you work on things in Pycharm.
+
+
+Today:
+* New Hire orientation Day 1
+* Image Compare Runs
+
+    * Standard:
+
+    * Call Barring: Reference shows the options as "waiting" but screenshot shows them as disabled
+
+    * Call Settings: Call waiting is greyed out on the screenshot but not reference image
+
+    * Change Homescreen: flipped order
+
+    * Wifi enabled: No Connect with WPS
+
+    * Smoke
+
+    * 3 expected errors (date changes)
+
+    * Music Song view test has album art that has a slight mismatch
+
+    * Non-Smoke
+
+    * Calendar scroll wheel shows/not shown -> not a problem
+
+
+Blocked?
+Nope
+
+Pallavi: (@Dentist - 9.30 to 10.30)
+
+Kate
+Friday
+* Finished PR
+* Dwelved into Vaani
+
+Today
+* New Hire orientation
+* Request RPi and start testing stuff
+* Start working on automation aka voiceclip upload button
+
+Johan (Read only - At FoxLink meet up week in London)
+* Saturday/Sunday:
+** FOSDEM:
+*** Presentation done with Martijn. Slides: https://goo.gl/H1xpY5 Video will come in the following days. We had an audience mostly composed of Selenium-savvies. The presentation went well. Questions were more about our CI.
+*** Attended presentations about:
+**** taking e2e testing out of VM for network/disk tools (they do it by wrapping C calls)
+**** a tool that helps finding perf bottlenecks in microservices.
+**** rasperry pies clusters management (for traditional web hosting, for instance)
+**** provisionning VMs thanks to descriptive documents (à la Dockerfile)
+** Hacker Rank: Graded 2 new candidates.
+
+* Monday
+** FoxLink meet up:
+*** Looked into Fabrice's first prototype: https://github.com/fabricedesre/foxbox/
+**** No unit test were present. I looked into how to add one. Big issue: There's no way to set quickly up mocks 
+*** Discussed with NoJun about what kind of automation will be required https://public.etherpad-mozilla.org/p/foxlink-automation
+
+* Tomorrow:
+** More FoxLink
+
+Kevin Tucker
+*What did I do Friday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD report
+******Reviewed the weekly quality report
+
+*Am I blocked?
+No 
+
+*What will I do today?
+**Sanity and Smoke Test on Aries 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+
+Isabel
+Today
+*Email and bugzilla mail after PTO days
+*Started to work on new mjs test:  Bug 1244775 - Implement new test: add_number_to_contact_from_dialer as an integration test in javascript
+*Worked on Data Sync Test cases:
+    **Test Plan: https://docs.google.com/a/mozilla.com/document/d/1KHrN-8xlmuAaowuH8GbqKqnAO4ij5YCgXb9i83aOtWI/edit?usp=sharing
+    **ACC Test Matrix: https://docs.google.com/a/mozilla.com/spreadsheets/d/19pY5oBuAvInJO5ClYXBleVS9kwucnfHyd9X2yiR7Cao/edit?usp=sharing
+*Will attend the Project Meeting
+
+Tomorrow
+*2.6 comms triage
+*Firefox Sync Sprint Planning
+**Will share the first version of the test cases with devs to ask for feedback in terms of some expected behaviors
+**Once the test cases are clear, we can run a first execution (hopefully within this week)
+*Continuew working on bug 1244775
+*1:1 Pallavi
+
+No-Jun
+* What did I do?
+** Helped out Michael a bit with the permafail bug
+** Attended foxlink meeting
+** Got feedback for the mjs script
+** Copied Naoki's test plan template into wiki space
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Make updates to mjs pull request
+** Continue attending foxlink meeting are the meetings on vidyo? Yes. Not sure of the vidyo room. It might be LON 344 Fawlty Towers Thanks!
+
+nhirata:
+2/1:
+* [Blocked by 1217130] bug 1241624
+* [WIP] : bug 1224774 :  https://tools.taskcluster.net/task-inspector/#BSmcKTYVTRCVu_5SK-rY0Q/
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* need to wait for tomorrow : is there any point in bring the machine up to QAnalyst now?
+* some basic how to read code training for qanalyst?
+
+1/29: 
+* [WIP] : bug 1224774 : follow up of nexus 5 : so I got the balrog to point to the public /fullimg, taskcluster itself is not pointed to make these parts public even though the task is asking it to be public.  I'm not sure where it's failing yet.
+** next attempt : https://tools.taskcluster.net/task-inspector/#FIpjgn8TRdiWzrSb_g3KOQ/
+** so I figured it out.  it doesn't matter if you put public/private for the b2g-phone-ota because the post-build.sh script is hard coded in pushing to certain directory.  There's no point in trying to clean that up right now, doing the quick patch.
+** https://tools.taskcluster.net/task-inspector/#ZtychWc6RO2vy4Eipf2Psg/
+** odd.  failed, maybe I forgot to push.
+** https://tools.taskcluster.net/task-inspector/#bYG5bmAwSkCImPgkIY56xw/0
+** also posted: https://tools.taskcluster.net/task-inspector/#UCRYELwWQV6GNIh7FG4Yjw/ which is just regular master in case something broke...
+** https://tools.taskcluster.net/task-inspector/#COWQq_o0QmGa-uA_cif6nw/0 is based on master.
+...
+** Almost done : https://public-artifacts.taskcluster.net/COWQq_o0QmGa-uA_cif6nw/0/public/logs/live_backing.log
+* [Blocked by 1217130] bug 1241624 ; blocked.  Releng already has a image, it's not worth it for me to duplicate the efforts already done.  Once the image is there, we can utilize that image and push to balrog easier.
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+
+==========
+ 2016-01-29 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Red, 1 new blocker, 1 existing blocker
+
+New:
+https://bugzil.la/1244149 Build error: workspace/gecko/b2g/app/nsBrowserApp.cpp:284: error: undefined reference to 'mozilla::LogModule::Init()' 
+
+Existing:
+- https://bugzil.la/1243849  Restore support for accessing the Cache API from app:// URLs and also for storing requests/responses with app:// URLs within it
+
+Sanity: Passed
+Flame 2.6 Status: Red, 1 new blocker, 1 existing blocker
+
+New:
+https://bugzil.la/1244149 Build error: workspace/gecko/b2g/app/nsBrowserApp.cpp:284: error: undefined reference to 'mozilla::LogModule::Init()' 
+
+Existing:
+- https://bugzil.la/1243849  Restore support for accessing the Cache API from app:// URLs and also for storing requests/responses with app:// URLs within it
+* Later Flame builds will be affected even though this technically does not occur on the build that was smoked.
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 3 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+  * This issue doesn't explicitly fail any specific dogfood test case, but is severe enough to impact the end user.
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**2 bugs
+=================================================
+
+Johan
+
+* What did I do today?
+
+** FOSDEM presentation: 
+** Got reverted. I broke a unit test without noticing. I repaired it, wait for the results to come and landed.  Bug 1232680 - Repair and reactivate call_log_test.js
+** Got NI'd on bug 1242665 by KTucker. Set up debug env on Fennec to investigated DOM. Then, Vivien helped me in finding the culprit class in Gecko.
+** FoxLink: Prepared my environment for the workweek.
+*** Got Raspberry to connect to. Had to reconfigure my dns resolver (avahi wasn't used as a source) to ping the machine.
+** Played with rust. Wanted to quickly set up unit test, coverage, to see how it's feasible. Struggled in concatening 2 strings. Finally set up a playground repo with CI running  https://github.com/JohanLorenzo/rust-testing-example 
+
+* Am I blocked?
+** Bug 1221510 - Unable to download builds when the link contains a bewit 
+
+* What will I do tomorrow + Monday?
+** FOSDEM
+** FoxLink: meet up week
+
+Michael
+
+Yesterday
+* Read over and watched materials for the New Hire event next week
+* Image compare runs 
+
+    * Standard:
+
+    * Media storage information and wifi wrong
+
+    * Built in Keyboard test is missing the 'installed keyboards"
+
+    * Smoke:
+
+    * Passed
+
+    * Non Smoke
+
+    * Calendar scroll bar shown/not shown > not really an issue
+
+Worked on Bug 1242634
+
+    * Got to the step where the test fails with "Element not visible"
+
+    * It looks like the element is visible though but i'm not sure if it's written correctly
+
+    Web IDE gives me: <a href="/profile/">Profile</a>
+
+    Test script is:  _profile_icon = (By.CSS_SELECTOR, "a[href='/profile/']")
+
+    print self.marionette.page_source
+
+    <gaia-*> => self.marionnette.switch_to_shadow_root()
+
+
+Today
+* Image compare runs
+
+    * Standard:
+
+    * Failed to build
+
+    * Smoke
+
+    * Slight Album Art mismatch > Not really an issue
+
+    * Non Smoke
+
+    * Calendar scroll bar shown/not shown > not really an issue
+
+* Continue work on Bug 1242634
+
+    * Problem solved thanks to No-Jun's help
+
+    * Fix added, committed and PR submitted
+
+    * Added Johan and Martijn for review
+
+    * Also inadvertantly tweaked my PR for my notes test so I'll need help fixing that next week :/
+
+
+Blocked?
+No
+
+No-Jun
+* What did I do?
+** Spent entire afternoon with pdahiya about using setTimeout() method in marionette.  Apparently it is harder than i thought.
+** Bug 1243751 ( FF/REW control test in video app) and Bug 1242615 ( check content of the gallery info view) are done and up for review
+** attended media triage- seems like devs are quite frustrated as well.
+
+* Am I blocked?
+** No
+
+* What will I do?
+** Look into writing a test plan for media components
+
+Kate
+*Yesterday
+** Finished coding for base views
+** Re-did my git branches issues
+** Learned about Vaani/got oriented
+
+*Today
+** Complete full PR already
+** Continue with Vaani
+
+Pallavi:
+    Ari will have an All-Hands in TPE on Tuesday
+    Today at 9.15 -> I am in a Engineering Managers meeting to discuss options to present to Faramarz and Ari
+    Today at 9.45 -> Presentation to Ari/Faramarz
+
+Kevin Tucker
+*What did I do Yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD reportf
+******1 on 1 with Pallavi
+
+*Am I blocked?
+No 
+
+*What will I do today?
+**Sanity and Smoke Test on Aries 2.6
+***Daily bug triage
+****Exploratory testing on Aries 2.6
+*****Send out the EOD report
+
+nhirata:
+1/29: 
+* [WIP] : bug 1224774 : follow up of nexus 5 : so I got the balrog to point to the public /fullimg, taskcluster itself is not pointed to make these parts public even though the task is asking it to be public.  I'm not sure where it's failing yet.
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+* [WIP] bug 1241624 ; need to talk to rail.
+
+1/28:
+* meetings : systemsfe, vaani, standup.
+* ramp Kate on vaani
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** need to work on bugzilla info, automation info, soccoro, and raptor then the first draft is complete?
+** there's one other thing I wanted to touch in in the automation section but I forgot.
+* [WIP] bug 1224774 : I think I'm almost done, testing : https://tools.taskcluster.net/task-inspector/#fPvt3v6cRZCdXwqlgr1QWg/0
+** made gaia the source.xml (manifest) and the fullimg mar for nexus 5 public.
+* [WIP] bug 1241624 ; learned about docker images, setting new one up.  need to figure out submitter, once that's working then also need to figure out ssh and the docker image.  once that's done, setup the task and get it all integrated... might take a few days.  Mentor notes are listed here : https://public.etherpad-mozilla.org/p/b2g-intree-mentorship#lineNumber=35
+==========
+ 2016-01-28 
+==========
+
+Taskcluster issues: 
+- https://bugzil.la/1224357 Fix Aries dogfood for mozilla central
+*qablocker : we need https://bugzilla.mozilla.org/show_bug.cgi?id=1186944 pushed by Mahe/Jean
+
+Daily Smoke results and Severe issues:
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Build_Information_and_Results
+* https://wiki.mozilla.org/B2G/QA/Daily_Bulletin#Smoketest_Severe_Issues
+
+Sanity: Passed
+Aries Status: Yellow, 1 new blocker
+
+New blocker:
+- https://bugzil.la/1243670 Gecko broke the Music app (was: Perma failure:  apps/music/test/marionette/Player_test.js | Music player tests Player icon tests Check the player icon displays after play some song)
+
+Sanity: Passed
+Flame 2.6 Status: Yellow, 1 new blocker
+
+New blocker:
+- https://bugzil.la/1243670 Gecko broke the Music app (was: Perma failure:  apps/music/test/marionette/Player_test.js | Music player tests Player icon tests Check the player icon displays after play some song)
+* Later Flame builds will be affected even though this technically does not occur on the build that was smoked.
+
+Sanity: Passed
+Aries Dogfood 2.6 Status: Red, 3 existing blockers
+https://bugzil.la/1186944 [Aries][OTA] Unable to find latest build from OTA channel 'dogfood-latest'
+
+Existing:
+- https://bugzil.la/1239136 Users are unable to scroll articles on yahoo.com in browser
+  * This issue doesn't explicitly fail any specific dogfood test case, but is severe enough to impact the end user.
+- https://bugzil.la/1240347 Huge regression when starting Twitter
+- https://bugzil.la/1234898 Fullimg mar off of taskcluster fails to build appropriately.
+
+Crashes
+* New Query excluding POVB, QAExclude, and those not set to status-b2g-master=affected
+* http://mzl.la/1RG4eGP
+**2 bugs
+=================================================
+
+Isabel (read only)
+-Today
+*Attended Medical Platform meeting
+*Worked on the Data Sync Test Plan (WIP):
+**https://docs.google.com/a/mozilla.com/document/d/1KHrN-8xlmuAaowuH8GbqKqnAO4ij5YCgXb9i83aOtWI/edit?usp=sharing
+*Went through the stagnant bugs list
+
+-Tomorrow : PTO 
+
+Johan
+
+* What did I do today?
+
+** FOSDEM presentation: Made diagrams. Working on CI part. Also dug up some old presentation done back in 2012 related to Gaiatest.
+** Interns: 2 new tests corrected
+** Conflicts with 2 more commits. Un-bitrot. Automation caught a couple of nits I fogot in the rebase. Manually checked for regressions. Landed.  Bug 1232680 - Repair and reactivate call_log_test.js
+** e2e-py: We got jobs back to green + videos are online. Filed a couple of new bugs founds thanks to videos.
+
+* Am I blocked?
+** Bug 1221510 - Unable to download builds when the link contains a bewit 
+
+* What will I do tomorrow?
+** Continue the presentation for FOSDEM with Martijn
+** FoxLink: Prepare my environment for the workweek 
+
+Michael
+
+Yesterday
+* Made changes to my PR and pushed them again
+* Image compare runs
+* Attended the software talk
+* Meeting day
+* Started looking at Bug 1242634
+
+Today
+* Work on Bug 1242634
+
+    * First attempts at the test result in BzLite not even launching
+
+* Read over and watch materials for the New Hire event next week
+* Image compare runs 
+
+    * Standard:
+
+    * Media storage information and wifi wrong
+
+    * Built in Keyboard test is missing the 'installed keyboards"
+
+    * Smoke:
+
+    * Passed
+
+    * Non Smoke
+
+    * Calendar scroll bar shown/not shown > not really an issue
+
+
+Blocked?
+Nope
+
+Kate
+Yesterday
+- https://github.com/mozilla-b2g/gaia/pull/33952 made progress on entire details test conversion, made base view
+- Saw speaker
+- Met with Marcia on documentation
+
+Today
+- Get PR ready for code review
+- Read and watch materials for new hire event next week too
+- Compile existing reading materials on testing connected devices (and/or robots) and put information in a wiki page. What current standards exist for testing of CD? This sounds great! \o/
+
+
+Kevin Tucker
+*What did I do Yesterday?
+**Sanity and Smoke Tests on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries
+*****Sent out the EOD reportf
+******Sent out stagnant bug emails
+*******Attend the weekly roundtable and update the etherpad with smoke status
+********Filled out my status report and send out the team's status reports
+
+*Am I blocked?
+No 
+
+*What will I do today?
+**Sanity and Smoke Test on Aries and Flame 2.6
+***Daily bug triage
+****Exploratory testing on Aries and Flame 2.6
+*****Send out the EOD report
+******Look over QA 101 sent by Naoki
+*******1 on 1 with Pallavi
+
+No-Jun (in media standup, readonly)
+* What did I do? 
+** Worked on Bug 1243751 (ff/rew test on video app)
+** Meetings
+
+* Am i blocked?
+** Music app is broken due to tier-3 status
+
+* What will ido?
+** Wrap up 1243751, look into creating test plans
+
+Martijn
+
+    Working on FOSDEM presentation: https://docs.google.com/presentation/d/1R6oqTpXNko0h38EmUhPbPkhOycOmJ1a9QT6Dj9u4Et8/edit?ts=56a7a332#slide=id.gee9c34342_1_11
+
+    Working on Bug 1219649 -       Implement *test_cost_control_reset_wifi.py* as an integration test in JavaScript
+
+    Need to update my pull request for Bug 1240077 -       Write a MarionetteJS test to verify the repeat button on the Music player works
+
+
+nhirata:
+1/28:
+* meetings : systemsfe, vaani, qa standup
+* working on taskcuster stuff : nexus build, separation of balrog updating to a different task
+* follow up with the nexus 4 build
+* agps( bug 1203411 )
+* need to follow up on : chirimen ( 1166608 ) 
+* yml for T2M, b2g-ota, nightly for aries
+* crashers/reds/etc.
+NOTE: monitoring bug 1240347 ; bug 1235392 ( need to flash eng.worker.20151130.124658 with newer gecko/gaia)
+* look into hooks for timed builds for FOTA/mars
+
+1/27:
+* meetings : qa auto, qa standup, Jocelyn Goldfein, b2g-OTA in tree mentorship
+* [WIP] : QA 101 : https://docs.google.com/presentation/d/1wNc_XBfFnUa6JWiF6qnKg5AgFW1coFoZtM5nAR9HdA0/edit#slide=id.g106f2be277_0_0
+** more progress
+* bug 1224774 : following up with nexus 5, things are private still.  need to fix that.
+** didn't seem to push to balrog either.  Not sure why?  Need to investigate log.  Goes with bug 1241624.  I think I probably should try fixing that first?
+** actually I was wrong when looking through the logs.  It did report to balrog: https://aus4-admin.mozilla.org/releases#B2G-gecko-dev-nightly-20160127015706  I looked at mozilla-central release not gecko-dev release.  just need to make things public instead of private.
+** blocked: github down.
+* [WIP] : bug 1241624 : https://public.etherpad-mozilla.org/p/b2g-intree-mentorship need to change to balrog upload using similar model as upload symbols.
+** blocked : need newer version of docker tools but can't reach server for download;
+https://github.com/docker/toolbox/releases/download/v1.9.1i/DockerToolbox-1.9.1i.pkg points to an angry unicorn
+
+Chat
+
+jlorenzo:14:43 we lost yesterday's meetings notes. If somebody still has them in one of his *unrefreshed* tab, feel free to add them
+
+jlorenzo:16:38 nervermind, it's back
+
+jlorenzo:11:15 Line 820 and below cut. See revision 42045 to get the previous content of this pad
+
+nhirata:00:47 https://old.etherpad-mozilla.org/b2g-qa-daily-standup starts at 2015-10-05
+
+nhirata:00:50 apparantly we can't save the etherpad like we were able to do on the old one. we lost everything from the last entry here to the old etherpad.
+
+nhirata:00:50 above comments were placed in 11/30/2015
+
+jlorenzo:13:57 2015-12-02, nhirata: There's a way to get it back. Go to https://public.etherpad-mozilla.org/p/b2g-qa-daily-standup/timeslider#42045 , then export the pad (either in HTML or in plain text). You'll get the history from 2015-09-24 to 2015-11-11
+
+jlorenzo:17:21 Line 594 and below cut. See revision 76146 to get the time range from 2015-11-06 to 2015-12-31.
+
+jlorenzo:10:36 Cut the bottom of the etherpad. See https://public.etherpad-mozilla.org/p/b2g-qa-daily-standup/timeslider#105613 to get the range from 2015-12-22 to 2016-02-02
+
+marcia:22:42 I think for intern candidates we should probably refrain from adding names to this etherpad since it is public
