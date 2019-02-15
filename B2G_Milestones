@@ -1,0 +1,356 @@
+This pad is thought as a draft for Milestones in the B2G Tansition Project
+
+As it seems hard to see the progress of this Project and its dependencies I suggest to slice the parts in to small milestones. 
+Not to push anybody who adopted Apps or is Maintaining the Core but to get a overview of done and open work.
+@Great idea!
+
+I listed every app i didn't know or wasn't able to say "not needed"...
+
+B2GOS Stack:
+
+    Gaia
+
+    Core System
+
+    Apps
+
+     System app
+
+     Home screen
+
+    Virtual Home Button appears
+
+    ?
+
+     default Theme
+
+     dialer 
+
+    Numbers visible
+
+    Numbers are dialed
+
+    Numbers can be reacted in a call to dial in a audio menu
+
+    call can be done
+
+    call can be aborted
+
+    call Audio Transmit works
+
+    call Audio Receive works
+
+    Proximity sensor shuts screen off when near by ear
+
+    emergency-call
+
+
+     Search 
+
+    cursor appears and Keyboard comes up
+
+    Typing works
+
+    Search for Apps work
+
+    Search for System Settings work
+
+    Search for contacts work
+
+    Search for Notes work
+
+    Search for E-Mails work
+
+    Search for
+
+
+     Keyboard 
+
+    Typing possible
+
+    rises and goes away
+
+    API for different Keyboards
+
+    Languages?
+
+
+     Settings
+
+    list of setting menu points?
+
+    Network Alerts ? : for https://en.wikipedia.org/wiki/Wireless_Emergency_Alerts
+
+    communications?? : has "contacts", "dialer", "facebook integration"
+
+
+     sharedtest
+
+    whats that?
+
+
+    Clock/Timer
+
+    set a clock that rings at that time
+
+    set a clock that rings in amount of time
+
+    start a timer to measure time
+
+
+
+    Calculator
+
+    standard
+
+    programer
+
+    scientific
+
+
+    Calendar
+
+    add Event, delete Event
+
+    Event Name
+
+    Time, Date, Fullday
+
+    Location
+
+    Notes
+
+    URL
+
+    Attachments
+
+    Invitations
+
+    Sync calendar
+
+
+    Camera
+
+    Take Picture
+
+    Focus
+
+    zoom
+
+    Store Picture
+
+    Change app to Gallery and back
+
+
+    Gallery
+
+    View Picture
+
+    Delete Picture
+
+    zoom Picture
+
+
+    Contacts
+
+    Add, Delete
+
+    Full profile, Name, Prename...
+
+    Sync Contacts
+
+
+    Cost Control
+
+    Set costs
+
+    receive information about 
+
+    Call, length
+
+    SMS (is it called Text in english?)
+
+    Data
+
+    Roaming
+
+    Calculate
+
+    Graphical view
+
+
+    E-Mail
+
+    Send
+
+    Receive
+
+    Write
+
+    Draft
+
+    Sync Accounts
+
+    IMAP
+
+    POP
+
+    Exchange?
+
+    other?
+
+
+    FM Radio
+
+    Audio 
+
+    RDS
+
+    open recorder
+
+
+    Music
+
+    Controll, Start, Pause, fast forward/rewind
+
+    Listen
+
+    Artwork
+
+    Playlists
+
+    Detect Headphone or Speaker
+
+    Pause by detached Headphone
+
+
+    SMS
+
+    Receive
+
+    Submit
+
+
+    Video
+
+    Controll, Start, Pause, fast forward/rewind
+
+    Listen
+
+    View
+
+    Artwork
+
+    Playlists
+
+    Detect Headphone or Speaker
+
+    Pause by detached Headphone
+
+
+    Bluetooth
+
+    Headphones
+
+    Datatransfair?
+
+    ???
+
+    bookmark??
+
+    download
+
+    directory?
+
+    findmydevice
+
+    ?
+
+    fl ?
+
+    ftu ? : "First Time Experience" app
+
+
+    operatorvariant ?
+
+    pdfjs (pdf viewer?) : yes
+
+    ringtones (i loved the Firefox ones!)
+
+    sync (is this a menu in settings?) : at least, v2.6 has this menu in the setting what does it sync?
+
+    verticalhome ? : former homescreen?
+
+    wallpaper 
+
+    Change to different default
+
+    Choose from Device
+
+    wappush ?
+
+    geoloc ?
+
+    test-sensors
+
+    List of Sensors manufacurer specific
+
+    upnp-test ?
+
+    nfc-test ?
+
+    Backup ?
+
+    Notes
+
+    read, write
+
+    store
+
+    sync
+
+    Audio Recorder
+
+    Speach
+
+    Music
+
+
+    Gecko
+
+    System Chrome
+
+    Graphics
+
+    Audio
+
+    Network
+
+    Device API's
+
+     Find an alternative solution to legacy mozApps-only APIs 
+
+     IAC 
+
+     DataStore
+
+     System Messages 
+
+     Web Activities
+
+     Remove themes and langpacks and add support for Web Extensions 
+
+
+    Gonk
+
+    HAL
+
+    Linux Kernel
+
+     APIs needed for TV will be maintained by staff on the TV team - will it be erased from B2G?
+
+     Smartphone-specific APIs will need to be maintained by the wider community 
+
+     Merge the B2G process model with the Firefox process model 
+
+    Moving to Android M and/or N ?
