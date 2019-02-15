@@ -1,0 +1,138 @@
+ * OTA : 
+   * https://wiki.mozilla.org/B2G/QA/Flame_OTA
+   * https://wiki.mozilla.org/B2G/QA/Spark
+ * QA:  
+   * Dashboards:
+     * http://charts.mozilla.org
+     * http://charts.mozilla.org/fxos/burndown-feature-b2g.html
+     * Smoke Test Dashboard: https://s3-us-west-2.amazonaws.com/b2g-dashboard/index.html#/
+     * https://wiki.mozilla.org/index.php?title=B2G/QA/Daily_Bulletin
+   * Legacy: https://wiki.mozilla.org/FirefoxOS/FeatureTesting
+     * https://etherpad.mozilla.org/Test-Outline-2-5
+       * just a copy of https://etherpad.mozilla.org/Test-Outline-2-2
+   * Test Plan Template : https://docs.google.com/document/d/1w5gr-urrhuqZJIynUV16TqLoBuGyn349i62qNBAYT80/edit
+   * Contributor Work : 
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=1183782
+     * https://etherpad.mozilla.org/new-qa-webpage
+     * https://docs.google.com/spreadsheets/d/1smGTsmeTyBa0ZYcCtTW6xCjk9h6F8g-plwAI6e6rl_U/edit#gid=0
+   * Automation :  https://wiki.mozilla.org/B2G/QA/Automation/Scrum
+   * MozTrap : https://dl.dropboxusercontent.com/u/7281903/docs/bkm_tiddly.html#MozTrap
+   * Moz illuminate : https://github.com/MozIlluminate/mozilluminate-demo
+   * Performance tests: 
+     * https://wiki.mozilla.org/Firefox_OS/Performance/Release_Acceptance
+   * 
+   * Metrics: https://etherpad.mozilla.org/b2g-qa-metrics
+
+   * Devices Aries-L & Flame-L : https://docs.google.com/spreadsheets/d/1fHFQvxiUYc_NG2R1QahD8q_7Ln61EZXqEKhS8jIXU2g/edit#gid=0
+   * Other tools : https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Developing_Gaia/Gaia_tools_reference#b2g_util
+   * Task Cluster : https://docs.google.com/document/d/1bpXlpRGXY_cNjGSper4Vuj62xA6AekXWScoHY4RHh4U/edit
+     * Taskcluster : https://etherpad.mozilla.org/taskcluster-docs 
+
+ * MDN: https://docs.google.com/document/d/1HtugnanmssJeVI8KRme5K8fGnWKC4_NUnPUZTQfQPiw/edit#heading=h.ill6ph8woo86
+
+ * Foxfooding : 
+   * http://foxfooding.github.io/dashboard/
+   * https://bugzilla.mozilla.org/form.fxos.feature
+2.5 Project Areas:: 
+ * https://wiki.mozilla.org/B2G/QA/2.5#Feature_Area_Owners
+   * Taipei / US / Euro Sync :
+     * https://docs.google.com/spreadsheets/d/1fmMXgcWakykU9s15FraJzxKFRykcu0c1WXfwM-mfiGA/edit#gid=0
+ * User stories: https://docs.google.com/spreadsheets/d/1Q21Znmj65blyEEgjaq1LvPcAm58-4xUUfNXsGXzdq2k/edit#gid=0
+ * ALL UX Specs : https://drive.google.com/a/mozilla.com/folderview?id=0B-CK_pGGzS6AflM3YTJPZ1BWMU5oUE1SRjZyWkZMVkI1eWZXbjRnUEJfN0ZnZzBrQlNFQk0&usp=drive_web
+ * 2.5 overall sync :https://docs.google.com/document/d/1_OfGCmtTx_APjNQwL5e1jWzeaddexU5C-Hy7m7kqOic/edit
+ * https://taiwan.etherpad.mozilla.org/b2g-drivers
+ * 2.5 +/? features : 
+   * https://bugzilla.mozilla.org/buglist.cgi?classification=Client%20Software&classification=Components&classification=Server%20Software&classification=Other&f1=cf_feature_b2g&list_id=12427242&o1=substring&query_format=advanced&v1=2.5&query_based_on=&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Creporter%2Ccf_feature_b2g
+ * 2.5 memory issues : 
+   * https://bugzilla.mozilla.org/buglist.cgi?f1=cf_qa_whiteboard&list_id=12427335&o1=substring&query_format=advanced&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&v1=memory-failure&product=Firefox%20OS
+
+
+ * 2.5 Systems FE: https://etherpad.mozilla.org/fxos-systems-frontend2-5 ; Michael Henretty ( Dev Manager )
+   * Pin the Web: https://etherpad.mozilla.org/pintheweb => https://docs.google.com/document/d/1vhwYn29lUZcidvPJO0GkpBleNmz1qkivbM6WuFjnwQU/edit
+     * Wiki: https://wiki.mozilla.org/FirefoxOS/Pin_the_Web
+     * Spec : https://docs.google.com/presentation/d/1t39xMPHQYzQ17KcIfDwcsMR4S21DCM_3YcIUnHbFwzU/pub
+     * Product Backlog: https://www.pivotaltracker.com/n/projects/1354744
+     * Meta Bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1168939
+     * Sprint Plans: https://wiki.mozilla.org/FirefoxOS/systemsfe/releasetracking#FxOS-Systems_Frontend_Pin-the-Web_2.5_Dashboard
+     * Scope for RA (aka Release Available):
+     * MVP
+     * Task Manager ; Task manager is changing (SFoster leading)
+     * Decisions from the meeting:
+       * Keep decision to combine browser start page and awesomescreen - maybe revisit design of awesomescreen
+       * Sam/Marcus to prototype swipe from bottom, adding home to task manager & edge gestures - need a fallback plan
+       * Sheets order doesn't need to change for edge gestures if sheets are grouped by site in the task manager
+       * Francis to work on task manager spec
+   * FTE: 
+     * https://docs.google.com/document/d/1Sa0MpCp3Hhfu_4kiEjSft74tGBW1uQc7UliOgQd_1LQ/edit
+     * Spec: https://drive.google.com/open?id=0B5nBT2-RgS4NcDJNSGdsMFc0Tk0
+   * Replacable homescreen : https://etherpad.mozilla.org/replaceablehomescreens 
+     * Homescreen : https://github.com/mozilla-b2g/classic-homescreen/
+   * Vaani : https://trello.com/b/UWXblmKb/webspeech-api  Reza, Kelly
+     * Spec : https://drive.google.com/open?id=0B5nBT2-RgS4NfjY5YWpTbUJhbmZYRWJxY2VLTFlldnpTa2FVMXl3MzRCbmFrRnhPb2xraXM
+     * Road map : https://docs.google.com/document/d/1xJ8FqJwsm90J8csu_sMV1Ou4QCBlulUeyZhjT5INm_E/edit?pli=1#heading=h.13uq6fdli7z
+     * English, French and possibly Spanish
+     * https://wiki.mozilla.org/Firefox_OS/Vaani/Custom_Command
+     * https://public.etherpad-mozilla.org/p/vaanispeech
+     https://docs.google.com/document/d/1GRizwJZdXWlRyEJAVrJiTd59CYxNGTmCoMdacDpNdhU/edit?ts=56169c62
+   * Private Browsing: - Kevin Grandon, Reza
+     * platform functionality
+       * work breakdown ( in 42 for platform ) - platform qa
+     * UX spec to be completed next week
+       * Francis : week of 7/27
+       * fennec + desktop affected
+     * https://etherpad.mozilla.org/privatebrowsing
+ * Performance :  (Gregor : Dev Manager) - Raptor view : Each QA member should monitor for their apps.
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=1169788
+ * Geolocation : 
+   * https://bugzilla.mozilla.org/show_bug.cgi?id=1183516
+   * Geo Stumbler : https://bugzilla.mozilla.org/show_bug.cgi?id=1154435
+ * Updater : ( Primary: Gerry)
+   * https://etherpad.mozilla.org/fxos-update
+   * https://trello.com/b/KtlcmjIH/fxos-update-initiative
+   * https://mana.mozilla.org/wiki/display/PM/FOTA
+ * Spark : (nhirata) https://docs.google.com/spreadsheets/d/1FAlinVpTL9xyHi7E9Qe7Jm1R_nF_LNIRM3iU8d3kL8k/edit#gid=1754113360
+   * Customizer
+   * Sharing 
+   * Webmaker: scope narrowed to open and runs and that's it.
+   * Customizer, Studio, Hackerplace is going away.
+   * Sharing and add ons are the things supported for 2.5
+   * Calculator and Notes ?  Need to find out.
+ * Dogfood
+ * Support/Help (formerly : BuddyUp ) - [lead: marcia supported by Community]
+   * Current status is here: https://docs.google.com/document/d/1nOL32HANRnV8W5JBdIB8GyBvdB5mAg0b4sw3skRv9J4/edit#heading=h.6utmjlpc7lne
+   * RTL
+     * Has not landed yet
+     * marcia lining up community to help with testing
+   * l10n
+     * 8-25 Landed and testing in process
+   * Filter by languages
+ * Bugzilla Lite : 
+   * How to install and test app : https://docs.google.com/document/d/16r4u5GqYGChvtAfGjTIGNF-biVN4M5kM2m4cFvjDrVE/edit
+ * Addons: https://etherpad.mozilla.org/fxos-addon
+   * standups : https://etherpad.mozilla.org/addons
+   * https://docs.google.com/document/d/19G0hWFTJCpTHag929eIXkwD2xxrjBdj7xAiiFOMfrVU/edit#heading=h.k43zwg2o8s6v
+   * Marketplace upload/Marketplace functionality - Krupa
+     * https://etherpad.mozilla.org/Draft-testplan-addons-2-5
+     * https://wiki.mozilla.org/Marketplace/Testplan/Addons
+     * https://docs.google.com/document/d/1LkILeM23q5xSpRS5ZW81t-ZXSWXtwKjP89ZSzy67DXk/edit
+ * Local Apps ( aka Late customization )
+   * Work Breakdown - next week
+   * Device + Marketplace
+   * QA: Krupa (Marketplace), Gerry Chang (FTE changes)
+ * NGA:
+   * https://etherpad.mozilla.org/nga-qa-status
+   * https://docs.google.com/document/d/1tUKmxqBH71trm7sIF7tsXDm6yaO2PWG_eCUEMoTcteI/edit
+   * Background info : https://wiki.mozilla.org/Gaia/Architecture_Proposal
+ * RedTai: killswitch :  Dev : Alexandre Lissey
+ * RTL
+   * UX spec done
+     * ai: need confirmation on Phoxygen resourcing (mcrandon)
+     * Work breakdown  - delayed until resource confirmation
+   * QA : Delphine / Josh
+ * New Security Model : 
+   * https://etherpad.mozilla.org/Nsec-ux
+ * Device Storage : 
+   * https://etherpad.mozilla.org/devicestorage
+ * TV:
+   * https://wiki.mozilla.org/TV_2.5#Sprint_6:_2015.2F08.2F24_-_2015.2F09.2F04
+
