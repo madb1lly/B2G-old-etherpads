@@ -1,0 +1,232 @@
+Sprint is from October 7th -> October 19th (called FxOS-S9) (2 weeks)
+
+Velocity: [p=7]
+
+PTO ?
+Julien: full time \o/
+Steve:  1 holiday
+Oleg: presumably 1 PTO on Friday?
+
+=> I roughly counted p=7 (9 days * 3 devs - 2 PTO) / 2 points * 0.6 (velocity)
+
+from current sprint
+
+(I removed the ones related to low storage -- agree ? I'll still try to land my r+ed patch but in very low priority) +1+1
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1198266  [skip]
+Bug 1198266 - [Messages] Use ConversationService in the application
+:(Oleg) It's leftover from the last sprint, let's see if we have points left to do something more here. This bug is related to performance, but only NGA performance :)
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1185604 [skip]
+Bug 1185604 - [Meta][Messages][NG] Implement Drafts service
+:(Oleg) It's unblocked now, does anybody need this service for something right now?
+:(Julien) I think it's part of NGA and this should be abandoned until november.
+:(Oleg) Yep, agree
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1201016 [skip]
+Bug 1201016 - [Messages][NG] Migrate the current Message manager event handling to NGA
+:(Julien) I think we should skip all the bugs about NGA that don't help with performance
+:(Steve) ok
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1208532
+Bug 1208532 -  [Messages][Refactoring] Extract SystemMessageHandler from ActivityHandler
+:(Oleg) It's not a blocker (intention was to make solution for blocker below easier, not sure if it's in reality :)), so likely will do in background? But really want to land this :)
+
+
+blockers
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1192263 [2.5+] [p=2]
+Bug 1192263 - [Messages] We load Inbox before going to the notification conversation when app is run via notification click.
+:(Oleg) This one is actionable, not sure if we want to wait for the bug above?
+:(Steve) I think we might have some time to work in parallel? 
+:(Julien) There is the similar bug about having a white screen for activities (that's not a blocker apparently). That one could maybe be alleviated using a green background instead, and showing the panel by transitioning the opacity. And we should likely do the same here, in some way ise the same path as we use for activities.
+:(Oleg) mmm, I thought tha this bug is that we load first page of conversations before forwarding user to the appropriate one, not sure how backgrounds can help, rereading.....
+:(Julien) The idea is that we can load the conversation right away, but then we'll have https://bugzilla.mozilla.org/show_bug.cgi?id=1193029 that we may want to fix as well. But yeah you're right that's actually 2 bugs. Just nominated bug 1193029 ;)
+:(Oleg) Yeah, so I see you've asked 2.5? for the second one - let's see :) For this one, how many points do you think it can take, you know Navigation stuff much better :) p=2?
+:(Julien) yeah p=2 sounds good. I don't have a simple idea yet so maybe this will need a not-simple change ;)
+:(Steve) Sounds like we'll need more because you might need to change the navigation mechanism for activity case?
+:(Julien) I think it's p=1 for a simple idea, p=2 otherwise. I don't think I'll have to change it too much anyway.
+:(Oleg) p=2 sounds good to me, anyway if we need more we can roll it over to the next sprint.
+:(Steve) ok let's go with 2 points
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1190980 [2.5+]
+Bug 1190980 - [Messages] Duration of the copy paste menu triggered from "To:" field is too short to access
+:(Steve) I raised the qawanted again. Hope we can have a clear reproduce step.
+:(Julien) is it an issue from SMS or is it an issue from the copy paste subsystem ?
+:(Steve) I think it might related to copy paste subsystem, but since Ting-yu could not reproduce it(I only seen it once) it's hard to push further.
+:(Julien) I can take it to try to reproduce and show to Johan :)
+:(Oleg) Sooo, do we include this into sprint, is it actionable on any front (at least try and show to Johan :))?
+:(Steve) I can bother other QA as well, but just want more feedback from original repoter. Not sure if we want to spend points on it because the it might only about communication.
+:(Oleg) Got it, so I think if we can do that communication out of the sprint and it's not really actionable maybe let's not include this into sprint then?
+:(Steve) Sounds good to me
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1197231 [2.5+] [p=2]
+Bug 1197231 - Increase in SMS app memory consumption
+:(Oleg) I guess we need to figure out what exactly caused this?
+:(Julien) I think it's quite clear it's because of workers.
+:(Oleg) I just was surprised that one shared worker could cause 7mb regression, but yeah likely it's (I also was thinking about MC, BC and iframe).
+:(Steve) Seems like we will need the upgrade mechanism ASAP :) Should we file another(or reuse the performance/memory regression bug) for the service upgrade part only?
+:(Oleg) Right, I think we need dedicated bug for this first, current bug is not the right place (I actually did 2 things there - upgradable service + conversation service in inbox to demonstrate that it works :)).
+:(Oleg) How do we want to deal with this? In the scope of upgradable services or some other ways (like move just MessageService to window/iframe or get rid of iframe entirely if it's the cause)?
+:(Julien) maybe we can try this just to prove it can make it better, just as a poc.
+:(Oleg) "try this" - what part of my question? :) I have a POC for the first part, it's just contains ConversationService changes.. Do you want me to remove feedback request from that bug and ask on "purified" POC?
+:(Julien) 'try this" means "just trying simple other ways to prove this will make things better, and then finish the upgradeable patch to do it in a clean way". I don't know if this makes sense ?
+:(Oleg) Yep, why not.
+:(Steve) So we estimate for the profiling for upradeable service?
+:(Oleg) I think we can try just move things around (from worker to window, from iframe to window statically) and measure memory,
+:(Julien) yep that's what I have in mind as well. To see if the memory issue comes from iframe, or worker(s), or both. Maybe also see if we can put everything in one worker only.
+:(Steve) p=1 or 2 for this? maybe 2 is better if we want to figure out more details
+:(Oleg) Unfortunately from my experience p=1 is not enough for try and measure, always something weird pops in :( p=2 would be better I think
+:(Julien) yep, agree with this.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1211395 [p=2]
+Bug 1211395 - Performance regression in Message
+:(julien) I'd merge the 2 previous bugs in 1, what do you think ?
+:(Steve)not sure, I think the Oleg's upgrade patch might help the performance, but memory issue is still not easy to address.
+:(Oleg) Not sure, we have 2 types of regression - cold launch time and memory - maybe they are caused by the same thing, then we can join them
+:(Julien) OK !
+:(Julien) for launch time I guess we need to profile :)
+:(Oleg) Okay, so this is _profile-profile-and-one-more-time-profile_ bug :)
+:(Julien) yeah, I think we can have 2 points to profile and analyze it and define future tasks. wdyt ?
+:(Oleg) Yeah, p=2 sounds good to me. At least we need to start digging into it.
+:(Steve) p=2
+
+nominations
+
+1 point left :) Should we take one of these, or keep it to help landing the features made by contributors (from the top of my head: read report setting, and late arrival notice) ?
+:(Steve) If it doesn't confused us while updating daily progress, then I'm fine with that :)
+:(Oleg) I'm OK with this as well, we'll just remove it on the last sprint day :D
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1193029 [2.5?]
+Bug 1193029 - [Messages] Blank teal background appears for 1-2 seconds when sharing to messages.
+:(Julien) see above for a proposal: That one could maybe be alleviated using a green background instead, and showing the panel by transitioning/animating the opacity.
+:(Julien) we can also profile and see what we can improve at startup. But likely this is the fact that we start lazy loading too late for this case. I don't know how we can improve this in a better way?
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1206727 [p=1]
+Bug 1206727 - [Messages][Inbox] Don't reload the conversation node after saving draft
+:(Oleg) Not nomination anymore, but still nice to have if we have time.
+:(Julien) Yep.
+:(Steve) I think it won't take much time to fix this bug, I'm fine if we put 1 point on it.
+:(Oleg) I'm with you on this :)
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1190275
+Bug 1190275 - [Messages] Image attachments are not showing up properly when going to a subview and coming back
+:(Julien) This one as well. Just needs to write correct integration tests, the code was already r+.
+
+features
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1180470 [2.5+]
+Bug 1180470 - [Messages] Propose a setting to disable sending the read report
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1161521
+Bug 1161521 - Do not spam the user with error messages
+
+
+Story: Define all services for Inbox panel
+
+Main goal is for this sprint: Load all threads and drafts (together) in inbox
+:(Julien) tell me what you think.
+
+Bug - Lay out the structure for MessagingService
+Bug - Lay out the structure for ContactService
+Bug - Lay out the structure for NotificationService
+Bug - Lay out the structure for DraftsService
+
+Story: Split panels in separate documents
+
+Story: IndexedDB in Gaia
+
+no other blockers or nominations \o/
+
+Here are my propositions for this sprint. 
+1. if you have other bugs in mind please add them
+2. let's order them in order of higher priority first (note: the order below is the order I think, so we can start from here: you can discuss below one bug to say if you disagree with the priority) (note2: normally, the product owner decides this, but it's quite too late now)
+3. estimate
+
+Which is the most important bug?
+
+Reminder: long-term goals are:
+* 1 panel = 1 object [haida]
+* lazy load content [perf]
+* fetch sms/mms from datastore [haida] (side product is an in-app db)
+
+Should we take small standalone [ux] bugs or bugs for long-term goals?
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1015194 [UX]
+Bug 1015194 - [Messages] Invalid recipients are sometimes still considered as valid recipients
+*: (Julien) goal is to slightly refactor how recipients are checked. Especially we need to pass along the index of the recipient when checking it, so that we don't need to "guess" which recipient we're checking. Maybe easier now that we have promises.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1040144 [HAIDA]
+* make Compose.js instanciable
+*:  (Julien) final goal is to have 2 instances of Compose so that we can  have one instance in ThreadPanel and one instance in NewMessagePanel.  But in this bug we'll still have 1 instance.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1040874 [UX]
+Bug 1040874 - [Messages] Add the phone number actions to the Thread menu as well
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1084298 [perf] FIXED
+Bug 1084298 - [Messages] Decoupling the all inputs query logic from DOM tree structure
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1082073 [refactoring, technical debt]
+Bug 1082073 - [Messages] Use promises when resizing images
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1088526 [refactoring, memory, technical debt]
+Bug 1088526 - [Messages] Rework how the images are resized in compose.js/attachment.js/attachment_renderer.js
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1032273 [UX]
+Bug 1032273 - [v2.1] Bug: Tapping "Call" launches Phone but does not dial
+*: (Julien) should be easy enough: add telephony permission and call "telephony.dial" instead of launching an activity.
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1082546 [UX]
+Bug 1082546  - [Messages] When we receive a  message for a thread and a notification  exists, we should display how  much messages are unread in that thread
+*:  (Julien) now that we can pass a data object with notifications, this  can also be a good opportunity to remove the imageUrl parsing. Maybe we  can also use this data to keep the number of received messages for a  thread. See https://bugzilla.mozilla.org/show_bug.cgi?id=899585 for the implementation in DOM Notifications.
+
+Not actionable:
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=903763 [PERF] [skip]
+Bug 903763 - [Messages] avoid css recalculations while rendering a thread
+*:   (Julien) is an issue with huge threads. Problem is that we add  messages  with "display: none" but the CSS needs to be recalculated to  be applied  and it takes a very long time. Several solutions: either  keep all  threads in memory and render only when scrolling up; or even  request  from MessageManager when the user scrolls up (but it can be  less  "instant", need to test).
+*: next is bug 1084298 
+
+
+haida work:
+
+
+performance work:
+
+
+* POC with an indexedDB
+** Goal: have a unified DB for SMS where we can store lots of things that we can't store for now
+*** (examples: video thumbnails, MMS content to be displayed in inbox, contact information)
+*** Thread information
+** Goal for this sprint?
+
+
+These haida bugs depend on unfinished bugs:
+
+<unfiled bug> (TODO)
+* move other compose-related things to compose.js
+* separate compose.js in a controller + view
+* display segment information in compose.js
+* needs bug 944249 <-- Done
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1040144
+* make Compose.js instanciable
+* ThreadUI or NewMessage panels will be passed to the instance's creator function
+* needs <unfiled bugs above>
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1011085
+* separate new-message and thread panels
+* needs bug 944249 and <unfiled bug above> and bug 1040144
+
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=1009545
+* lazy load things in panels
+* (TODO) create separate bugs
+* needs bug 1011085
+
+
+datastore work:
+
+<unfiled bug>
+* background work for the IDB
+* we should start doing a prototype in this sprint
