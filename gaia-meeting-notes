@@ -1,0 +1,77 @@
+No longer in use. Please see the B2G Weekly Meeting Etherpad https://public.etherpad-mozilla.org/p/b2g-weekly-meeting
+
+
+
+=========== Template - Do not delete ===============
+ 
+ 
+Gaia Weekly Meeting
+* Date: YYYY-MM-DD
+* Meeting notes: https://public.etherpad-mozilla.org/p/gaia-meeting-notes
+* Meeting connection details: https://wiki.mozilla.org/B2G#Meetings
+* Host: <name>
+* Minutes copied to the wiki by host each week https://wiki.mozilla.org/Gaia/Meeting_Notes
+ 
+Alternate Meeting Times:
+* "TPE/EU" meeting time: Tuesdays 02:00 Pacific, 11:00 CEST
+* "EU/US" meeting time: Tuesdays 9:00 Pacific, 19:00 CEST
+ 
+== Announcements ==
+* 
+ 
+== Talk ==
+*
+ 
+== Roundtable ==
+*
+ 
+==QA==
+*
+ 
+== TEAM UPDATES ==
+ 
+=== New Architecture (NGA) ===
+https://wiki.mozilla.org/Gaia/Architecture_Proposal
+* Telemetry library
+* Web app bridge
+* Service workers
+* SMS app conversion
+* Music app conversion
+* Contacts app conversion
+* Sync
+ 
+ 
+=== New Security Model (NSEC) ===
+https://wiki.mozilla.org/FirefoxOS/New_security_model
+ 
+=== New Experience (Alopex) ===
+https://wiki.mozilla.org/Firefox_OS/Alopex
+*
+ 
+=== TV ===
+https://wiki.mozilla.org/TV
+*
+ 
+=== Communications ===
+https://wiki.mozilla.org/FirefoxOS/Comms/
+* 
+ 
+=== Media  ===
+https://wiki.mozilla.org/FirefoxOS/media
+* 
+ 
+=== Productivity ===
+https://wiki.mozilla.org/FirefoxOS/productivity
+*
+ 
+=== System ===
+https://wiki.mozilla.org/FirefoxOS/systemplatform
+*
+ 
+=== Systems Front End ===
+https://wiki.mozilla.org/FirefoxOS/systemsfe
+*
+ 
+=== Other ===
+*
+ 
