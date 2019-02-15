@@ -1,0 +1,58 @@
+SMS Daily Standup Meeting
+Delete bugs you didn't work on, add new bugs
+use "*"; not real lists
+Add bug title (real one or approximate) so that we know what bug is about, but please don't add the link
+Don't add things that are not SMS-related (indirectly related is fine).
+Add things that can be interesting: problems you had and how you resolved them, things happening outside the team but that can affect us, etc.
+Write what you did since the last standup, and what you'll do until the next standup
+
+Steve (last updated February 5th)
+
+* Chinese new year from 2/8 ~ 2/14. Wish you all have a better result in foxlink project!
+Happy New Chinese Year ! :)
+
+* System modulization/documation: dependency graph for system is finished. Need to discuss with TV team.
+
+* medical platform project survey.
+
+Today:
+* System merge - discussion.
+* Medical platform project - continue mhealth survey.
+
+Julien (last updated January 29th)
+
+Note: next week I'm in London for a foxlink workweek. I don't know yet exactly if it will be 100% but likely.
+
+* mostly spent time on bug 1229321 (issue with NFC -- but really issue with graphics)
+* reviewed bug 1087933 (add a new recipient from the Conversation view). r+ ! :)
+* moved forward bug 1213113 (remove spark apps)
+* moved forward the eslint formatter patch (bug 1241464)
+* spent time triaging old bugs
+
+Today:
+I want to:
+* finish checking my patch in bug 1213113 and ask review on this
+* continue looking at bugs where I am assignee and either try to finish or unassign
+* continue triaging old bugs in the SMS component
+
+Oleg (last updated on February 1st)
+
+* Bug 1233552 - Intermittent TEST-UNEXPECTED-FAIL | apps/sms/test/marionette/share_activity_test.js | Messages as share target Share via Messages Activity close button Should close activity if in NewMessage view
+** Looks like finally the root cause in Gecko has been found by Kan-Run, Bobby and Boris - in "Bug 1244222 - Race when setting ToXPCOMCallback to a content function".
+** So will close this bug this week if everything is fine.
+
+* Bug 1244108 - [Messages][Tests] Fix and enable integration test for the Conversation-to-Participants path while in activity mode
+** Prepared PR, got r+ and landed (landed).
+
+* Bug 1222741 - [Messages] 'Delete thread' option is missing from the menu shown when viewing an SMS message
+** Continued and stopped review because of the fact that PR has been constantly updated during review :) Will continue today (in progress).
+
+Other:
+* Digging into openHab and eclipse.org/smarthome to have better understanding of the abilities they provide.
+
+Today:
+* Will handle review/feedback/need-info requests;
+* Will work on review comments and assigned bugs.
+
+
+
