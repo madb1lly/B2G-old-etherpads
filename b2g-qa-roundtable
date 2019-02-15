@@ -1,0 +1,146 @@
+
+NOTE: Please be aware it's a public etherpad and be careful about confidential information
+
+// For 2016/03/09
+== Overview ==
+* Meeting Name: B2G/Connected Devices QA Roundtable
+* Meeting Time (Taipei-EU): Wednesdays @ 3:30pm - 5:45pm CST
+* Meeting Time (Taipei-MV/SF): Wednesdays @ 5pm - 5:45pm PDT
+* Vidyo Room: QA-B2G Vidyo Room
+* Video Link: https://v.mozilla.com/flex.html?roomdirect.html&
+key=A97nLDtY921vuLGRB1jv5S6OKs
+* Dial in: 1-800-707-2533, #92, #9245
+* Meeting Notes: https://wiki.mozilla.org/B2G/QA/Meetings
+* Archived Information is here: https://wiki.mozilla.org/B2G/QA/Archive
+
+== Status Highlights ==
+
+=== PTO/Off plan ===
+* jlorenzo: March 21st - March 25th
+* marcia: March 11
+
+=== Upcoming Holidays ===
+* U.S. - Monday, May 30 - Memorial Day
+* France: Monday, March 28 (Easter Monday)
+
+== This Week - Decisions & Action Items ==
+
+
+== Previous action items ==
+
+== Demos and Presentations ==
+
+== Agenda ==
+* General Discussion items go here
+
+== Project Status ==
+
+=== Project Vaani ===
+
+* QA has requested architecture docs - djf to create
+* One and Done Tasks posted under the newly created Connected Devices Team
+** https://oneanddone.mozilla.org/tasks/list/?search=&team=9
+* Contribution Pathways are being developed by David Palomino and Brian King
+** https://docs.google.com/document/d/14nFRrz1NFEnnn9YVELtb8W2IjUXc1bNDFRFcyg1f8iY/edit
+
+===Project Link ===
+* End to end integration with Philips Hue done. First E2E automated test partially done. It runs locally. Some additional set up required to be 100% automatically run by CI
+* First automated integration tests of Foxbox landed. They are now running on every PR.
+* Manual smoketests were defined
+* Unit test coverage don't fail anymore on Foxbox. Reports are made on every PR. 
+
+=== Project Smarthome ===
+* https://wiki.mozilla.org/Smart_Home
+
+=== Project Sensor Web ===
+* https://wiki.mozilla.org/Sensor_Web
+
+===Telemetry/Metrics===
+* Currently a 6 person team (1 PM, 1 EM, 2 Engineers, 1 Data scientist, 1 QA, probably 1 more person for dashboards)
+* Goal is to create a metrics system for the new CD projects as they progress.
+
+    * Set it up so that projects can easily incorporate our system into their work
+
+    * Provide/advocate for metrics in the new projects 
+
+
+===TPE Office Project Status ===
+
+==== Firefox OS TV ====
+* TV 2.5 support for partner will be finished until end of Mar.
+** Buglist: http://mzl.la/1RzhrPx 
+* TV 2.6 plan: https://docs.google.com/a/mozilla.com/spreadsheets/d/1Lef8FR7gFN2y5t2P_p_gJ9EDTQTvOxBpU7IxovlzmJI/edit?usp=sharing
+** Wiki: https://wiki.mozilla.org/TV_2.6
+
+* QA outsource support in Taipei will stop after next Fri.
+* For 2.6, we will only 2~3 QA in TV project
+
+===Other updates ===
+* Summer QA Intern hiring complete - Hassan Ali will join us from May 23 to Aug 12 
+* He is currently studying at McGill University in Quebec
+
+* Outreachy Intern
+** https://wiki.mozilla.org/Outreachy#Develop_REST.2FAPI_automation_tests_for_a_voice_interface_for_Project_Vaani
+** Currently have talked to a few people that are interested
+
+* Mountain View Lab update
+
+    * Aries devices shut down and sim cards returned
+
+    * Inventoried the rest of the lab and will cut back resources as needed
+
+
+== Community Updates [marcia-read only] ==
+
+* London Work Week
+** Email sent regarding community invites
+
+* Upcoming Events
+** B2G OS Community Call with George Roter
+*** meeting is Thursday at 18h30 UTC --> join by going to the Vidyo room at this link:
+
+https://v.mozilla.com/flex.html?roomdirect.html&key=mW6PX3WtirCaaP3ZcC9NyY2Wxjo
+
+* Vaani Community Planning First Draft
+** https://docs.google.com/document/d/1LDSysJwrMVVThxdxmTvJnOsTtmQNO3kAkFPG4lZKESU/edit
+
+* Community Education
+** We are tracking courses here: https://public.etherpad-mozilla.org/p/QAEducation
+** Plan is to form discussion groups after each weekly session
+
+* Contributor Spotlight
+** New contributor spotlight posted on QMO: https://quality.mozilla.org/2016/03/marko-andrejic-realist-thinker-and-geek/
+** Parul has contributor spotlights set for the next few months
+
+* One and Done project
+** Added a Connected Devices Team as well as Project Vaani
+** https://public.etherpad-mozilla.org/p/OneandDoneTasks
+** Tasks on Line 22-30 of https://public.etherpad-mozilla.org/p/OneandDoneTasks are all assigned in the tool
+** marcia now owns the remaining tasks
+** One and Done Hackathon meeting happened in Orlando - See Line 113 of https://public.etherpad-mozilla.org/p/QACommunityOrlandoWW
+
+* Documentation Tiger Team
+** With Connected Devices changes, we will need to meet again
+** Notes from first session are here:
+*** https://public.etherpad-mozilla.org/p/QADocumentationReview
+
+* IOT Weekly Community Calls (led by Participation Team) [marcia]
+**Weekly Meetings were being held Thursdays at 10 AM PST.
+**New format https://public.etherpad-mozilla.org/p/IoT_call_2016-02-25
+
+* Porting Discussion
+** Notes from this week's discussion - https://docs.google.com/a/mozilla.com/document/d/1m-YpwyZE2BSOjLtm0hoFzwG-s3gCY3FszUZgqY5MiG0/edit?usp=sharing
+
+* Work Week Community Discussion (2 Sessions Held)
+** Work Week Notes are here: https://public.etherpad-mozilla.org/p/QACommunityOrlandoWW
+
+*Q1 Community Goals 2016
+** Coordinate presence at FOSDEM - Complete
+** Work with Jeff and l10n team regarding events in 2016. Develop content for a 2 day workshop.
+** Other goals are being reformulated
+
+* Joint l10n/QA events
+** Met with Brian King to discuss funding for the May event in Buenos Aries
+
+
+
