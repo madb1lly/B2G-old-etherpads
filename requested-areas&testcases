@@ -1,0 +1,169 @@
+Suggestion for QA test day Testing areas:
+
+1. Pin the Web
+2. new Home screen (can only test the swapping of homescreen)
+3. Music app
+4. Settings
+5. Task manager/Card View
+
+(will also be re-use some of the ones that already on one and done)
+--------------------------------
+
+[pin the web] Testing basic home screen functionality
+Prerequisites: 
+Have Pin the Web enabled in Developer settings
+Be running the new homescreen
+Have multiple pages pinned and pinned page card 
+
+1. Long press on home-screen to get into edit mode
+
+     Home-screen will go into edit mode
+
+2. Move pinned site icon
+
+    Trash can icon will appear on tool bar
+
+3. Move icon to trash
+
+     Confirmation dialog is shown
+
+4. Tap cancel
+
+     Will take you back to home screen and icon will still exist
+
+
+5. Long-press on home-screen to re-enter edit view
+
+6. Move the pinned con to change location
+
+     Can change location without problems
+
+7. Exit home-screen editor
+
+8. Go to Settings-> Browser privacy and "Clear browser history" and "Clear cookies and stored data"
+
+9. Go back to home-screen, check pinned sites and pinned pages
+
+     All pinned sites and pages still exist and can be launched correctly
+
+
+------------------------------------------------------------------------------------
+ 
+ [settings] Testing basic functionality of settings
+ Prerequisites:
+     Have 2.5 installed
+     
+     Examples given for each thing to test.
+Check the following:
+    1. Do all toggles and sliders work?
+
+        Example:
+
+    a. Open Settings
+
+    b. Scroll to area of airplane mode
+
+    c. Toggle airplane mode on and off, make sure it's enabling and does not get stuck after repetitive flipping
+
+    2. Do all buttons to open other areas work?
+
+        Example:
+
+    a. Open Settings
+
+    b. Open the sections and make sure you can
+
+    c. Open sub sections
+
+    d. Make sure buttons in each section and subsection work
+
+    3. Do all sign in areas work? (facebook, live, gmail....etc)
+
+    Example:
+
+    a. Open Settings
+
+    b. Go to Firefox Accounts
+
+    c. You can sign in and sign out as desired
+
+    4. Is all info correct?
+
+    Example:
+
+    a. Open Settings
+
+    b. Open Device info
+
+    c. Check if version is correct, last updated is correct, etc....
+
+
+----------------------------------------------------------------------------------------
+
+[music app] Does music app work correctly and find location of music on phone correctly?
+
+    Prerequisites:
+
+    Have the gaia nga (new gaia architecture) app and music to put on your device... just have phone fully up to date
+
+
+Check the following:
+    1. Can you put music on the device fine and does phone locate it correctly?
+
+    a. Plug device into computer
+
+    b. Enable usb storage
+
+    c. Transfer music onto the device
+
+    d. Disconnect device or disable usb storage
+
+    e. Open music app
+
+           Does it detect music correctly and load it into music app?
+
+   2. Does the app display properly?
+
+    a. Is anything overlapping?
+
+    b. Does anything stand out as incorrect?
+
+    c. Is everything in alphabetical order in the lists?
+
+    d. In playlists, are there any spelling errors?
+
+   3. Check the music player screen
+
+    a. Can you go to next song?
+
+    b. Can you go to the previous song?
+
+    c. If shuffle is on, is the next song shuffled randomly?
+
+    d. If song is set on repeat, does it play repeatedly?
+
+    e. If playing an album, if you set repeat, does the album repeat after reaching the end?
+
+     f. Can you set ratings on them correctly?
+
+    g. Can you get back to the music player from all sections of music app using upper right hand corner? not upper left? (not verified it)
+
+   4. Does the search work correctly?
+
+    a. If you type a valid search for what is in the library, do the proper results display?
+
+    b. If you type an invaild search for what is in your library does it display as so?
+
+    c. Can you search for songs, albums and artists?
+
+
+-------------------------------------------------------------------------------------------------
+
+[Task manger/ Card view] Does the task manger allow your to change apps, close apps and open them properly?
+   
+
+
+
+
+
+           
