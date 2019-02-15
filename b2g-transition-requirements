@@ -1,0 +1,210 @@
+  == PHASE TWO ==
+
+APIs we have already removed from mozilla-central:
+
+    Bug 1261022 - Apps API (in progress)
+
+    Bug 1261001 - Web Activities API
+
+    Bug 1261011 - Inter-app Communication API
+
+    Bug 1261009 - Data Store API
+
+    Bug 1261013 - System Messages API
+
+    Bug 1252570 - mozPay API
+
+    Bug 1254287 - Engineering Mode API
+
+    Bug 1270158 - KillSwitch API
+
+    Bug 1269303 - RequestSync API
+
+    Bug 1252573 - Mobile ID API
+
+    Bug 1296579 - Simple Push API
+
+    Bug 1300884 - Alarm API
+
+
+APIs we should plan to remove from mozilla-central and find alternatives outside of Gecko:
+
+    bluetooth  (unless Web Bluetooth moves forward?) - Security Team has serious concerns about the Web Bluetooth standard being developed at the W3C; assume safe to remove. 
+
+    cellbroadcast
+
+    devicestorage (replace with a file system web service)
+
+    fmradio
+
+    icc
+
+    identity
+
+    mobileconnection
+
+    mobilemessage
+
+    nfc
+
+    phonenumberutils
+
+    resourcestats
+
+    settings (replace with a system settings web service)
+
+    speakermanager
+
+    telephony
+
+    tethering
+
+    tv
+
+    voicemail
+
+    wappush
+
+    wifi (replace with system web service, have a working prototype)
+
+
+Components needed to render web content and browser chrome and therefore we believe should remain in mozilla-central:
+
+    Browser API (chrome-only, which Firefox is also using)
+
+    Input Method API (chrome-only, to make the keyboard work)
+
+    Camera Control API (chrome-only, unless we can replace it with WebRTC Streams)
+
+    Gonk widget layer and A/V playback (We feel strongly about this part, it allows us to render web content directly onto the lower levels of Android without the Java Android runtime and all the technical redundancy and legal baggage that comes with that. This is hugely valuable.)
+
+
+There are also Gonk back ends for APIs like the W3C Vibration API, W3C Battery API and W3C Wake Lock API which we could potentially move out of tree and we can be flexible on what to do with Nuwa.
+
+
+== PHASE ONE (COMPLETE) ==
+
+https://wiki.mozilla.org/B2G/Transition_Project
+
+Minimum required experience after transition:
+
+    As a user I want to turn on the device and see the homescreen so I can launch websites
+
+    As a user I want to configure WiFi so I can connect to the Internet
+
+    As a user I want to set the correct time on my device so I can use it to tell the time(alarm?)
+
+    As a user I want to navigate to a web page
+
+    As a user I want to search the web
+
+    As a user I want to enter text with the keyboard
+
+    As a user I want to add sites to the homescreen
+
+    As a user I want to make a phone call by dialing a number into the dialer (entry/exit call's log?)
+
+
+
+Estimation scale: 1, 2, 3, 5, 8, 13
+(1 is a one line change, 13 is a full two week sprint of work)
+
+Meta Bug: Bug 1252143 - [META] Firefox OS Transition work https://bugzilla.mozilla.org/show_bug.cgi?id=1252143
+
+Work breakdown:
+    
+
+    1256506 Move Gaia to chrome:// URLs (13 points)
+
+    1254281 Build system changes for the transitioned Gaia (13 points)
+
+    1260755 Blob-free builds (8 points)
+
+     Remove mozApps
+
+    1261019 Remove Apps API (WIP patch waiting for pine merge)
+
+    1255046 Remove all uses of AppsService
+
+    1254282 Remove the dependency on apps status in the audiochannel code (3 points)
+
+    1254283 Remove the dependency on apps status in the NFC code (part of MVP?) (5 points)
+
+    1254284 Remove the dependency on apps status in the Bluetooth code (part of MVP?) (5 points)
+
+    1254285 Remove the dependency on apps status in the Downloads api code (5 points)
+
+    1254286 Remove the dependency on apps status in the RequestSync api code (part of MVP?)
+
+    1254287 Remove the dependency on apps status in the EngineeringMode api code (cut?)  (3 points to remove the API)
+
+    1254292 Remove all uses of APP_STATUS_CERTIFIED and APP_STATUS_PRIVILEGED
+
+    1261001 Remove Web Activities API (ask fabrice/alex)
+
+    1261013 Remove System Messages API 
+
+    1261009 Remove Data Store API
+
+    1261011 Remove IAC API
+
+    1252427 Remove FTU app (8 points)
+
+    Get core system apps working as chrome
+
+    1261027 system
+
+    1260325 Get utility tray working (3 points)o
+
+    1257824 Get Places database working without DataStore (13 points)
+
+    1261028 homescreen
+
+    Fix Apps API breakage (5 points)
+
+    1261029 search
+
+    1261065 Get search app to load (5 points)
+
+    1257828 Get search app communicating without IAC (5 points)
+
+    1257935 Get keyboard working as chrome (8 points)
+
+    1261030 settings
+
+    Configure wifi
+
+    Set time
+
+    Everything else? (what depends on apps)
+
+    1262764 Re-establish defense in depth for apps
+
+    1262219 Get dialer working (8 points)
+
+
+
+
+Stretch goals:
+
+    Get all role=system apps working as chrome?
+
+    bluetooth?
+
+    bookmark?
+
+    download?
+
+    emergency-call?
+
+    findmydevice? => I'm wondering if we should continue, since it requires serious server-side work
+
+    Address book?
+
+    Calendar?
+
+    sync? (carddav?/caldav?)
+
+    wallpaper?
+
+    SMS
