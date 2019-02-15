@@ -1,0 +1,33 @@
+= Overview =
+This is a weekly meetup to discuss all things regarding B2G automation and Quality.
+
+Please use wiki style.
+
+* Meeting Name: QA Automation Roundtable
+* Meeting Time: Thursday @ 9:30am - 10am PST
+* Vidyo Room: QA-B2G Vidyo Room
+* Video Link: https://v.mozilla.com/flex.html?roomdirect.html&key=A97nLDtY921vuLGRB1jv5S6OKs
+* Dial in: 1-800-707-2533, #92, #8901
+* Previous Meetings: https://wiki.mozilla.org/B2G/QA/Meetings#Automation_QA_Roundtable
+
+Dogfood cases:
+https://moztrap.mozilla.org/manage/cases/?filter-suite=912
+
+= February 24th, 2016 =
+
+== Attendees ==
+* US/EU: Kate, Isabel, Pallavi, No-Jun, Naoki, Johan, Jayme
+
+== Previous Action Items ==
+* [IN REVIEW https://bugzilla.mozilla.org/show_bug.cgi?id=1250161 ] jlorenzo: Document our Jenkins instance in QA wiki
+* [IN REVIEW https://bugzilla.mozilla.org/show_bug.cgi?id=1250161 ] jlorenzo: Give pointers to taskcluster work in QA wiki
+
+== Status Highlights / Agenda ==
+
+* Rethink the purpose of this meeting?
+** day-to-day problems will be discussed on IRC
+** status will be done each Wednesday during the standup
+
+== Decisions & Action Items ==
+
+
