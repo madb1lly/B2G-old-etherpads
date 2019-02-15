@@ -1,0 +1,270 @@
+Status 5.Sept.2016
+
+    B2GOS - Landing Page 
+
+    B2G OS Architecture
+
+    B2G OS Architecture
+
+    B2G OS APIs
+
+    Gaia
+
+    Gaia overview
+
+    Different ways to run Gaia
+
+    Running the Gaia codebase
+
+    Developing Gaia
+
+    Understanding the Gaia codebase
+
+    Making Gaia code changes
+
+    Testing Gaia code changes
+
+    Submitting a Gaia patch
+
+    Gaia build system primer
+
+    Make options reference
+
+    Gaia tools reference
+
+    Build B2G OS
+
+    Build overview
+
+    B2G OS build process summary
+
+    Build prerequisites
+
+    Preparing for your first build
+
+    Building B2G OS
+
+    Building B2G OS
+
+    Building B2G OS for Flame. on Mac OS X
+
+    B2G build variables reference sheet
+
+    Run B2G OS on Desktop
+
+    Choosing how to run Gaia or B2G OS
+
+    Run B2G OS on desktop using Mulet
+
+    Install B2G OS on mobile
+
+    Installing B2G OS on a mobile device
+
+    B2G installer add-on
+
+    Compatible Devices
+
+    Create updates for B2G OS
+
+    Creating and applying B2G OS update packages
+
+    Building and installing FOTA community build
+
+    Porting B2G OS
+
+    Porting overview
+
+    Porting basics
+
+    Porting on CyanogenMod
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Proposal 12.Sept.2016
+
+    B2GOS - Landing Page 
+
+
+    Compatible Devices - a list of all devices and a Page for every device with Status and Help a bit like: https://wiki.merproject.org/wiki/Adaptations/libhybris/Install_SailfishOS_for_fp2#Hardware_Support
+
+    Manufacteur:
+
+    Sony
+
+    Z3
+
+    Flame
+
+    Aries
+
+    Fairphone
+
+    Fairphone 2
+
+    Google
+
+    Nexus 4
+
+    Nexus 5
+
+    HTC
+
+    xyz...
+
+
+    B2G OS Architecture
+
+    Gaia
+
+    Gaia overview
+
+    Status
+
+    Developing
+
+    Gecko
+
+    Gecko overview
+
+    Status
+
+    Developing
+
+    Gonk
+
+    Gonk overview
+
+    Status
+
+    Developing
+
+    B2G OS APIs
+
+
+    Development of B2GOS
+
+    steps of develpment (brief graphical overview of following 5 points)
+
+    -The code base (where is it, how do i get it, hwo is owner)
+
+    -Porting (what files is needed to port)
+
+    -Building for Hardware
+
+    -Development of Userinterface
+
+    -Debuging
+
+    -Bugfileing
+
+    Porting B2G OS
+
+    Porting overview
+
+    Porting basics
+
+    Porting on CyanogenMod
+
+    Build overview
+
+    B2G OS build process summary
+
+    Building B2G OS
+
+    Build prerequisites: version status definition
+
+    Building B2G OS on Linux
+
+    Ubuntu 14.04
+
+    Build prerequisites
+
+    Ubuntu 16.04
+
+    Build prerequisites
+
+    Gentoo
+
+    Build prerequisites
+
+    Arch
+
+    Build prerequisites
+
+    xy..
+
+    Build prerequisites
+
+    Building B2G OS on Mac OS X
+
+    OSX
+
+    Build prerequisites
+
+    MacOS
+
+    Build prerequisites
+
+    Preparing for your first build
+
+    B2G build variables reference sheet
+
+    Create updates for B2G OS
+
+    Creating and applying B2G OS update packages
+
+    Building and installing FOTA community build
+
+    Different ways to run Gaia
+
+    Running the Gaia codebase
+
+    Developing Gaia
+
+    Run B2G OS on Desktop
+
+    Choosing how to run Gaia or B2G OS
+
+    Run B2G OS on desktop using Mulet
+
+    Understanding the Gaia codebase
+
+    Making Gaia code changes
+
+    Testing Gaia code changes
+
+    Submitting a Gaia patch
+
+    Gaia build system primer
+
+    Make options reference
+
+    Gaia tools reference
+
+    Debuging (How to find the fail)
+
+    Hardware
+
+    adb options
+
+    different ways?
+
+    Software
+
+    options?
+
+    Bugfileing, PR, and review taging
+
+    Install B2G OS on mobile
+
+    Installing B2G OS on a mobile device
+
+    B2G installer add-on
+
+
+
+
+
+
+
