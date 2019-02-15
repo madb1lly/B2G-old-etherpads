@@ -1,0 +1,222 @@
+Apr 29
+* New 2.2+ blocker
+** https://bugzilla.mozilla.org/show_bug.cgi?id=1158727
+* Spark priority
+* <gsvelto> Doing l10n improvements for the Dialer.
+* <drs> Introduce gsvelto and tedders1.
+
+Mar 25
+* <gsvelto> As a follow up to the v3 plans discussion of last week we should probably open a bug to mop up our CSS rules (in fact we might already have one). This goes hand in hand with re-thinking the way we lay out elements in the callscreen. The dialer is not in such a bad shape expect maybe for the call log; the callscreen is the biggest offender here IMHO.
+* <gsvelto> A few thoughts about using the emulator for development: I've been extensively using the x86 emulator this week and while it can be useful for callscreen development it still has a few quirks. I wouldn't recommend it yet but if you need to test 5-way conference calls or other funky scenarios it's probably your best bet anyway.
+* <drs> Pick bugs to punt to other Comms people.
+** Bug 1146241 - [RTL][Dialer]The Arabic words of phone type is cut off in suggestion bar. <thills> I think this will be fixed by 1134961
+** Bug 1142610 - [RTL] [Lockscreen] The carrier name overlaps the SIM slot text when recieiving a call on the lockscreen
+** Bug 1146833 - [Flame][Dialer]During importing contacts, go back to contact A's call Information view, the screen will flash.
+** Anymore incoming bugs until we stabilize our current workload.
+
+Mar 17
+* <thills> spend few minutes talking about updating review checklist for rtl.
+** https://wiki.mozilla.org/FirefoxOS/Comms/Dialer/Design_Patterns_and_Guidelines#Reviewer_Checklist
+** <gsvelto> Give icons their own elements.
+** <drs> Talk with Wilson about making phone number field a WC.
+*** http://logs.glob.uno/?c=mozilla%23gaia&s=18+Mar+2015&e=18+Mar+2015#c125900
+* <gsvelto> discuss our plans for v3, here's a few ideas
+** We know there will be an increased focus on making things modular so we could try turning some pieces of the dialer into proper web components (the keypad for example), or use some existing ones (overlays, buttons, etc...).
+*** <jlorenzo> DTMF tones: Long pressing 1, then 2 without lifting 1, causes 2 to stop the tone for 1 and continue as 2 until either 1 or 2 are released. Pressing 3 at this point makes the 3 tone play, and then releasing either 1 or 3 causes the tone to stop.
+** Startup performance is still high on the priority list and personally I haven't checked it in a while. We should consider it an area where we could imrpove things.
+*** https://bugzil.la/1144537 — NEW, nobody@mozilla.org — When a contact changes try to update only the relevant call log entries
+** We could decide to shed some tech baggage in the existing code. We don't know if the dialer will undergo a big redesign or not but even if it does being able to reuse more of the existing code would help. Most of the stuff we have now works fairly well but is too fragile to reuse.
+
+Mar 4
+* <thills> one item to discuss about CSS and localization.
+** Practical that I know works: key={{str1}, key2={{str2}}, comma=, , |var format = str1 + comma + str2;|
+** Most ideal: key={{str1}}, {{str2}} --> str1 and str2 are localized
+*** <drs> AI: Investigate if this is possible or not.
+* <gsvelto> Discuss remaining blockers 2.2+, how many do we have left?
+** 5: https://bugzilla.mozilla.org/buglist.cgi?quicksearch=1134961%2C1136664%2C1135044%2C1011066%2C1135063&list_id=12061381
+* <gsvelto> Emulator
+** KK meta bug: https://bugzil.la/1090359
+** L meta bug: https://bugzil.la/1124557
+
+Feb 25
+
+
+Feb 18
+* <drs> Assign unassigned blockers
+
+* <drs> RTL reviews are slow, worried we might not make it
+** <drs> [AI] Talk with Francisco and/or Bhavana, see what we should do here
+
+* [jlorenzo] Smoketests review
+
+** Current QA Smoketests: https://wiki.mozilla.org/B2G/QA/Smoke_Tests
+** Smoketest wiki found: https://wiki.mozilla.org/FirefoxOS/Comms/Dialer/SmokeTest
+
+** <drs> [AI] Go over the smoke tests and make more recommendations
+** Tests that could be promoted to smoketests:
+*** All in https://wiki.mozilla.org/FirefoxOS/Comms/Dialer/SmokeTest. They can be fairly automated
+*** The current 2 DSDS test cases:
+**** https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-ui-tests/gaiatest/tests/functional/dialer/test_dialer_dsds_make_phone_call_with_default_sim.py
+**** https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-ui-tests/gaiatest/tests/functional/dialer/test_dialer_dsds_receive_call_on_both_sims.py
+*** Miss call notification https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-ui-tests/gaiatest/tests/functional/dialer/test_dialer_miss_call_from_known_contact_notification.py
+*** Airplane mode https://github.com/mozilla-b2g/gaia/blob/master/tests/python/gaia-ui-tests/gaiatest/tests/functional/dialer/test_dialer_airplane_mode.py
+**** [jlorenzo] [AI] Not add this in dialer, ask the smoketest team if we could test that somewhere else.
+
+* [jlorenzo] Dogfood test suite
+** [jlorenzo] [AI] Follow up on the purpose and the implications of this suite
+
+* <drs> Call log bugs post {{bug|1112577}}
+** <drs> Cleaned up phone number matching metabug, {{bug|1102284}}
+
+
+Jan 28
+*<thills> do we need to talk about David's email?  Any changes we need to make to current sprint based off of this?
+** [jlorenzo] I'm chasing down and filing RTL bugs in dialer and contacts
+
+Jan 21
+* Clean up the dialer's startup procedure
+** {{bug|1043561}} https://bugzilla.mozilla.org/show_bug.cgi?id=1043561
+* The place of verification in the development process of new features?
+* Mini-triage
+
+Jan 7
+* 2.2 status
+** Looks good, nothing notable.
+* Over-the-air review of Bug 1092427 - Dialer app should follow text selection pattern.
+** Done review, got r-, but we know what to do now.
+* Bugs that may added in dialer-most-wanted:
+** https://bugzilla.mozilla.org/show_bug.cgi?id=1116890
+** https://bugzilla.mozilla.org/show_bug.cgi?id=1118421
+** https://bugzilla.mozilla.org/show_bug.cgi?id=1118423
+** https://bugzilla.mozilla.org/show_bug.cgi?id=828904 (now that vibrations are enabled by default in 2.2)
+** https://bugzilla.mozilla.org/show_bug.cgi?id=1100856
+
+Dec 11
+* 
+
+Nov 26
+* RTL
+* Portland goals
+** Work out scrum mastering
+** Evaluate peers
+** Iron out design guidelines
+** Discuss 2.3 features
+** Adding UI/integration tests with patches
+** Share RTL knowledge
+* Portland schedule
+** https://docs.google.com/a/mozilla.com/spreadsheet/ccc?key=0AvsBbrH4InJDdFFjOHVwOUJmWnFOWnNUQjFNc3hHSmc&usp=drive_web#gid=0
+
+Nov 19
+* 2.2 bugs filed.
+** If you are cc'd, I thought you would be a good person to work on this bug.
+* Bug 1031175 - [Gaia] Unify both sendMMI() and dial() functions
+* Bug 976990 - [Sora][Call Log] Contact's name still display in call log after delete the contact from phonebook.
+
+Nov 12
+* Newest tabless redesign spec: https://dl.dropboxusercontent.com/u/17593665/%5B2.2%20Dialer%5DRemoving%20tabs%20in%20Call%20log%200.1.pdf
+* https://wiki.mozilla.org/FirefoxOS/Comms/Dialer/Scrum_Mastering
+** Begin rotating with same rotation as daily standup.
+** People come with a list of bugs that they want to work on.
+* Killing or altering the burndown chart
+** Agreed to kill it.
+** Write down the total burndown from beginning to end in terms of resolved bugs instead.
+
+Nov 5
+* RTL
+** https://dl.dropboxusercontent.com/u/17593665/BiDi_20141030.pdf
+** {{bug|1071918}}
+** https://groups.google.com/forum/#!topic/mozilla.dev.gaia/GzIIlTUKvAg
+* Tabless redesign
+** https://dl.dropboxusercontent.com/u/17593665/Dialer-removing%20tabs%20-%20NEW.pdf
+** From Carrie: "About the current proposal, we faced a problem that if we add a shortcut  to Contacts APP at the top, the transition to switch APPs is really  disturbing and also it makes users feel that tapping the "favorites"  (which are at the same area) will get them to contact details rather  than dial out directly (feedback received from user testing)."
+** Why don't we just make the favorite contacts buttons do what the user expects, instead of redesigning the spec to include the contacts view?
+** Prototype the contacts view as a view instead of iframe if we decide to keep that tab.
+* Anything else?
+* Little triage
+
+Oct 29
+* 2.2 feature proposal:
+** VScroll
+*** Sticky headers. May have to have a design where we have a button for loading more items.
+*** No other app seems to use this for visual display. It seems that they use it for networking only, in particular within the Email app.
+** Dialer/contacts split
+*** We need to talk with Etienne about some history here. In particular, all the benefits.
+** RTL compliance
+** DataStore for call log
+*** If 2.2 is a short release cycle, we will cut this.
+* Little triage
+** We canceled this due to the triage tomorrow.
+* + anything else you want to talk about
+
+Oct 22
+ * <gtorodelvalle> Generation of sequence diagrams detailing the event and data flows for all the available calling scenarios:
+   * It may help using a tool such as http://bramp.github.io/js-sequence-diagrams/ which I already used to get https://bug977056.bugzilla.mozilla.org/attachment.cgi?id=8508559 for https://bugzilla.mozilla.org/show_bug.cgi?id=977056 Source code for the diagram available at https://bug977056.bugzilla.mozilla.org/attachment.cgi?id=8508560
+   * We are close to have the spec for event notification and data flow for the calling scenario when a participant leaves a conference call amongst 3 parties. It will solve https://bugzilla.mozilla.org/show_bug.cgi?id=1083402 and unblock https://bugzilla.mozilla.org/show_bug.cgi?id=977588
+ * Triage
+   * Moved to next Thursday, same time
+ * 2.2 schedule
+ * Blockers
+ * DTMF tones
+ * Little triage
+ * + anything else you want to talk about
+
+Oct 15
+ * Peers, team
+ * 2.2 Features
+ * MVC
+ * Blockers
+ * Little triage
+ * Bug 977056 - [Dialer] Visual discrepancies: Call ended view under conference call participants list:
+   * When a groupchanged event is notified to a call, I am not aware of any means to know if the notified call is still ongoing or maybe it was the hung up one causing the groupchange event since in this latest case I am also getting "connected" as the state of the call. According to this already existent code https://github.com/mozilla-b2g/gaia/blob/master/apps/callscreen/js/handled_call.js#L86 I guess there was a time when we were getting at least "disconnecting" if not "disconnected" as the call state. Any clue?
+   * I left a comment for Hsin-Yi: https://bugzilla.mozilla.org/show_bug.cgi?id=977056#c39
+ * <jlorenzo> Find the right Moztrap request to have only dialer data
+
+Oct 7
+ * Blockers
+ * What we commit to during sprints
+ * 2.2 feature differentiators: https://etherpad.mozilla.org/EngineeringDifferentiatorsList
+ * Bug 1031175 - [Gaia] Unify both sendMMI() and dial() functions
+ * RTL
+   * Audit code for concatenation
+   * We need a point of contact
+   * We should get in contact with UX
+   * Consider doing a push
+
+Oct 1
+ * Propose moving bug triage to next week, same time
+   * We decided to move it.
+ * Unit test helper for DB migrations
+   * Anthony mentioned that Julien talked about a helper for this. We should get in touch with him about it.
+ * Removing background waiting code
+   * We're going to prototype removing the background waiting logic on Tarako to see if there's a perf hit.
+   * Filed bug 1075603 (https://bugzilla.mozilla.org/show_bug.cgi?id=1075603)
+ * Send out email to dev-gaia about bug 1074379 since we can't repro it.
+   * Anthony will do this
+   * Everyone on dialer should try to repro.
+
+   * DUT = Flame 2.2 AT&T
+   * voip calling DUT - no repro
+   * iPhone (AT&T) calling DUT - repro on first call
+   * POTS FiOS home (VZW) - no repro
+   * iPhone (AT&T 3G) calling DUT - repro after few calls
+   * 
+   * DUT = Flame 2.2 AT&T w/ patch http://pastebin.mozilla.org/6742764
+   * iPhone (AT&T) calling DUT - repro on first call
+   * iPhone (AT&T 3G) calling DUT -
+   * 
+   * DUT = Flame 2.2 AT&T + T-Mobile (2 SIMs)
+   * iPhone (AT&T) calling DUT's AT&T SIM - 
+     * repros calling AT&T SIM(1st try).  
+     * Does not repro when calling Tmobile SIM.
+
+   * iPhone (AT&T 3G) calling DUT's AT&T SIM -
+   * iPhone (AT&T) calling DUT's T-Mobile SIM -
+   * iPhone (AT&T 3G) calling DUT's T-Mobile SIM -
+   * 
+   * DUT = Flame 2.2 TMobile SIM
+   * iPhone (AT&T 4G) calling Tmobile - no repro
+   * Tamara to try later iphone->iphone to test call clearing
+   * 
+   * DUT = Hamachi 2.2 AT&T
+   * iPhone (AT&T) calling DUT - 
+   * iPhone (AT&T 3G) calling DUT -
