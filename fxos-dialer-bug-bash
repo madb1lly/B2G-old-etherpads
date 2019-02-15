@@ -1,0 +1,141 @@
+Feb 26
+380 start (started at bug 1037016)
+359 end (stopped at bug 1059458)
+
+Jan 15 (an hour)
+386 start (started at bug 1023234, sorted by ID)
+377 end (stopped at bug 1035663)
+9 closed, 11 kept
+
+Nov 27
+395 start
+347 end
+
+Nov 26 mini
+417 start
+395 end
+
+Nov 20
+444 bugs to start
+406 bugs at end
+
+Nov 12 mini
+427 bugs to start
+412 at the end
+
+Real people use our phones
+https://bugzilla.mozilla.org/show_bug.cgi?id=924100
+
+Oct 15 mini
+
+Come back to
+(jlorenzo) Bug 1083082 - [Call]MS display missed call after reject incoming calls.
+(jlorenzo) Bug 1083023 - [v2.2] Call Log not logging reliably
+(jlorenzo, drs) Bug 1082688 - [B2G][L10n][l12y] Callscreen messages in notification tray not localizable
+(jlorenzo, drs) Bug 1081244 - [Call Volume] Call volume does not correctly adjust while in call
+Bug 897463 - [Dialer] Emergency call on airplane mode needs proper UX while waiting for network
+
+Oct 9
+
+Participants
+drs, 2 flames, 3 SIMs
+Rik, 1 flame, 1 hamachi, 2 SIMs + 1 personal SIM
+jlorenzo, 2 flames, 1 hamachi, 1 SIM
+gtorodelvalle, 1 flame, 1 hamachi, 2 SIMs
+davidg, 1 flame, 1 peak, 1 SIM
+thills 2 flame, 1 hamachi, 2 SIMs
+gsvelto 1 flame, 1 hamachi, 1 keon, 2 SIMs
+
+-----------------------
+
+Bug Query
+https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&component=Gaia%3A%3ADialer&list_id=11190682&product=Firefox%20OS&query_format=advanced&resolution=---&order=bug_id&limit=0
+
+Base images
+Follow these instructions to flash KitKat: https://intranet.mozilla.org/QA/B2G_Tips_and_Tricks#latest_OEM_KitKat_Base_Image_:_v180
+Have 2 devices with KitKat
+
+Copy and paste message
+This bug is out of date and we suspect that it's no longer valid. If you think this is in error, please reopen it.
+
+For audiochannel:
+This bug is out of date and we suspect that it's no longer valid. We fixed a bunch of audio channel bugs and we don't have an exact commit that fixed this one.
+
+If you think this is in error, please reopen it.
+
+Common bugs to dupe to
+"Invalid number": 862513
+"comma on callscreen": 898672
+
+Images
+Have a few devices with 2.1, mostly 2.0 and 2.2/master
+For KitKat
+* Download one of these files:
+** 2.0 : https://pvtbuilds.mozilla.org/pvt/mozilla.org/b2gotoro/nightly/mozilla-b2g32_v2_0-flame-kk/latest/flame-kk.zip
+** 2.2 : https://pvtbuilds.mozilla.org/pvt/mozilla.org/b2gotoro/nightly/mozilla-central-flame-kk/latest/flame-kk.zip
+* Extract the archive
+* Run flash.sh
+
+Sep 25
+
+Devices and SIMs
+Team 1 (Doug Sherk's Vidyo Room)
+* (leading) <drs> 2 flames, 3 SIMs
+** Flame: v2.2, 2 SIMs
+** Flame: v2.0, 1 SIM
+* <gsvelto> 1 flame, 1 hamachi, 1 keon, 2 SIMs
+** Flame: v2.2, 1 SIM
+** Keon: v2.1 (if you can), 1 SIM
+** Hamachi: v1.4, no SIM
+* <jlorenzo> 2 flames, 1 hamachi, 1 SIM
+** Flame-KK: v2.2, 1 SIM
+** Hamachi: v2.1, no SIM
+** Flame-KK: v2.0, no SIM (+1?)
+*** Please ask around for 1 SIM.
+* <gtorodelvalle> 1 flame, 1 hamachi, 2 SIMs (the second one is a duplicate of the first (main) one, in case it helps ;) )
+** Flame: v2.2, 2 SIMS
+** Hamachi: v2.0, 1 SIM
+** Flame: v2.2, 2 SIMs
+** Hamachi: v2.0, no SIM
+** Change your color please, it's the same as Rik.
+* <cawang> 2 flames, 1 SIM (unlikely to make it)
+** Flame: v2.2, 1 SIM
+** Flame: v2.0, no SIM
+Team 2 (Joe Cheng's Vidyo Room)
+* (leading) <Rik> 1 flame, 1 hamachi, 2 SIMs + 1 personal SIM that I'd like to avoid using
+** Flame: v2.2, 2 SIMs
+** Hamachi: v2.0, 1 SIM (personal)
+** Change your color please, it's the same as gtorodelvalle.
+* <davidg> 1 flame, 1 peek, 2 SIMs
+** Flame: v2.2, 1 SIM
+** Peak: v2.1 (if you can), 1 SIM
+* <francisco> 1 flame, 1 hamachi, 3 SIMS (2 UK based, 1 roaming) Kitkat image
+** Flame-KK: v2.2, 2 SIMs (1 roaming)
+** Hamachi: v2.0, 1 SIM
+* <thills> 2 flame, 1 hamachi, 2 SIMs
+** Flame: v2.2, 1 SIM
+** Flame: v2.1, 1 SIM
+** Hamachi: v1.4, no SIM
+
+Bugs to come back to
+* Blacklist
+** https://bugzilla.mozilla.org/show_bug.cgi?id=804602
+Bug 832867 - [Dialer] When receiving incoming call with ear-jack, it is not supported to reject the call by headset key
+** [jlorenzo] I'm able to refuse a call by longpressing the main button on my Plantronics 100 BT headset
+Bug 835253 - [OPEN_][Dialer] The entering number is lost when hiding the dialer pad in calling.(617001980930)
+https://bugzilla.mozilla.org/show_bug.cgi?id=830666 When there is a call and another one is incoming, needs to notify the user by sound
+Bug 849143 - [Buri][SOS]Sometimes the Emergency call interface display error when the phone is locked
+* [ai][jlorenzo] Ask to echang how he tests emergency numbers
+https://bugzilla.mozilla.org/show_bug.cgi?id=845718 favorite numbers
+Bug 866267 - [dialer] [leo] yesterday's calls are listed under "today" until a call from today comes in and refreshes the list
+Bug 849820 - [META] [Transitions. UX] Implement transitions as specified.
+Bug 857442 -        [B2G] [Dialer] voicemail number while roaming
+Bug 871885 - [Dialer] When receiving second call during call, if existing call is disconnecting, beep sound is stopped.
+Bug 874373 - [SOS] Respect emergency call restrictions, e.g. if is not possible without sim card
+
+Copy and paste message
+This bug is out of date and we suspect that it's no longer valid. If you think this is in error, please reopen it.
+
+
+565 before, 480 after
+34 bugs touched but left opened
