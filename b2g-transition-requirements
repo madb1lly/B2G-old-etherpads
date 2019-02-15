@@ -208,3 +208,29 @@ Stretch goals:
     wallpaper?
 
     SMS
+
+
+
+Chat
+
+faramarz:20:06 could we have the dialer capability to this as well
+
+faramarz:20:07 as a minimum, the phone should be able to place a phone call. contacts and stuff like that probably not as important, but dialer i feel like is a must.
+
+benfrancis:17:41 The dialer wasn't mentioned in the original transition plan, but I've added it to this list and we'll see what we can do. I know Gabriele started looking into this.
+
+Thatoo:20:41 good job :=)
+
+kskarthik:07:59 thanks for working on the dialer :)
+
+Lapineige:11:30 Hi all, is it a technical reference for Mozilla devs, or can we add points here ?
+
+Lapineige:11:31 For instance (as Thatoo add), SMS are missing. And well, a phone with no sms support is... not really useful :(
+
+sbneelu:08:45 I think the sleep mode and wallpaper should be part of the minumum required experience, not a stretch goal...
+
+sbneelu:08:46 Also, I'm quite new to this. Is it completely open-source, as in, can I help to work on it?
+
+Lapineige:18:02 yes ;)
+
+Lapineige:18:02 (and your welcome)
