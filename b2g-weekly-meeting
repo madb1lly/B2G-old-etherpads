@@ -1,0 +1,303 @@
+T##$826B2G
+
+     Weekly Meeting
+
+
+    Date: 2016-09-27
+
+    Host: Ben Francis 
+
+    Notes copied to the wiki each week https://wiki.mozilla.org/B2G/Meeting
+
+    Meeting time: Tuesday, 9am Pacific / 4pm UTC
+
+    This week, we are back on Vidyo since last week's experiment was not very good
+
+
+Special meeting this week: 
+
+    https://discourse.mozilla-community.org/t/b2g-os-announcements-on-tuesday/11041
+
+    https://groups.google.com/forum/#!topic/mozilla.dev.fxos/FoAwifahNPY
+
+
+Attendees
+
+    Ari Jaaksi
+
+    David Bryant
+
+    Faramarz Rashed
+
+    Fabrice Desre
+
+    Ben Francis
+
+    George Roter
+
+    Kevin Grandon
+
+    Mattieu
+
+    ralf
+
+    Amit Kumar Jaiswal / @amit_gkp
+
+    Christophe Villeneuve / @hellosct1
+
+    Enrico
+
+    Jovan
+
+    gsvelto
+
+    Lapineige
+
+    Many more on Vidyo and Air Mozilla...
+
+
+Apologies:
+
+    krz37 - will not be able to attend because I am traveling
+
+
+== Announcements ==
+
+    All B2G-related code is going to be removed from mozilla-central, the B2G community must fork Gecko if they want to continue. See the mailing list for the full announcement https://groups.google.com/d/msg/mozilla.dev.fxos/FoAwifahNPY/Lppm0VHVBAAJ
+
+
+== Q & A ==
+
+Questions?
+
+    Pad with questions: https://public.etherpad-mozilla.org/p/b2g-gecko-fork-questions
+
+    Please put the questions in this pad so we can see them. Done
+
+
+=== Questions from Vidyo ===
+
+    kgrandon - I guess we're removing all B2G specific bits from Gecko, going to be forking that. Have we thought naming, about Boot to Gecko or something else?
+
+    Yes, the code is going to be removed.
+
+    As long as it's not "Firefox OS", B2G is fine (Firefox is a registered trademark)
+
+    B2G/Boot to Gecko not trademarked, up to community if they want to keep that name or call it something else
+
+    But yes, you can argue that after the fork it is no longer "booting to Gecko"
+
+    mattieu - What will be the link be between the community and Mozilla Foundation regarding this potential fork?
+
+    I guess you're asking about Infrastructure. The infrastructure still exists. There will be a body of work in Gecko. As far as resources are concerned there won't be any resource investment from Platform Engineering or Connected Devices.
+
+    mattieu - On the Mozilla side, what are the next steps about Connected Devices and things like that?
+
+    We have a handful of projects going on. One is SensorWeb, one is Haiku... we will move to platform development but this is independent from B2G. We don't see those require a rendering engine or full whole home grown operating system. Connected Devices plans are not to use B2G or Firefox OS going forward.
+
+    mattieu - What makes the decision to drop everything now rather than last year?
+
+    Ari - We made the decision very early on to drop the commercial development of smartphones. During the spring there were several efforts to look into whether we can use B2G in Connected Devices. We wanted to finalise 2.6 for our TV partner and clean up the code so we had a stable release for them to go forward., Then the decision was made based on all the new work coming to Gecko that we would need B2G to fork. In Connected Devices we didn't find a reason to continue with B2G.
+
+    David - There were further investigations over the last 8 months to see what routes might be appropriate to take, after those months of investigation we felt we had a clear picture of what we planned to do, but in a way that follows through and puts the rest of the code base in the hands of the community
+
+    Will Mozilla continue to provide the B2G community with access to its infrastructure? For instance, Bugzilla, Taskcluster, Mercurial/Git hosting, MDN?
+
+    Infrastructure that's currently available is still available. Can continue to provide that in a self-supported model. They could decide to make changes which would be fine.
+
+    ralf - It would be interesting to hear if you guys think this forking is even possible? For me it feels like killing Firefox OS again. For me this is really now formally dead. Do you think there is a chance for this to survive, or could it maybe come together again with Servo for example?
+
+    Coming together is always a possibility. Impossible for me to anticipate what might be relevant in the 9 web engine parts of B2G. The right underlying engine for that work is a variable that's going to get looked at. E.g. purely embedding or headless.
+
+    Ari - It is far from being trivial, especially given there are no commercial products (e.g. getting hold of drivers). If you think of it as a phone operating system it's going to be very difficult (not impossible but very challenging, to be honest with you).
+
+    Fabrice - There are companies like Sony who provide a free open source base we can use.
+
+    David- Gecko is a large codebase, not that many people who deeply understand it. This creates significant challenges for the community. There are ways around those but non-trivial or require shifting infrastructure.
+
+    Ben - going to get much harder as codebases diverge. Not impossible but very hard.
+
+    David - There will be new components in Gecko that B2G may want to take advantage of so will require merging
+
+    Which parts of Gonk, Gecko, Gaia are going to be maintained by Mozilla?
+
+    None
+
+    ralf - B2G was the home for Progressive Web Apps as they are now called, long before this term was used. Do you have interest in supporting Progressive Web Apps? Now they are all dead even on the desktop.
+
+    We still think these technologies are important, and our involvement precedes Google's marketing around those terms. Also working on the web games stack and WebVR.
+
+    Agree that Mozilla was using this approach before the PWA term existed. That work will continue in Firefox.
+
+
+=== Questions from Etherpad ===
+
+    Will Mozilla continue to provide the B2G community with access to its infrastructure?  For instance, Bugzilla, Taskcluster, Mercurial/Git hosting, MDN? (and Discourse)
+
+    (see above)
+
+    Is B2G still considered Tier 3?
+
+    Yes, until it is removed.
+
+    I wonder why Mozilla announced transition & modified the architecture. They could have stated this earlier & stopped with 2.6 branch.
+
+    2.6 took until the summer. It took us a few weeks to put the announcement together. We were looking at whether products could be based on it or not.
+
+    Can Mozilla place all B2G-specifc code in a separate repo so that it's easy for B2G OS community to work on.
+
+    mozilla-central changes are going into mercurial. We will continue there.
+
+    There has been a mozilla-b2g/gecko-dev repo in the past, this could be re-instated
+
+    We're not taking on that activity but anyone else welcome
+
+    Is all Mulet-related code also affected by this? Of course, yes
+
+    Yes
+
+    Are latest B2G system apps are at least supported in the next Gecko? I heard that some of the new Rust code are coming to Gecko, but this means the core stack of B2G may need to be modified.
+
+    There's a steady stream of work relative to Gecko with use of Rust that have been proved through Servo. Most of those are internal that are beneath existing APIs.
+
+    For sub-pieces like the CSS engine we have for media decoding. May not be the case for webrender, very platform specific.
+
+    It's inherently the case these changes will have impact up the stack.
+
+    Steady stream of small changes happening even now.
+
+    Should we start to archive current B2G and Mulet source codes then start another new transition to be compatible with the next versions of Gecko, and even Servo? (But it be Boot to Servo at this time)
+
+    It's all in version control on GitHub. We can tag it.
+
+    Instead of a fork, will it be possible to have a stable interface on the C++ part to add and compile our part of code ? It will be easier for new C++ contributors to have a list of functions to use to add new camera functions for example than to search in Gecko fork code where add his code ( and worse to maintain when there is code modification in Gecko ... );
+
+    Why can't we have something like Gonk separate from the Gecko tree? Gecko has issues that prevents us doing that.
+
+    The history of Firefox OS was to develop it in such a way that that wasn't possible. Gecko doesn't expose a complete API surface. It could be possible in future but not today.
+
+    Due to the monolithic nature of Gecko it isn't currently possible to maintain those pieces out of tree.
+
+    Who took this decision, precisely? it would be (a little more) fair to talk with the community before or, at least, with your core developers (@Gabriel on the mailing list).
+
+    Consequence of a number of other decisions that got made about B2G and Gecko over the last nine months. Made by Mozilla Leadership within units of responsibility. It was Ari for Connected Devices and David Bryant for Platform Engineering, not a single person's decision.
+
+    When do you plan to do this remove of b2g code from gecko ? (= do we have time to manage what's next ?)
+
+    We have a number of activities that are queued up in the very near term, expect that to start later today.
+
+    So we don't have time to make a backup/archive (if needed ?)
+
+    So this project is going out of gecko. What are the plans on Mozilla Corp side ? Do you still want to help us in some way ? (This add a lot more work for the community, that is still quite small and not super experienced)
+
+    If we can use current Gonk build for later versions of Gecko, how about releasing some of B2G system apps (such as clock and calendar) as WebExtensions? If most of the B2G core is changed I prefer apps to be installed the same way as WebExtensions. As I mentioned in Telegram group I have forked "B2G" and "Gaia" in GitHub for archive and testing purposes.
+
+    Issue is that Gonk porting layers being removed
+
+    Is there a way to use libhybris to run full Linux stack and Linux port of Gecko, while converting all the phone-specific stuff to services?
+
+    What does it mean for new Panasonic TVs? "They concluded that Firefox OS TV was a project to be run by our commercial partner and not a project to be led by Mozilla" is not very clear. Will Panasonic continue the development or will they stop using Firefox OS for future TVs?
+
+    That's up to them. We have certain business agreements. We can't comment on their longer term plan, they have a stable release they will use in 2.6. Whatever Panasonic wants to do is up to them and between them and Mozilla.
+
+    question on telegram/irc: "What would be the basis for trust going forward with Mozilla after all this?  Or does Mozilla see community involvement as less important in their next generation of plans?"
+
+    David - Community is constantly important as part of what we do. We work collectively on lots of things and independently as well. The community is ever and increasingly important to Mozilla and our next level of plans.
+
+    Beside from the FxOS specific APIs on which were still rely, which parts of B2G in Gecko would we still need for B2G to work?
+
+    Mostly the graphics and media stuff. Gonk widget layer and media rendering.
+
+    For the people like me (Matthieu) would it be possible to explain a bit more detailed what will have to be maintain (telephony stack, rendering engine, drivers..?) by the community as soon as B2G code is out of gecko ?
+
+    Gonk widget layer, media playback
+
+    Gonk back ends for several W3C APIs
+
+    Replacing legacy APIs with local web services (already planned)
+
+    Telephony stack is a big piece
+
+    Browser API will still exist
+
+    Camera API will go, maybe we can use MediaStreams? We take patches.
+
+    Input API
+
+    ...
+
+    Does mozilla have any plan to provide a new embedded api of Gecko for applications like B2G in near future?
+
+    We have vaguely shared that embedding is an opportunity we are more interested in going forward. Putting web technologies in more places beyond the traditional ones.
+
+    Growing area we want to be a part of.
+
+    could we boot to Gecko by using a striped down Android with only a fullscreen "Firefox for Android"?
+
+    in the future if we want to participate to Webapp/offline web app how can we get involved with Mozilla ?
+
+    The PWA implementation in Firefox
+
+    So how to replace what will be missing after going out of gecko ? (I guess it's something that we will discuss in the community, sorry if it's irrelevant)
+
+
+Español
+
+    ¿Podemos tomar como base Chromium? Igual como hace Electron para crear desktop apps.
+
+    There is no Gonk equivalent for Blink that renders web content directly to the lower levels of Android without the Android Runtime in between. You could theoretically create something like this, that would be a lot like Chrome OS!
+
+
+
+== David Wrap Up ==
+
+We've tried to address the way communications  have been made, have been cryptic, implications not always as visible as internally. Learning experience for us. Going to be harder for community to continue. We may not all agree on everything but have made it easier to have a conversation. We realise decisions are painful, part of why we wanted to get together today and work through so thank you. Look forward to continue working together going forward.
+
+== Ari Wrap Up ==
+
+Looks like a cold-hearted business decision but there's an emotional side to this. A lot of effort people have put in. I wasn't part of this from the beginning but I can respect that. Dreams and hopes this could have been different but it wasn't. I want to look at this episode as first more engaged episode with community. First to admit communication could have been better but would not have changed the outcome. Going forward freedom and openness of the Internet important. No hesitation in my mind that one of unique values of Mozilla is the community. How do we learn from these episodes and make the best out the situations where not everyone agrees? Really appreciate the work people have done in the last months, in the platform. Keeping communication open. Emotional aspect part of the reality. Thank everybody. Recognise difficult to continue with codebase. Would be eager to see if new creative ideas come out of it, but realise it is hard.
+
+
+
+
+------------->8---  TEMPLATE  ---8<------------
+
+B2G Weekly Meeting
+
+    Date: 0000-00-00
+
+    Host: 
+
+    Notes copied to the wiki each week https://wiki.mozilla.org/B2G/Meeting
+
+    Meeting time: Tuesday, 9am Pacific / 4pm UTC
+
+
+Attendees
+
+
+
+== Announcements ==
+
+
+== Status Updates ==
+
+=== Smartphone ===
+
+=== Smart TV ===
+
+=== Porting ===
+
+=== Infrastructure ===
+
+=== Documentation ===
+
+=== Governance ===
+
+=== Communications ==
+
+=== QA ===
+
+
+== Round Table ==
+
