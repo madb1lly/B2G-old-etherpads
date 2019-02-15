@@ -1,0 +1,393 @@
+v2.2-S11
+
+Things we did well
+
+Things we could do better
+
+Action items
+
+v2.2-S10
+
+Things we did well
+* <drs> We technically got all of our 2.2 blockers done on time, though there may be more to come.
+* <gsvelto> In spite of landing plenty of changes we didn't seem to have introduced any regressions (yet), test coverage is probably improving
+
+Things we could do better
+* <jlorenzo> Get the regression window more quickly, especially a couple of days before the deadline. I delegated to the contactors in Seattle. I could do it while you guys were still asleep. I'll remember that for the next FC milestone
+** <drs> It's sometimes actually faster for us to get it ourselves. This is a sign that this process could be a lot better.
+** <thills> maybe a higher level thing, but we should have a cutoff point where we don't allow adhoc testing after a certain point.  When it gets really close to a release, we should just test to the plan.  Maybe front load our schedule with ad-hoc testing.  It becomes hard to predict a release date with no blockers when there is ad-hoc testing at the end.
+
+Action items
+
+v2.2-S8
+Things we did well
+
+
+
+Things we could do better
+*<thills> we didn't finish everything
+
+
+Action Items
+
+
+V2.2-S 7
+
+Things we did well
+* <jlorenzo> Not a lot a fallouts on callLogDB discovered since last sprint.
+
+Things we could do better
+* <thills> Didn't finish everything. +1
+* <drs> Ask managers for help when you need it.
+
+Action items
+
+
+v2.2-S6
+
+Things we did well
+* <drs> Tamara did a great job staying on top of all the RTL stuff. Even though we have a bad item below, we already knew that we might not make it in time.
+* <gsvelto> Some misc polish fixes landed here and there which is always nice to see
+* <drs> We went over our smoke tests and made some changes.
+* <thills> I know there was some fallout from the call log db, but I believe this was a net positive change
+
+Things we could do better
+* <drs> We missed FL for getting all RTL/feature-b2g bugs in, but only by 1 bug.
+*<thills> From my side, I think next time, a lesson learned is not to let the uplifts stack up so much.
+*<thills> I think a step we missed was to do an audit on RTL.  There were a lot of bugs that were filed already, but I believe a holistic audit might have been useful earlier on.  
+
+Action items
+* <drs> Do a holistic audit of RTL.
+
+v2.2-S5
+
+Things we did well
+*<thills> Got quite a few RTL bugs done.  We also got quite a few new ones, so I'm not sure how much overall ground we gained on total RTL bugs.
+* <gsvelto> :salva landed a patch that greatly improved handling text deletion in the dialer and which included a few integration tests (yay!)
+
+Things we could do better
+* <gsvelto> Our cost estimates for certain bugs were quite off
+
+Action items
+* <thills> we probably will be tight on the next iteration so we should make sure to prioritize the remaining RTL.  There was some discussion about whether we needed to finish P1 or P1 and P2 for the feature landing, and I am not sure where that ended up and we might need to clarify.
+** <drs> Taking this.
+*<thills> Do we need to have a discussion about a call log rewrite?  I know it's been mentioned, but just wanted to maybe talk about it.  
+** <drs> Talk about this during the office hour.
+* <drs> We're very limited on people, with nobody working full-time on the Dialer. Will talk with Francisco about this.
+
+v2.2-S4
+
+Things we did well
+* <thills> the ideation was fun!  It's rare to get an opportunity like this.
+
+Things we could do better
+* <drs> I was pretty inactive this sprint.
+
+Action items
+
+
+v2.2-S3
+
+Things we did well
+* <jlorenzo> 2 intermittent failures fixed on the Python side (bug 1113154, bug 1097754)
+* <gsvelto> We landed quite a bit of stuff in spite of the vacations which I find always remarkable
+
+Things we could do better
+* <drs> We missed FLR. My fault. Will watch the schedule more closely and step in where needed in the future.
+
+Action items
+* <thills> we should decide what we are going to do going forward with the daily notes/burndown, etc.
+** <drs> We will start writing daily notes when working on a new feature branch, probably v3.
+* <jlorenzo> Following up the fixed intermittent failures fixed: Add "always wait until an animation finishes" in the best practices for Marionette JS tests which QA is writting down.
+
+v2.2-S2
+
+Things we did well
+* <gsvelto> Johan's integration tests caught a lot of issues in the call log DB code even before being enabled :-)
+
+Things we could do better
+
+Action items
+
+v2.1-S9
+
+Things we did well
+* <drs> We got almost everything done that we set out to.
+* <drs> We're going into 2.2 development in great shape.
+* <gsvelto> It seems to me that we balanced the workload well across everybody involved.
+*<thills> I believe we got a lot triaged and a lot done during these bugfix iterations after we finished the features... both in terms of triage and in terms of fixing bugs.
+
+Things we could do better
+* <gsvelto> As usual, communication with vendors/partners could be improved but that's not really something that depends on us unless we can find someone to act as an interface with them. The impact of this on our sprints is that currently we may flag a bug as a blocker just to discover later that it's really not, and vice-versa.
+* <thills> I feel our backlog is still really large despite all the great efforts.  I almost wish we could continue on fixing our backlog of issues.  
+** <gsvelto> +1
+
+Action items
+* <gsvelto> Find someone who's in touch with vendors/partners to help smoothing out our communication with them.
+** <drs> For partner communication, bring in Wesley more often when we're not sure about something.
+
+v2.1-S8
+
+Things we did well
+* <drs> We landed several really large bugs.
+** <gsvelto> And the patches stuck!
+* <drs> We came up with a plan to tackle our 2.2 features.
+* <drs> We killed the bi-weekly meeting.
+
+Things we could do better
+* <thills> I think I messed up in the review/feedback for the  airplane mode bug.  After giving my review, it should have then gone to drs, but that got bypassed and they landed it... so we should figure out a better step-wise process for German and I to go through since we are doing reviews that sometimes involve other teams so we can avoid the confusion.
+* <gtorodelvalle> Definitely I have to check my agenda before the spring planning meetings to better identify my availability in advance.
+* <gsvelto> Two issues regarding the UI being inconsistent with the actual calls state cropped up last week. We should really spend some time to clean up our UI story.
+
+Action items
+* <drs> I will set review? on myself even if I end up only giving feedback+ at the end of reviews.
+
+v2.1-S7
+
+Things we did well
+* <drs> We got all of our 2.1+ blockers fixed!
+* <drs> Tamara did her first review. I would like to start sending reviews to Germán as well.
+** <gtorodelvalle> Really nice and helpful review I must add ;)
+* <drs> Everyone has been helping with triaging bugs on their own.
+* <gsvelto> We handled incoming bugs from vendors rather quickly, dup'ing and nom'ing as they came in
+* <gtorodelvalle> Great QA support when needed
+
+Things we could do better
+* <drs> We had to punt the bug triage again. We will be doing 2 of them this sprint on each Thursday.
+* <drs> Unfortunately, we found out right after finishing our 2.1+ blockers that 10/24 wasn't the deadline. It's actually 10/30. I've been talking with Francisco and David about this. We must  also get all of our CAF bugs fixed by 10/30.
+* <jlorenzo> Bugs that were reproducible in the US only. It would be better to have more definition tasks handled by QA
+
+Action items
+* <jlorenzo> If devs thinks a QA task should be handled by QA on the West coast, do not hesitate to tell jlorenzo :)
+
+v2.1-S6
+
+Things we did well
+* <thills> I thought we all worked together well to get the blockers triaged.
+
+Things we could do better
+* <drs> bug 1031175
+* <thills>I believe we should have challenged the blockiness on some of these a bit sooner than we did.
+* <gtorodelvalle> Are you aware of people or machines :p testing the Dialer and related apps apart from the unit and integration tests in Gaia? It seems to me that important bugs just show up in bunches and mostly as final users (us) use the phone to make calls.
+** <jlorenzo> QAnalyst is the team that manually tests FFOS. Here's the test suite for the Dialer (run 3 times per version) : https://moztrap.mozilla.org/manage/cases/?filter-suite=130&filter-productversion=217
+** <jlorenzo> Everybody in QA agrees, the coverage of the functional tests in Gaia need to be expanded
+** <gtorodelvalle> Did we update that coverage including the latest blockers found and solved?
+** <jlorenzo> We don't do that for now. We catch up with the poor coverage of the features. I would like to do so in the future.
+* <gsvelto> Having the Flame KK build forced upon us caused us some problems, using BT headsets is quite crash-prone now and audio controls are not working well (volume control is not working correctly)
+* <thills> I feel like a lot of things showed up late in the cycle.  Maybe we can ask for %executed and the pass rate so we can help estitmae how much time we need to keep free for blockers in these sprints that are close to the end of the release.
+
+Action items
+* <thills> Should we document our learnings about the different RILs somewhere?
+* <gtorodelvalle> Probably more coordination is needed between the QA teams since for example I am aware of a new integration test testing long calls which is only run by Telefónica. We created it during this sprint. I mean to share these contributions.
+** <jlorenzo> Ask tchung about TEF test runs.
+* <jlorenzo> Summarize the test run during the standup + have a look if doug can subscribe to the mailing for test runs.
+* <jlorenzo> Ask in the b2g-roundtable why we didn't have any communication about the KK switch
+* <gsvelto> File bugs for auditing audio channel usage.
+
+v2.1-S5
+
+Things we did well
+* <drs> The bug triage was great and we got through a lot of bugs. People generally agreed that getting through our backlog should be a priority until feature work begins again.
+* <drs> The office hour was good.
+* <gsvelto> The bug bash was excellent, both in trimming down the number of bugs in the component and in floating up a few valid issues we had left on the bottom of the list.
+* <Rik> Sharing a calendar
+
+Things we could do better
+* <drs> As discussed during the office hour, I generally feel that we're lacking a technical direction. We covered this when we talked about MVC.
+* <drs> Our burndown was not very good this sprint. Other than Germán not being available for most of this sprint, what went wrong?
+* <thills> From my side, personally, the bug that I took wound up to be a bunch of different bugs and tied into a lot of different issues.  I believe that this is something we only find out once we really start working on it.  Not sure what we could do better here.  
+* <drs> Tamara says that she sometimes runs into issues knowing how to test features.
+
+Action items
+* <drs> Write a proposal to move the dialer towards MVC/Haida.
+* <drs> Do more bug triages.
+* <drs> Tamara suggested having a list of smoke tests or ways to test features that aren't obvious.
+
+v2.1-S4
+
+Things we did well
+* <drs> This was a nice and relaxed sprint, and we didn't get many blockers.
+* <davidg> Managed to get bugs on time
+
+Things we could do better
+* <drs> Dialer has ~550 bugs open at any given time: https://bugzilla.mozilla.org/buglist.cgi?component=Gaia%3A%3ADialer&list_id=11111500&product=Firefox%20OS&query_format=advanced&resolution=---&order=bug_id&limit=0
+** <drs> Thoughts on doing a bug bash? I know it's not fun, but a lot of these bugs are ancient and it will probably be as simple as resolving them or duping them.
+** <thills> I would like to do it.  Would be good to set aside a time where we can all work on it at the same time.  
+* <drs> We didn't do any demos this last sprint. I'm wondering if anyone sees any value in them. We asked this last time but maybe the answer has changed. If we decide to get back to doing them, I will really start pushing it this sprint for anything demoable.
+** <thills> do we have a blog to go along with this?  I'm not sure it's for us directly, but others outside the team.
+** <drs> Anthony was going to, but I don't know if we got enough demos, or if he had time.
+* <davidg> A bug that was late-l10n was just landed at the very last moment, but it was ready much before.
+** <drs> Suggestions?
+** <davidg> When the bug get blocked by a deadlock discussion, just try to unlock it. Pretty much what we did at the end but earlier.
+** <drs> Yeah, sometimes it's hard to know the state of everything. I noticed that this was blocked a bit later because it didn't seem blocked on the surface a few days before. It would help if this was mentioned in daily meetings and notes.
+** <davidg> I should probably tried to propose a solution instead of just watch them argue :)
+** <drs> It's ok, it's hard to know what to do all the time. Just mention it in the daily. Either way it was ok, it would have just been nice to be unblocked sooner.
+
+Action items
+* <drs> We have not been doing enough to get contributors engaged. I've talked with Francisco who actively sets himself as a mentor on many bugs and provides and plan and support for contributors. I'm going to begin doing this and I suggest that others do the same as well.
+** <gsvelto> I've set myself up as a mentor on a number of bugs but none dialer-related IIRC. Most of those are code cleanup & factoring out shared pieces as those are easy for new contributors and not high priority. We could start by filing some of those as there's many parts of the dialer that could use some love. Additionally if a bug needs an easy follow up it's always best to set it as a mentored one (e.g. remove a workaround, polish some unit-tests, etc...).
+** <davidg> Maybe we should invite Jorge and Francisco to join dailys
+*** <drs> I did I think. I should double-check that.
+* <drs> Do a bug bash.
+** <drs> Have a 2.2 phone and 2.0 or 2.1 ready to test bugs.
+* <drs> Really push for demos and do a blog post.
+* <drs> Continue doing office hours.
+
+v2.1-S3
+
+Things we did well
+* <thills> the hosting the standup instructions were very good.  The velocity calc rocks and makes it much easier.  I think we should add a link to the "hosting the standup" instructions on the main page.
+** <drs> I'm glad you found it helpful! I've added this.
+* <drs> The push at the end of this sprint was heroic! Great job, everyone. We shouldn't have to do that, but we handled a bad situation well.
+** <Rik> How can we recreate the emulation we saw on a more regular basis?    
+** <drs> After discussion: Anthony was referring to the "whole being greater than the sum of its parts" when he said emulation. We discussed having office hours on Vidyo.
+* <drs> Gabriele added some docs to the wiki and has been pushing for bug 1031175 to be done properly.
+** <gsvelto> I've managed to get the RIL team to post a proper proposal for the MMI refactoring on dev-webapi and it looks much better than the merry-go-round we did on the bug.
+* <Rik> We look ok with high res images. Just as a reminder, flash with GAIA_DEV_PIXELS_PER_PX=1.5. And testing locales: https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_best_practices#Test_localizability (the accented english is pretty nice for this)
+* <Rik> Spreading the technical lead between Doug, Gabriele and Rik. I felt like I had less bugs to follow.
+** <drs> Agreed!
+* <davidg> Holidays were great! Sorry guys
+** <drs> Nothing to be sorry about, get your rest/relaxation.
+* <drs> We have really good data now on how many points of velocity we can reliably burndown every sprint. So far, it's been about 25. We can now use this as a benchmark to see if we're taking too much or too little.
+
+Things we could do better
+* <drs> The dialer-most-wanted bug has blown up a bit. Should we switch to a whiteboard tag?
+** <gsvelto> I like having the bug, it works better for me but that's just personal preference. Anyway if it's becoming too large and something is not really wanted we could always remove it.
+** <drs> After discussion: We decided to stick with the bug. Gabriele also mentioned that it helps to draw attention to how much tech debt we have.
+* <drs> We could have done a better job balancing our work in other sprints. We underestimated the amount of work and left too much of it to the end.
+* <drs> The Friday deadline for 2.1 features came out of nowhere and pushed us really hard. I follow the release schedule pretty closely and it was never mentioned anywhere until Wednesday. I've already talked with David about this, and I'm going to spend more time with him discussing it soon.
+* <davidg> I'm mostly working on certifications waivers, a lot of times I get sidetracked by non dialer stuff. Not sure how to account for that time. 
+** <drs> After discussion: We assign dialer-most-wanted and nice-to-have bugs to people who are uncertain as to how much time they have.
+
+Action items
+* <drs> Added "Hosting the Standup" instructions to the main dialer page: https://wiki.mozilla.org/FirefoxOS/Comms/Dialer#Hosting_the_Standup
+* <Rik> Add a query to the blocker nominations (2.1?) to be even more reactive.
+* <gsvelto> One of the things that occurred to me during the sprint is that the Telephony/MobileConnection documentation on MDN is horribly outdated and incomplete. I intend to improve it and help is welcome obviously.
+* <Rik> Add |GAIA_DEFAULT_LOCALE=qps-ploc make| to the wiki documentation at https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_best_practices#Test_localizability
+* <Rik> Talk with Contacts team about their mix of Sprints and Kanban.
+* <Rik> Send an invite for 1-hour "office hour" over Vidyo every wednesday after the daily standup.
+* <Rik> Blog about our 2.1 features (comms, not only dialer).
+
+v2.1-S2
+
+Things we did well
+* <drs> Though we took on too much, we got a lot done.
+* <Rik> Felt that reviews where not an issue except for today because holiday.
+
+Things we could do better
+* <drs> We took on way too much and didn't complete a lot. Even worse, most of what we didn't complete were bugs that were planned.
+
+* <drs> I think we should count the "all issues in sprint", not the planned bugs. Since they're so intermingled, it's more useful to know if we're taking too much in general, not just in the beginning. Whether or not we finish everything we planned on taking isn't actually super important since there are legitimate reasons, other than being overloaded, that we might not finish them. So I'd rather know if we're overloading ourselves or not, and to me "all bugs" is a better indication of that than "planned bugs".
+
+* <thills> a small thing, but when we do the estimates, we should probably note down what we actually settle on in the EP... if it's not already noted in the bug.
+** <drs> Ok, I'll add this before I set it on Bugzilla.
+
+* <thills> I thought the estimation process was good and collaborative.  I do think we should require that a bug have points on it before we allow it into the sprint... that just forces us to think about it a little before just assuming that it's a 1.
+** <drs> I'm glad you liked it. Are you suggesting that we estimate bugs and features?
+
+* <gsvelto> On a personal note, I was swamped with last minute 1.4+ blockers in other areas which prevented me from getting anything done
+
+* <Rik> A tool to count the bugs count would make it even faster for hosts to update our wiki pages daily
+
+Action items
+* <drs> Begin writing PTO days down so we have a better estimate of how many points of velocity we can take.
+
+* <drs> Add which issues to look at in hosting standup instructions.
+
+* <drs> Switch to "all issues" for counting velocity.
+
+* <drs> Have people who take bugs estimate them.
+
+* <drs> Tool for counting bugs. Look into https://scrumbu.gs/
+
+* <drs> Do blog posts for demos on FL instead of every sprint end.
+
+v2.1-S1
+
+Things we did well
+* <drs> Our situation is generally really stable and we kept it that way the whole sprint.
+* <drs> The "things we could do better" is massive but the reality is that we're actually fine. It's good that we're thinking about things we can improve, though.
+
+Things we could do better
+* <drs> We were pretty lethargic about doing demos. Was there a communication problem here?
+** <Rik> For me, nothing to demo.
+** <drs> Does everyone think there's value in demos? We assumed that because the other teams do them, we should too, but if nobody sees any value then we don't have to do them.
+** <gtorodelvalle> In my case the limitation is due to bug 1048285 which is blocking the establishment of second and conference calls to record the demos :(
+** <thills> I don't see much value for something "non-functional" such as writing unit tests and showing a screenshot of the unit tests completed.  I think there is lot of value when it's something user-facing and we can show it to UX team/product owners.
+** <drs> When we talked about this in one of our standups, we decided that user-facing features would be demoed, but you could also demo non-functional features if you want to. See https://wiki.mozilla.org/index.php?title=FirefoxOS/Comms/Dialer/Sprint/v2.1-S1/20140722-Minutes
+** <gtorodelvalle> Totally in favor of recording demos :)
+* <drs> If we had blockers come up during the sprint, we would have been in trouble. We just barely got everything we initially planned done. This is ok as we agreed that we might have to move some work out of the sprint in this case, but we were still a bit behind where I wanted to be.
+** <Rik> I felt like we took a lot of work that was not initially planned. I haven't checked if that was the case.
+** <drs> Unfortunately, that's not true at all: https://wiki.mozilla.org/FirefoxOS/Comms/Dialer/Sprint/v2.1-S1#Bugs_Taken_During_Sprint This was the lightest sprint so far on taking work after planning.
+* <drs> Our estimates were generally too rosy. This is also totally fine since we knew our first few times would be used to improve later.
+* <drs> There was generally some mess-ups surrounding bug 1018283. We messed up by not splitting it up more, and relman messed up by not communicating more. We're taking steps to address this such as helping relman publish data that is useful to us.
+* <drs> Thoughts on the "Meeting Minutes" section on the wiki? Does anyone read this or can we stop putting it up?
+** <Rik> I never read them and they are now logged at http://logs.glob.uno/?c=mozilla%23fxos-dialer anyway.
+** <gtorodelvalle> Regarding storing the minutes, it is true that for the ones related to the daily meetings http://logs.glob.uno/?c=mozilla%23fxos-dialer does a great job. On the other hand, I found today extremely useful the storing of the Etherpad notes to find the Youtube video I recorded for a demo :)
+** <drs> Yeah, I think we should keep storing the Etherpad notes. I'm talking about the actual meeting minutes, i.e. our discussion on IRC. You can see it if you expand the "Meeting Minutes" section for each day on the wiki.
+** <gtorodelvalle> I have to confess that I always use the searching capability of logs.glob.uno for that: http://logs.glob.uno/?a=search&c=mozilla%23fxos-dialer&q=dropbox&ss=21+Jul+2014&se=6+Aug+2014
+* <Rik> Giving some "from scratch" work to Tamara was probably not the best idea. It was on top of crappy code. Too many concepts to grab at once.
+* <Rik> I fell behind on review times and that probably slowed you down.
+** <drs> It did, but I'm not sure what we can do here. I think this problem will solve itself once we have more peers. You can redirect more to me sooner though. At this point, I don't think you should have to really think about what to send me. You can probably pick 50% of your reviews essentially at random and give them to me.
+* <gtorodelvalle> (please do not take this as a complaint at all :) ) I think it is hard (impossible I may say) for reviewers to know in advance how much time it will take to do the reviews and this sometimes delays the landing of bugs :)
+* <Rik> Maybe we should start doing a burndown chart to see the progress as we go (instead of "guessing" by looking at a table that is hard to "parse")
+
+Action items
+* <drs> Stop recording meeting minutes and use http://logs.glob.uno/?c=mozilla%23fxos-dialer instead.
+* <drs> Do demos. Reviewers should remind people.
+* <drs> Do blog post(s) at the end of the sprint. Anthony will write it.
+* <gtorodelvalle> Reviewers should have enough headroom (not assigned points or whatever we may call it) to deal with reviews :)
+* <drs> Do burndown charts.
+
+v2.0-S6
+
+Things we did well
+* <drs> The team is starting to feel like a unified force instead of a loosely related group.
+* <drs> The daily standup seems to still really be helping and we've ironed out a bunch of details (though see below).
+* <drs> We got our blockers down to 0 and were the first comms subteam to do so.
+
+Things we could do better
+* <drs> Switching the standup host every day is cumbersome and doesn't allow people to get better at it.
+* <drs> Sprint planning was really weak, I should have prepared better.
+** <drs> Between blockers and reorganization, I had very little time to spend figuring out what to do next. I'm happy we did get started on the sheet navigation prototype, though. This won't be a problem this sprint.
+** <Rik> I think dialer-most-wanted will help a lot.
+* <drs> We are not doing a good job keeping everyone involved in long-term projects. In particular, we're not getting enough feedback or ideas. Now that we've cleared our blockers and we're not really under any serious pressure, we should be able to step back and think about these things.
+** <drs> Suggestions? What would get you more involved?
+* <gtorodelvalle> In this sprint we at Telefónica had many distractions from what was previously agreed as work to be done during the current sprint planning (IOT and certification guys' requests). 
+
+Action items
+* <drs> Switch standup host to weekly rotation. (thills' idea)
+* <drs> I think we should start doing demos of significant features/bug fixes.
+* <drs> I also think we should start setting time aside to improve our technical documentation. This is all we have right now: https://wiki.mozilla.org/FirefoxOS/Comms/Dialer#Feature.2FSubcomponent_Documentation
+** <gsvelto> We should also document our code better, our in-code documentation currently leaves a lot to be desired (which is an euphemism for complete absence of comments in the code). As a side note we could explicitly start asking for better in-code documentation in reviews.
+*** <gsvelto> Enforce documenting stuff that you touch.
+* <gtorodelvalle> We need a way to proceed in the presence of not previously considered bugs, mainly coming from IOT and certification guys at Telefónica. Probably raising the issue when they pop up and consider any needed rescheduling for the sprint.
+** <drs> Can we talk about these as they come up? At the daily standup.
+** <gtorodelvalle> Absolutely ;)
+
+v2.0-S5
+
+Please give feedback on any parts of the process we're doing! There's been many changes and some of them are guaranteed to not be as good as they could be.
+
+In particular, please check out our plans for sprint planning on Monday:
+https://wiki.mozilla.org/FirefoxOS/Comms/Dialer#Sprint_Planning
+
+Things we did well
+* Rik: Be more people :)
+* drs: Our daily standup turnout has been really good. Everyone is showing up and we've been getting a lot of unblocking/helping because of it.
+* drs: We did a great job knocking down the number of open blockers. Went from 16 to 4.
+* thills: Completely agree that this has been extremely helpful for getting unblocked on several issues.  Also, we are doing a good job keeping the meeting short.
+* Rik: I like the post meeting where we kind of implicitely decided that it's a time when people are available to help
+
+Things we could do better
+* drs: For now it makes sense for Gabriele to join us in our standups and write notes on the Etherpad, but once he has cleared his dialer work we'll have to figure out something that works better for him and isn't taking as much of his time (since he's part-time with us).
+** drs: We agreed to stop writing notes on the Etherpad and instead do a better job using Bugzilla statuses. We'll use IRC slightly more for talking about blocking issues.
+* gtorodelvalle: These last weeks have been really painful regarding testing (Travis and TBPL). In my case, waiting for the tests took so long that when they became green I had to rebase over and over again :-( I currently have 2 bugs waiting for tests to pass. Nice color BTW to be talking about tests :O
+** Rik: It's a bit outside of our team but we need to inform project and engineering management so they can escalate.
+* Rik: I'd prefer to focus the daily meeting more on things that block us and what we intend to work on the next day
+* Rik: We should rotate the standup daily host
+
+Action items
+* gtorodelvalle: Define a clear procedure/workflow about how to proceed regarding testing (wait for Travis to be OK?, wait for TBPL to be OK?, wait for both?, how to proceed if we detect some failing tests of third party apps?, etc.). 
+* gtorodelvalle: Ask the content of #fxos-dialer to be logged.
+* drs: Start using ASSIGNED status correctly.
