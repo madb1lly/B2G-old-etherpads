@@ -1,0 +1,120 @@
+Firefox OS 2.5 test day - Friday, 16th of October, 2015
+ 
+Welcome to today's testday! We will be testing Firefox OS 2.5 in preperation for release next month!
+
+No previous testing experience is required. Moderators will be available on the #fxosqa IRC channel to answer questions and provide guidance. 
+
+Please add yourself to the bottom of the pad so that everyone can get the proper recognition and so we know how well it went!!!!
+
+IRC
+Join us here:
+ * http://widget01.mibbit.com/?server=irc.mozilla.org&channel=%23fxosqa
+ and/or here
+ Google Hangouts
+ *https://hangouts.google.com/call/ys7zseukwgocc4tqkr5i7yaav4b
+ 
+ Proper build ID for today: 20151016 or 20151015
+ 
+ Simulator
+ If you need to set up the simulator, please look here: https://developer.mozilla.org/en-US/docs/Tools/WebIDE 
+ Also get the most recent xpi (gets you the most recent version of Firefox OS 2.5 simulator build)
+ Linux: https://queue.taskcluster.net/v1/task/KZB71dAOQ6-49CAx2XEVaw/artifacts/public/build/fxos-simulator.xpi
+ Windows: You have to use mullet builds for now - http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/b2g-44.0a1.en-US.win32.zip
+
+     -download and unzip file into one folder and run the b2g.exe to start the mullet b2g
+
+mac: you also have to use mullet for mac right now also http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/b2g-44.0a1.en-US.mac64.dmg
+            -download the .dmg and unpack it and run the one that is called b2g it should open the mulet that you can use to test firefox os
+            
+Flame reference Device
+For testing device, if you dont have v18D_nightly_v4 on you device you will need to full flash your device then shallow flash
+Full flashing: https://oneanddone.mozilla.org/en-US/tasks/141/
+Shallow flashing: https://oneanddone.mozilla.org/en-US/tasks/146/
+ 
+Filing Bugs
+
+    If you file a bug, please set the whiteboard to [fxos testday]. Also, it would be great if you could add your name and the bugs you worked on in this etherpad so that we can acknowledge your contributions. Thanks! 
+
+    You can use this guide to help you file Firefox OS bugs: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS
+
+    If you find a bug that was already found for this test day, please comment in the bug that you were able to reproduce it.
+
+    List of bugs found during the test day:
+
+
+https://bugzilla.mozilla.org/buglist.cgi?list_id=12616889&status_whiteboard_type=allwordssubstr&status_whiteboard=[fxos%20testday]&resolution=---&query_format=advanced
+
+Most of the tests you will be running are on One and Done: https://oneanddone.mozilla.org/en-US/?search=&team=4 - with the exception of BuddyUp Testing below:
+
+BuddyUp Notification Testing
+
+    Follow the instructions on Line 10 of this etherpad -> https://public.etherpad-mozilla.org/p/BuddyUpTestPlan
+
+    Make sure to create an account so you can answer questions - http://mailinator.com/ is a great site for throwaway email addresses
+
+    Ask and answer a series of questions and confirm you get a notification in the following cases:
+
+    When someone adds a comment to your thread
+
+    When a solution is offered to the question you asked
+
+    Spot check the following locales:
+
+    English, Spanish, Portuguese
+
+
+You can test the entire Firefox OS if you feel so inclined, these are just some tasks to get people started!
+
+Also when you decide you are done testing for the event, please stop by and fill out a survey so we can work to improve the Firefox OS test days: http://www.surveygizmo.com/s3/2382230/FXOS-Test-Day-Feedback
+
+Moderators (EST)
+http://www.timeanddate.com/time/zones/est - UTC -5:00
+0100 - Ioana 
+0200 - Ioana 
+0300 - jamie_
+0400 - jamie_
+0500 - jamie_
+0600 - jamie_
+0700 -feer56
+0800 - marcia
+0900 - jamie_
+1000 - jamie_
+1100 - jamie_
+1200 - jamie_
+1300 - jamie_
+1400 - jamie_
+1500 - jamie_
+1600 - jamie_
+1700 -
+1800 -
+1900 -
+2000 -
+2200 -
+2300 -feer56 (check irc to see I'm in)
+
+
+===================================================================
+Participants template:
+
+ * First & Last Name - Simulator or Flame
+   *List the One and Done tasks you worked on.
+   *List of bugs that you filed
+   *List of bugs you marked as being able to reproduce
+===================================================================
+
+Participants:
+Please list yourself here!
+
+1. Marko Andrejić - Flame
+2- Manel Rhaiem - Flame
+3. Gabriela Montagu - Flame
+4. Moin Shaikh - Simulator
+
+
+
+
+
+
+
+
+
